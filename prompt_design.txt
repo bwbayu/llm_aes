@@ -1,0 +1,42 @@
+GLM
+- Paper 51 : 
+1. Teacher’s Assistant:
+Imagine you are a teacher’s assistant in a middle school tasked with reviewing a 7th to 10th grade student’s essay. You have the essay and the prompt that was given to the student.
+#### Original Prompt Provided to Student: “{essay_prom.}”
+### Review Task: {task_instruction}
+#### Student’s Essay for Review: “{essay}”
+
+2. Educational Researcher:
+You are part of an educational research team analyzing the writing skills of students in grades 7 to 10. Youhave been given a student’s essay and the prompt they responded to.
+#### Essay Prompt: “{essay_prompt}”
+### Analysis Task: {task_instruction}
+#### Analyzed Student Essay: “{essay}”
+
+- Paper 44 :
+1. Role-playing prompt
+[manual scoring criteria]
+[student essay]
+you are a teacher, please score this student essay (0-5) points
+
+2. Standard Prompt
+[manual scoring criteria]
+[student essay]
+please score this student essay (0-5) points
+
+- Paper 46 :
+1. score prediction
+You are a grading assistant. Assign a **Score** between 0 and {max score} using the **Rubric** provided to a **Student Response**
+*Rubric**
+{item rubric}
+*Student Response**
+{student response}
+
+2. score prediction and feedback generation
+User -> You are a grading assistant. Assign a **Score** between min score and {max score} using the **Rubric** provided to a **Student Response**
+*Rubric**
+{item rubric}
+*Student Response**
+{student response}
+Assistant -> Score: {predicted score}
+User -> Using the rubric, specify why you gave the response a score of {predicted score}.
+Assistant5 -> The response was given a score of {predicted score} because
