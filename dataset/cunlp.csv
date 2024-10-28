@@ -1,0 +1,907 @@
+reference_answer,answer,score
+"If the question is IR-Based, I will do the following: I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: - The number of named entities of the right type in the passage. - The number of question words and keywords in the passage. - The keyword proximity between the question and each passage. - The number of question N-grams that also in the passage. - The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",Using semantic analysis methods. We can use vector space model.,25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","we should use vector space model. firstly, binary (we should mark to every word as a number ) then calculate the term frequenties (TF) then multiply with",25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","Assume we have a question like "" Why the sky is blue?"" We can calculate this two words (sky and blue) numbers in our corpus. Then check them passing by together in any sentence. Compare those sentences similarity with our question. Sort the all answers by their importance and showing the user.",50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","We can use Vector Space Model that is representation of words as vectors. But this method can be slow because of large corpus. We can represent the words as a vector in space. After that, with Cosine similarity that is measuring similarity between non-zero vectors, we can find semantically most relavant. In Cosine similarity, If the angle between sentences is close to 0ø, similarity increases otherwise decreases.",25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","In this corpus we will use sentence segmenting to seperate all sentence. In the sentence lets say every word has their POS tagging it will help to find answer quickly. End of tagging we will Vector space modeling to reach most relevant text in corpus. We will check the highest COS value between [0,1]. So we will get nearest answer.",50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","For example , Where do you live ? First step-> Get rid of stop and func word Second step-> Using lemma instead of word Third step-> Convert string to number to be calculated by vectore space model Last step->Call the similarity function",25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",I will choose keywords in question sentence. And using vector space to compare texts. If I try to make vector of texts ; it is not easy for a large corpus.,25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",I can find with corperoble (karŸlaŸtrlabilir) corpus. (ayn d”nemde ‡ekilmiŸ ayn trde farkl dilde dizi gibi),0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","We take the words as key in the short question sentence.Then, we don't search in corpus, because we want semantically, not lexically, so we look the meaning the words in dictionary.And we keep the one or two meaning these information.After that we decide concat the most key with them.In the corpus, partially, we search this meaning the most relevant text.Searching will be in corpus as words meaning.",25
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.",Assume that our corpus is wordnet. We can be each word of questiona node.Then we calculate distance between of each word.,50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",We can find that text with the help of TF-IDF which is a vector space model.For large data sets vector space model is useful.,25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",Questiondaki her bir kelimenin corpusun i‡inde ge‡me skl§na bakarm. Her bir kelimenin kendi a§rl§ vardr. Bu kelimeleri vector'e ‡eviririm. Bilgisayarn anlamas i‡in. Daha sonra vector space modeling uygularm. Vectorlerin aralarndaki a‡ya g”re cosine similarity'e bakarm ve benzer olup olmadklarn s”yleyebilirim. A‡ k‡ldk‡e daha benzerdir.,0
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","I need to find keywords from the question , for example Let question be : Where is the Adana ? In this sentence we have some keywords. Answer must include ""located in"" We can use ""Where"" We can classify the question and we know that we have to find an answer which include ""located in"" and ""Adana"" words. Also we need to find the text most relevant so we can check the frequency of these words. So that we can find the most relevant text to this question.",25
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.",We can use TREC. TREC y”ntemi byk corpuslarda iŸe yarar. Konuyla alakal olarak sorular cevaplar.,0
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","In a very large corpus, we can find Question Answering systems for the semantically most relevant text. History of dialog is important for Question Answering. Question Answerizing using memorizes. We can look question as semantically and return answer from very large corpus. We can look question how get return answer. It chose most meaningful answer from very large corpus.",0
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","We can use WordNet Based Approaches. WordNet can be graph or tree structured.In this case, ve can use graph. Each node contains synsets, end edges are relation. nodelar arasndaki edge'lere de§er vererek en yksek de§ere sahip olan nodelar semantic olarak en ilgilidir diyebiliriz.",50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","With Information Retrieval based question-answering method. Because it will rank documents, paragraphs even sentences for occurrency. Then appropriate one will be extract for answer. That'll be semantically most relevant text",50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","Let our question be ""Ni‡in ?"" First of all , we have to check our question for stem and affixes . Then we should scan our corpus . And we should decide some questions : - When we use ""Ni‡in"" in our corpus ? - Which text has most include ""Ni‡in"" to the others ? After all analysis we can also draw a Vector Space Graph. With use N-grams formula we can calculate probabilitys. ",25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","Co-occurance can be used. Vector space wouldn't be usefull, because it is a very large corpus.",25
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","Firstly doing the word Sense Dsambiguation on this sentence. I will using Knowledge-Based Approaches for it Because it is using WordNet which is very common. and it has all relations. For example synony, antonym, hypernym, meronym. Also i will do same operations for the corpus. In corpus I have text, because of that i am applying this for sentences. For ability to that i have to get rid of same lemmas and i will use some special keywords after these operations. i will determine similarity between sentence and corpus text's sentences in Sense Level. I am using sense level because it is primary level and give uniqe meanings.",50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",We can use semantic similarity for the question words And we can use this similarity result in question answering techniques. Firstly I thought vector space model but It is not very useful for large data.,25
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","First, we must understand the questing. With Question Answering methods we can define the properties of our answer. Based on that properties (like who,whom,when,where,what etc.) we can search our corpus. And then results can be filtered by their semantic relatedness. We can use vector space model for searching corpus.",50
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.",For a semantic similarity we can look 3 different levels. -Sense Level -Word Level -Text Level We can compare with using text level similarity. We compare with the large corpus (ex. WordNet) and the sentence.,50
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","First we have to check the type of question. What, how, when, where? Then we can understand what does question ask and we can search for answer types. Also we can normalize the question and save the words in a temp data. Then in large corpus we can search for our words. Frequently text that our words most used has to be answer for this question.",25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","Seperate word by word and find use frequency.The word which has lowest usage gives more spesific information about question.For example if sentence has ""DNA "" word we can say it would be about science.So we can find more information to use lowest word frenquency words.And then use Vector Space model to find most relevant text.in large corpus, Vector Space cost high but it can be useful",50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","Vectorize Documents with TF-IDF, Use cosine similarity to find closest.(No Stop words + Lemmatize words for performance due to large corpus)",25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","If we look Vector spaces nodes for question words, If there is a sentence in corpus and near to question words node location, we can find relevant between them.",25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","First, we can divide the question into words. Secondly, we create a vector for each word. Each vector is created according to the meaning of the related word. Then, after representing each vector on the Vector Space, we can calculate the cosine similarity of each word to indicate the co-occurence of group of words. When we want to find the most relevant text to question, we can do the same operations that we did on the question for the text. Then, By considering frequency of co-occurences of the question on the corpus, we can indicate the text which can include the answer of our question. ",50
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","Cause of a very large corpus, we can't use co-occurence statistics. This take very long time. So we can use feature extraction method for this problem.",25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","Firstly, we will teach the system to computer. For this, we will use corpus annoation. We have two method: supervisor and automaticly. In my opinion, supervisor system work more correctly than other. In next step, we will find semantic in this text. So, we will find meaning of the text. I suggest that we can use vectoral space. We will wrote all words to the space. That?s why we can use cos() for finding similarity of words. It will give meaning of text to us. Also, we can use LSA for this problem.",25
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","We create vector space model taking each words in the question and create vectors, and look for similar or co-occure words of the question words in the corpus, create vectors for them, then compare similarity using cosine similarity to find most similar text to our question. Also we can use a Hybrid method using WordNet to create a model and the corpus to look at, the most adjacant edges in the WordNet model are the most relevant. This method is used to find semantic relations.",50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","First we can do sentence segmentation so we divide the corpus into sentences. Then we would do parsing and POS to filter sentences with same *units of sentence. Then we can use any semantic relation to find the text with the closest meaning to the main sentence. *""units of sentence"": ""cmlenin ”geleri""",75
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","We need to do some extractions like answering. I mean, let's assume our question is ""Who is Ada Lovelace?"" or ""Atatrk, is alive or not?"". Firstly, we need to do classification our answers. Then we need to do to obtain keywords, normalizing, tokenizing etc which will from Query Frame. We can say if our question begins with Who-Whom , we can assume answer will be PERSON, And if it begin with Where, it should be LOCATION. Now, let's go back to our question. Answer type will be person and ""ada lovelace"" our token. or another question. Answer type: Yes/No . tokens= ""atatrk"" ""alive"" We can searching in our corpus, for our tokens. And we can take answers which is related to our question then we measure semantic similarity(word/text/sense level)",50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","We use contextual, POS information of these and show these words as vectors in Vector Space Model. Relevant things have familiar words. According to this idea, we use one of those similarity methods and according to the result we choose the text that include these words",25
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","We can find text similarity by applying word similarity. First I will get rid of stopwords, then I will take lemmas of words in this question. Afterthat , compare these words (that in this question) with words of text in corpus.While comparing the words ,I will use Wordnet. It will let us know that these two words have a relation or they have strong or weak relation or they don't. After comparing all words I will find a text that have most relational words inside with mine.",50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","With vector space model. In this model, we can calculate word's and sentence's vector place in Corpus. After that, we can compare it with the question. It can give us sematically most revelant text to this question.",25
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","What is your name? -> Questionon Answer => My name is Refia. 1 Her soru i‡inde cevabyla alakal kelime i‡eriyor.isim sordu , cevapta ' da isim olmal ya da Ne, Nasl,How gibi sorular 2 POS tag tekni§iyle trne g”re bakabiliriz ama ilk y”ntem olmazsa. Mesela ka‡ yaŸndasn? Cevap sfat olmal de§il mi ? ""18"" . b”yle yazsada cevap kabul edebiliriz . 3 (Saysal veri olacak Ÿeklinde . ) Da§n uzunlu§u ne kadar ? 18 m. ( cevap saysal veri i‡ermeli ). ",0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",Soru cmlesindeki kelimelerin corpus i‡indeki textlerde tekrar etme miktarna baklr.Vector space modeli ile de aralarndaki benzerlik bulunur.Birbirlerine ne kadar yaknlarsa o kadar benzerlerdir.,25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","if we have short question of on sentence , and we use relevant based question answering first of all we get the quesition and make it as vector by vector model, then we make classification of the sentence that will make the passages number decrese , after that we search about the most relevent passage by calculating the similarity of the question and passages,and the co-occurance of the words arround the text which includle the answer. that mean we search about the relevent passage by vectors and the similrty between them.",25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","I think, we can use IR-based question answering method. Because question is short and one sentence that we'll used. First of all, we'll query of question. What kind of question is it? Then we classify the question according to the corpus.(Question Process). We can say that ""If we have like this word in question, maybe answer will has this word.""(Passage Retirival). After that we decide almost nearly answers for question. We choose one of answers according to rules.(Answer Exact) Finally, we have an exact or semantically most relevant answer.",50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",Lemmatization can be applied to decrease the sze of the corpus. Then sentences in the corpus and the question are weighted by using TF-IDF. Then similarity calculated by cosine smilarity. The sentence wth the largest cosne value is the most relavent sentence. The text which includes the sentence is the most relevant text.,50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",˜f the question has two words we should Tri-grams. ˜f the question has more than two word that time N-Grams is suitable rather than Tri-Grams.,0
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.",z,0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","For it is very large, firstly I use Tokenizing, then syntactic analyzing, then lexical similarity function applying",0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",when we look relation of the correct answer. (vector model) true answer ---> if relation is high ---> most relavant text (high mark) ------> if relation is low (low mark),25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","Ornek soru --->Soru: Bu kalem ne ile uretilmistir? .Kelime veya cumle analizi yapabilir.Diyelimki kelime analizi yaptik. .Soru lemmalarina ve tokenlarina ayrilir oncelikle. .Corpus uzerinde bu soruyla ilgili cevabi(text)'i bulmak icin korpus uzerinde kelime analizi yaparak,eslesen kelimeler bazinda yani ornegin meta etiketlerini kullanarak benzer soru orneklerine rastlanabilir ve bunlari bu soru kelimemizle eslestirerek anlamsal olarak ayni oldugunu bilirsek eger bu soru icin dogru veya ilgili text'i bulmus oluruz.Bir baska yolda kelime sikliklarinada bakabiliriz diyelimki bir metinde siklikla uretilmis veya ne ile veya kalem kelimeleri geciyor ise o metinin en ilgili metin olma ihtimali kelimelerin sikligiyla dogru orantilidir.",0
+"yIf the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",TREC uygun soru-cevap eleŸtirmeleri i‡in kullanlan bir corpustur. Vector-space method ile sorunun neyi ama‡lad§ anlaŸlr.TREC'te cevaplarla text base olarak karŸlaŸtrlr.Uygun eŸleŸtirme yaplr.,25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",Classification,0
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.",We can use semantic relatedness and similarity functions,0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","In a very large corpus, we use monitor corpus Approaches. Because, In more over more time ; It is can accepted. And We should use Question Answering. Question answering techniques are Knowledge based Question and IR based question. Knowledge based Question Answering is extract passages directly from documents, quided by the next of the question.",0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",Paralel corpura y”ntemiyle sorunu ‡”zebiliriz. Burda Vector Space Model kullanamayz ‡nk text byk. Kullanrsak verim alamayabiliriz. Ama paralel corpusta texti b”lerek daha ‡ok verim alabiliriz.,0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","We can use Vector Space Models but VSM is not good for large corpora.So we use lemmas instead of words.We apply VSM because computer does not understand strings so we have to convert numerical values.If there is a dialog system we know history and answer according to history.But in QA systems, there isn't history.We can find word meanings in text word(1)meaning+word(2)meaning+....+word(n)meaning=text meaning And I use semantic analysis.Also I use text classifications.",25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","We can use statistical type of pharapasing. We divide the corpus to pharagraphes. When we find the most related pharagraphes, then look at the sentences. So, we can find the most relevant text.",50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","We can use Vector Space Model. 2 belgenin ayn vector uzaynda,vector olarak temsil edilmesine Vector Space Model ad verilir. Ve bu model kullanlarak iki vector arasndaki yani iki belge arasndaki benzerlik ”l‡lebilir.Ve en benzer olanlar bulunur.",25
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.",To solve this problem we can use knowledge-based question answering methods. Because in knowledge-based question answering method we can directly take a most relevant text from the corpus for short question of only one sentence,0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",We can find semantically we use paralel corpus. We need semantic relation,0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","First we estimate the stop words. Then we use lemmas and token. We string convert to number for vector space model. Finally, we found the similarity words.",25
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","Firstly if used pos tagging in Corpus,our searching will be easy. We need to check answers for this question, because if we know the answer,we search questions which is the same answer after that we do semantic similarity beetwen our question and founded question.",0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","In question answering systems, semantic analysis of the question happens in question processing phase. So, when we came to passage retrievel part, we already know the answer type and keywords of the question. The only thing will be done here is, searching keywords and question type(name, location) in passages and rank them according to their co-occurences. The passage with highest rank will be the most relevant document in my corpus.",75
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","Bu yapy bir Question Answering sistemi gibi dŸnebiliriz. Question Answering ksa sorulara, ksa ve net cevaplar ureten bir sistemdir. Bu sistemlerin kullandklar ya web tabanldr yada kendi veri tabanlar vardr. Corpus'u kendi veri taban olarak dŸnursek; QA component' olan Passage retrievel sisteme sorulan sorunun cevabnn ge‡ebilece§i bir d”kuman bulmaya ‡alŸr. Bunu Question Processing'in oluŸturdu§u keywordler yardm ile, elindeki d”kumanlar bir ranking algoritmas kullanarak, en byk rank de§erine sahip d”kman en ilgili dokumandr olarak iŸaretler. Bizde bu Ÿekilde bulabiliriz.",50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",We can do POS Tagging of Neighbour. If the tags same or related to our topic we check this part in the corpus. Second solution is surrounding bag of words. We check the bag of words and if it is related our topic. We found the text,25
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","We can look to Semantic relations between them.We find their synonym words of them and put in kind of vector Space model or look to the their (meronym,hyponym or hyprnym) neighboring words. From Semantic similaritiy levels we can use Sense Level for the most relevant text, or we can use Lexical-resources from word Level similarity and put this word in Jaccard Methods from Lexical similarity The Last way is a kind of Vector space Models but it will be hard because the text is so big, but we can find lemmas of sentence and look them with Binary weighting.",50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","We can convert the question to a vector. And we can look for frequency of words in vector in the text. So we use TF-IDF method and the text that give us the biggest number, the text is the most relevant text. Also we use a tool and we detect some words that semantically related in our vector that we converted. And we calculate TF-IDF also this related words. Finally which one is the biggest between 0 and 1, it is the most relevant text.",50
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","Let say question is where? Question Answer system is a computer based system. I use this system and we can learn TYPE of answer. Let say posibility answers is Adana, Adana's type words. My answer must be Lemma type word. I choose this words. We can use Normalization the vector space model",25
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","Firstly, we need check pos tagging of short question. If it has not pos tag we have to write pos tag then Computer understand this question. Then, we need eliminate stop words on corpus because of our corpus is so large we need fast. we prepare an answer shame for example, question is "" what is your name""this can be Adverb noun translate this for ""my name is"", then we can use a Adverb noun vector space model and make a search on corpus then Computer will take the Closed distance answer",25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","We can think most relevant text as answer to that question. Therefore, we can use question answering techniques to retrieve some relevant text. After clarifying the topic of the question, we can use passage retrieval.",25
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","Bu soruyu Dialog System ile ‡”zebiliriz. ™ncelikle ilk adm olan Natural Understanding manager'da comminiative, constrative, directive ve acknowledge admlarndan ge‡ip soru alnr. Daha sonra bu soru dialog manager'e g”nderilir. Buradaki admlardan ""Contextual"" ile cmle i‡eri§ine baklr. Morfolojik ve semantik anlam analizi yaplr. Daha sonra ""Domain ..."" admna ge‡ilir. Burada alan adna g”re snflandrlp en son olarakta ""Action Selection"" adm ile en uygun yant se‡ilir. Bunlarn hepsi i‡in Corpus Based Dialog Management kullanlmaldr.",0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",Sorunun verilen corpus'ta olup olmad§n kontrol ederim. Verilen corpus ‡ok byk oldu§u i‡in bu iŸlem uzun srebilir. Soru cmlesini vector formuna d”nŸtrp corpus i‡erisinde bunu term frequency(TF) kullanarak ge‡me sklklarn kontrol ederek anlamsal olarak hangi texte daha ‡ok benzedi§ini bulabilirim.,25
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","We need to determine what the question tries to ask? So in my opinion, If we don't know the answer of the question, we need syntax information of the language, so that we can reorder the ""answer"" according to this syntax information. And also we need to determine pos of words in question. Example; When did 2. world war started? So we need to find ""2. world war started"" phase in the corpus. But also we need to give the information about what the question tries to find out. In this example ""when"" question says us the answer actually includes a time zone, date etc. So we need to find a time information after the following syntactic order. Finally, we'll accross with the answer in the corpus. ",50
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.","This is question answering problem . I can get tokens and keyword of this question . After that take what kind of question is like what is the answer like for example is it date , place or a person question after that I search in corpus which sentences probablty is higher and take this for answer .",50
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.",There are two techniques for question answering. They are IR based and knowledgement based. In this problem we can use knowledgement based techniques. In a very large corpus has a lot of words such as database. Knowledgement based technique can match the answer. Also knowledgement based technique use semantic parsers to find answer.,50
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.",Semantic olarak yakn cumleleri bulmak i‡in wordneti kullanabiliriz Wordnetin nodelar i‡inde synset var ve bu synsetler birbirlerine iliŸkileri belirten edgelerle ba§l. Cumlelerin birbirlerine yaknl§n wordnet-based similarity metodlarndan birini kullanarak karar verebiliriz. Aradaki zplama saylarna bakarak ve synsetleri kullanarak de§erlendirme yapp benzerlik kurabiliriz.,50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","Type of the answer to the question should be identified and keywords should be obtained . Since the corpus is very large before converting the keywords and answer type to numeric form and calculating similarities , we should first identify the documents that are possibly relevant by analyzing their titles . After finding a list of possibly relevant documents using vector space model is much more feasible . We can then use vector space to find the semantically most relevant text .",50
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","We can use three level of semantic similarities.Firstly,sense level this means unique word has no ambiguity.Then we use word level multi meaning and for short text is we can use word level.And also we can use relations model.These are synonym and antononym. ",0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","firstly we should normalize our corpus and this question. The we make tokenization for using words in our program. for make to our computer understanding better, we should represent this question and texts in vector space model. Every texts is a point in the space now. And we can use similarity functions ( especially cosine similarity is semantically better) for finding near vectors. For make better system also we can find co occurrence and how many times words of our question occur in the which text.",25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",We can use TREC approach.Vector space model could be used if the corpus wouldn?t be large,25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","First we divide that corpus to genres (news,science,education).Then we compare the corpus and question meaning. After that we can do a ""semantic analysis"". If the semantic meaning of the question fits with that corpus we can make a sense level similarity test to find the most relevant text to this question.",0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",If we have short question it is better that using vector space model. Firstly we do part of speech tagging then give them vector values. And compare the vector values of question sentence elemantary and corpus.,25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",Text-level Semantic Similarities.,0
+"If the question is Knowledge-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text: 
+Firstly, I would segment these texts to shorter passages like paragraphs. 
+Then, I would build semantic representations to the query such as locations, dates, times, entities, numeric forms/quantities. 
+At last, In order to determine the semantic relation between the question and passages, I would map these semantic representations between query and passages, using WordNet like lexical databases. 
+In that way, I can find the most relevant text.",we can find it by for example creat question-answering from our corpus (Data base) and then this short question calculate the similarity function and then found the most relevant question-Answer in our method we can determine the dialogue act type (for example inform addresses ...etc) and the semantics slots and value.,25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","Explicit ->clearly , t got the question about answer Implct c. ->wth details (Question) ERROR HANDLING topics ERROR HANDL˜NG with implicit c. , I can find the semantcally most relevant text to this question. EX A:Are there any flights frim city A to city B? B:There are several flights in the mornings from city A to city B , or in evenings? (It is relevant)",0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",Sorunun kelimelerini ayrrm. Non-Stop kelimeleri ‡kartrm sorudan. Kalan kelimelere ”nce lemmazitation uygular sonra tokenize ederim. Kendime k‡k bir corpus oluŸturur byk corpusta arama yaparm.,0
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","Using machine learning approach i.e. supervised and unsupervised learning for instance for this case, from the corpus we can use cosine similarity measures to find the vector position of the text.",25
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.","The first step is question processing to get information from it, then determine the type of question , after that we will transform our question to a query that can be understood by information retrieval systems , then we can use passage retrieval in order to get more relevant passages from relevant documents, finally the answer will be sent to the user , this answer contain the most relevant text semantically.",75
+"If the question is IR-Based, I will do the following: 
+I can assume the question as a query. Because of having a very large text, I would segment these texts to shorter passages like paragraphs. Then, I need to find the relevant texts in the corpus. To find relatedness, I would apply one of some methods such as TF-IDF Similarity, Jaccard Index, Word embeddings, etc, on query and passages. At last, I need to rank these relevant passages to find the most related. To do that, I can sort the passages according to: 
+- The number of named entities of the right type in the passage. 
+- The number of question words and keywords in the passage. 
+- The keyword proximity between the question and each passage. 
+- The number of question N-grams that also in the passage. 
+- The number of sequences of question words' occurring in passages. etc. In that way, I can find the most relevant text.",We can solve this problem using the Information Retrieval-Based Question Answering Techniques. => These techniques consider the question as a query and apply preprocessing methodes (Deleting stop words ...) for this query. => Use Information Retrieval Systems (Ex: Search engines) to find all Documents (texts) that respond to our query. => Use the semantic similarity methods (such as IF-IDF) to find the semantically most relevant text to our query (question).,100
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","I can calculate ""bank"" word's similarity with other words in sentence or text. (using semantic analysis) I can show options for ambiguity words like bank to user. So he/she can choose from them.",0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",Semantic Ambiguities,0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","We have a word called as ""bank"" meanings coast and financial institution at the same time. The machine can translate theese both meanings together and it's cause ambiguity. We can solve this ambiguity with two methods. Firstly machine can compare the ""bank"" word by using a similar corpus. It compares the meaning from that corpus and using that to our translation. Secondly machine can count the # of ""bank"" word in different meanings and using that counted meaning with ""fisherman"" words together. Machine can use that compared bank meanings with fisherman can solve the ambiguity.",0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","We should consider all of the words together in sentence, not by one by. We can use Neural Based Machine Translation approach. First, we can find meaning of all words seperately. Then we can compare the probabilities of ""fisherman"" and ""bank"" from our datasets. Finally we will find that generally fisherman goes to coast. So we can translate this sentence correctly. As I said, we should consider sentence not by word by. ",40
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",In this translation we have semantic ambiguity problem. First of all we have to understand which word has which feature so we will use semantic analyze to understand meaning of the word. So with this analyze if we cannot get any solution in this case of getting meaningfull output we will use vector space to find nearest meaning.,0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","I can use wordNet translation model to prevent ambiguities, Because there is semantic ambiguity problem and wordnet is most used tools to handle semantic ambiguity.",40
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",I can use Wordnet to calculate relation between fisherman and bank. And try all sense?s of these word; after that give them score like text level semantic similarity,60
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","I can use Neural MT . ( €nk ‡eviri yapmadan ”nce benzer milyonlarca veriyi taramŸ ve o Ÿekilde ‡eviriyi yapmaya baŸlyor. Bu yzden ""bank"" kelimesinin karŸl§nn bu cmlede ""coast"" oldu§unu bilerek ‡evirecektir.)",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","Firstly, we label to words POS tagging.Other hand, we give lots of corpus which includes to view this example ambiguity and like these.If the word has a few mean for ambiguity, we teach to machine for looking in sentence near words.Their means in dictionary will match or near mean.For example, for ""bank"" word, looking the sentence and the ""fisherman"" can not relation with financial, so it should be coast.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","Assume that our machine translate the english language to turkish language.We have english gramer rules,turkish grammer rules and a corpus.When we translate each word ,some words have more than one meaning.We have one sentence so we can use statistical machine translation.We calculate probabilities which mean of bank more used and we can chose it.",0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","This problem include semantic ambiguity. ""The fisherman went to the bank"" Uzunluk ne kadar artarsa uyumluluk o kadar azalr. bank(financial) , fisherman'e bank(coast)'dan daha uzak. Bu yzden ""coast"" se‡ilir.",40
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","We can use Knowledge-Based WSD from Morphological Ambiguity.If there are some words like ""sea,fisherman,ocean"" algorithm should choose ""coast"" mean,on the other hand if text contains financial terms algorithm should understand ""bank"".",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",˜lk olarak gereksiz kelimelerden yani stop an functional word'lerden kurtulurum. Text normalization yaparm. Lemmalara bakarm. Kelimenin ”ncesindeki ve sonrasndaki kelimelere bakarak anlamn ‡kartrz,0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","We can use the WordNet based disambiguation . For this sentence "" The fisherman went to the bank"" We have fisherman and in the wordNet we will see the relation of ""fisherman and - coast"" is higher than relation of ""fisherman and financial "" . So that we can see that the ""bank"" word here is mean coast.",100
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","This is a lexical ambiguity. Because bank has 2 means. Sahil ve banka. We can use neural machine translation. ™nceden girilen verilerde surrounding bag of words ile yani fisherman ve coast anlamndaki bank' sistem, iliŸkilendirip hatrlayabilir. Datadan fisherman-bank iliŸkisini ‡karabilir. Bu Ÿekilde do§ru bir ‡eviriye ulaŸlabilir.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","Corpus is important for machine translation. Also we can use semantic anlaysis for related to ambiguites. We need firstly a target language model and translation model. Then we calculate probabilities. Using Neural based Machine Translation. we can translate word-to-word.so we can know part which translated. This instance, we look mean of word according to other words of Sentences. We can find correct mean of weard with using Semantis Disambiguitons. And our model translate. Also we can use parallel corpara for translation.",40
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",1.0)Statistical Machine Translation 2)Hybrid Machine Translation Machine Translation Method 3)Neural Machine Translation Bu problemi ‡”zmek i‡in WordNet 'i kullanabilirim. €nk birbirine yakn anlaml kelimeler ayn node i‡erisindedir. Yani synsetleri kontrol ederim.,80
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","Firstly, I will look at ""bank""s surrounding words. As we know, generally similar words are in similar sentences. I will look at WordNet relations. Wordnet gives me shortest path between the word I look and the other words in sentence. It brings right sense for ""bank"". The problem will be solved",80
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","In this question , we can use Lesk Algorithm . In Lesk Algorithm ,we check the vacoblary in our dictonary and compare the means. But there is another problems ""Deyimler ve Atas”zleri"". We also teach to the machine all special sentences.After that when we read all the text , we can decide main idea. When our software learn to this , we can solve this problem.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",Semantic similarity,0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",I will use Neural Based Machine Translation System. Because it is determining each terms individual. Nodes represents synthess edges represent relations. bank -> bank,20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",This problem also called semantic ambiguity. We can use semantic disambigution for the words that has more than one meanings.,20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","We can check all the text, not only a sentence. This way we can determine the semantic meaning of the words in text level. For example if fisherman using ATM we can translate as bank but, if text contains words like sand etc., we can say its coast. Text level semantic similarity is our best solution for this problem.",0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","There are three types of machice translation -Rule-based MT. -Statistical MT -Neural MT. -> best one In this problem,we see one of m.t difficulties is semantic ambiguity. We can use neural machine translation for this problem. Because, you can give supervised data (annotated data) and train. So, the problem will be solved.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",The problem in this translator it only has one meaning for words. But words can have more meanings. In translation dictionarys such as wordnet has also different meaning for words. So we can use this as a source. In this case we can use N-Grams method with similarity. For example when we look at ?fisherman? word it should more used ?coast? meaning than ?instution? so the program can choose ?coast? meaning.,60
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",we can use semantic and lexical similarities to solve this problem.We check previous and next words to find exact mean.For this we can train our system manually.If we give financial usage data.Also using sematic disambigation,20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","This is a semantic ambiguity. Wordnet based WSD is perfect for this situation.When we apply one of the word-net WSD relatedness methods with fisherman and bank, probably ""bank as a coast"" is more related to ""fisherman"" than ""bank as a money bank"" ",100
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","We can check nearly words means for bank. For example we cant use ""went"" words with coast. When we do semantic analaysis for sentence, we can see, which one more releated with bank. Also word vector space can be use. If we calculate measure between word node, we can compare which one more releated.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","When a use enter a sentence that has some word which can be interpreted to many sense of the word, the program can use the history of the translation for the same user. to make decision about the sense of words. But if we have not any history of the translation, we can create a message that user can see. The message can include a question like ""The bank? Which sense of the word do you want to say? ""coast""? or ""financial""?"" Then user can choose the sense which he/she mention about. It can be more complex system but it is more usefull for the user of the program.",0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","Firstly, we need to find that is corpus's general subject. So the corpus can be about politicial, economical, technologies, physcology etc. After this step we will learn that the text means 'bank' or 'cost'. So the main problem has solved.",0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","It is perfect question. Nowadays, it can be seen like this problem. We know that there are 3 significant methods in machine translation (MT). These are rule-based MT, Statistic MT and Neural systems MT. I think that Neural systems MT is better that others. Because, we will change from wrong word to correct word (?bank? -> ?cost?). We know that artificial neurons are used in Neural Systems. That is why, this system works more sensible. Also, it translate word-to-word. I can give Google example for my explanation. So, This question can be solved by using Neural Systems MT.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","Here at this project, we have to look also at neghiboor words to find if the adjacant words of the ambiguis word are related to it and if there is any co-occurence happens, using this method the MT project looks at the sentence and finds ""fisherman"" word, using it, it finds that there is relatedness between it and ""coast"", not "" financial institution"". This model is called ""Statistical model"".",40
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","There exists a semantic ambiguity due to the same word having more than one meanings. To solve this ambiguity, ""bag of nearby words"" way can be used which checks for dictionary definitions and appoints the most appropriate translation is given. For the given example, software will check for ""fisherman"" in dictionary and find ""sea"" related results therefore ""bank"" will have the correct translation.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","This problem is a kind of semantic ambiguity difficulties. We need to analyze ""bank"" word in the right scope. Firstly, we can do checking POS tagging but in our problem we don't need to do this because bank tagged like a noun for both sentences. We can look at neighbourhood for ""bank"" word, for understanding the semantic meaning, we can look o",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","We take words as a nodes (with their contextual, semantic info) We need corpus for it. We start to link these nodes when they used in the same sentence. Then we give a weight to these links according to their usage frequency (birlikte kullanlma frekans) So, we can choose the word from their weight on the system we created",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","We will use surronding bag of words method. I will check the other words in text.After checking their meanings I can understand what is this text about. So if the text is about fishing I will accept it as ""coast"" else if it is about financial institution I will accept it as ""bank"".",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","This difficulty is semantic ambiguity for machine translation. We can use, maybe Wordnet inside it to solve this problem. It is well-known tool to solve it.",60
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","1.0 Local collacation -> Kelime ‡ifti tarznda alaka var m ona bakarm. 2 Pos of neighborng words -> Sfat, m , zarf m isim diye bakarm. 3 Surnondng bag of words . -> cmle ”ncesinde konuyla alakal neyden bahsetmiŸ hangi kelime var.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",Balanced corpus kullanlmal.Bu sayede makine farkl kaynaklara ait bilgilere sahip olabilir.Daha sonra cmle zerinde tokenizing iŸlemi yaplr.Verilen cmle ile textler arasndaki (”rne§in bank kelimesi) benzerlik belirlenir.Word vector yardmyla bulunabilir.Bank kelimesinin daha ‡ok ge‡ti§i (TF weighting) texte karar verilir ve bunun do§rultusunda kelimenin hangi anlamda kullanld§ anlaŸlmŸ olur.,0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","in the machine translation we have this challange that thier is many words wich have more than one meaning and this make a semantic ambiguition problem . to solve this problem , I think we can use the semantic similarty . for example if we use the wordnet based sens disambigution and find the most appropriate sens to this sentence that will help solving this problem, any way thier is many chooses to solve the sens ambiguition not only wordnet based (or corpus methods) for example : the probabilits of that sens is using with this arrounding words.",80
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","I will use Google Neural MT. Because of it has labeled word. Also it can predict (tahmin) which word has what kind of mean in sentence. If I give traning data input, it will make a decision semantic similarity. Because this MT work like a brain. When I give a sentence than it parser sentence. Every word represent a neuron. Then it (kurar?) relation between every words which is neural network. So if bank-coast and fisherman have relation, MT says that ""this bank has ""coast"" means"".",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","WordNet can be used to solve this problem. By using pos tagging we can decide to which path length should be calculated. Then path length of the fisherman to the coast and financial instution are calculated. Then the meaning with lower path length is choosen. If the path length is the same, statistical analyss can be done for selection but corpus is required for statistical analysis.",80
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","We should find close word for each meaning of ""bank"" which is fisherman. After finding propare word compair the each meanings of word with the keyword ""fisher"". As a result of comparing, pick most suitable meaning of word for target languages. ",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","MAK˜NEN˜N DE ANLAMADI¦I NOKTA BU OLUYOR.DO¦RU €EV˜R˜YE DO¦RU SONUCA ULAžMASI ˜€˜N CšMLEN˜N GEL˜ž˜NE, O YANLIž €EVR˜LEN KEL˜MEN˜N ™NCES˜NDE GELEN KEL˜MELERE BAKACAK.CšMLE BAZINDA DA ™NCEK˜ VE SONRAK˜ CšMLEY˜ ˜NCELEYECEK VE B˜ZE KONUNUN NE OLDU¦UNU ANLAYIP, €IKARIM DA BULUNACAK.ANCAK BU žEK˜LDE B˜RAZ DAHA ˜Y˜ SONUCA ULAžAB˜L˜R˜Z.žU ANDA DA BUNU EN ˜Y˜ žEK˜LDE YAPAN GOOGLE'DIR. ""GOOGLE NEURAL TRANSLATION""",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","""The fisherman went to the bank"" for ""bank"" word, I use lexical analyzing",0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","we need to use semantic ambiguites. we should understand;""what is the word meaning""? (cmlede ne ifade etti§ine , kiŸiye ne hissettirdi§ine baklr, e§er kyaslanan kelime/cmleler aynysa bir se‡im yaplmas , problemin giderilmesi ger‡ekleŸtirilebilir)",0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","There are 3 types of MT that; 1-Rule-based MT 2-Statistical MT 3-Neural MT I will solve this problem by using Rule-Based MT.Actually the problem can be solved three of them. Problem; The fisherman want to the bank 1.bank bank---> Ambigution here! 2.coast(sahil) 1.Elimizde ingilizce kelimeleri cevirmek icin bir sozluk kullanicam 2.Ingilizce grammer bilgileri olmasi gerekiyor. 3.Turkcenin yani cevirilecek olan dilin grammer bilgileri gerekli 4.Bu iki grammer bilgisini iliskilendirip bu problem balikcinin financial instution'i kastetigi anlasilir ve dogru tercume yapilir. veyahutta; Ilk once kelimeler karsilik geldikleri anlam itibari ile yanindaki kelimelerle balikcinin nereye gitmek istedigi kelime kelime analiz edilerek cozulur. Statistical MT ile cozulur:Cunku diyelimki elimizde bir corpus var ve bu korpus onceden duzenlenmis ve icerige uygun bir altyapiya sahip oncelikle kelime kelime analiz edilir cumle daha sonra istatistigine gore ne isaret edilmis o cikarim yapilir ve bank mi yoksa coast mi daha cok kullanilmis ise corpusta o secilir diyelimki bank cok sik kullanilmis bu sebep ile bank secilecek ama bu yeterli olmayabilir bazen bu sebep ile ""language model"" 'e de bakilir ve oradaki kelimeler arasindaki birlikte kullanmada dikkat edildikten sonra problem cozulur.",0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",N-gram (bigram yada trigram) uygulanr.Cmledeki iliŸkili kelimelerin oran hesaplanr. POS taggingile syntactic durumlar karŸlaŸtrlr.Semantic benzerlikler i‡in sense-based similarity'ye baklr. B”ylelikle kelimeyle ifade edilmeye ‡alŸlan anlam g”rlr. Sonundaistatistiksel olarak en ‡ok tekrar eden e§leŸmeye Neural Machine Translation bu a‡dan daha uygundur.,20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","?The fisherman went to the bank? meaningfull. Semantic ambiguity and semantic disambiguaty. Firstly,I choosed Rule-Based machine translation.Because,I will nearly to word to word.After that,I will do search semantic ambiguity.Because, I was a search a lot meaning for ?bank ? . If there is a semantic disambiguity is there . I have to say semantic disambiguity is there.I can solve the 4 method disambiguity. Knowledge -based Supervised Unsupervised Hybrid An after that , choose a this method, I can solve.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","We can use Google Neural MT method. We can take help WordNet. And with the helping by corpora, we can find lexically similiar sentences and we can take statistic. By the statistic.",60
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","We can use Parallel Corpora for this translation project. In Vector space model machine translation, we need firstly a target language model and translation model. Then we calculate probabilities. Firstly; ""The fisherman went to the bank "" is a my source model. The disadvantage of Vector Space Model is becomess useless when the text size is long.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",Sorun semantic ambiguitie. Neural MT? kullanarak bu sorunu ‡”zebiliriz. €nk Neural MT ge‡miŸte bu sorunla karŸlaŸtysa hatrlayp sorunu giderebilir.,20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","I have to find word's behind meaning.Meaning can be conceptual or association.We don't want to find word meaning in dictionary .We want to see behind meanings.So I investigate arround words(neighbour words.)And I try to find relation between these words.I can use rule-based,statistical and neural machine translations.But the best model is neural.Sense level similarity kullanrm.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",The program should look at the sentence first. The fisherman's relationship of coast must be more than bank. We can use comperable monolingual corpus. Fuction compares the relations of words first.,0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","Bu belirsizlikten kurtulup,kelimeyi do§ru ‡evirebilmek i‡in metinde ge‡en kelimeleri tek tek de§il de, kelimenin ”nceki ve sonraki kelimelerini de dikkate alarak ‡eviren bir machine translation olmal.B”ylece di§er kelimelerle birlikte uyumlu ve do§ru ‡evrilmiŸ olur.Ve metin btnsel olarak anlaml bir yapya ulaŸmŸ olur.",0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","In this problem occurs because of semantic similarity of the word ""bank"" . So we should find a correct means of ""bank"". When semantic ambiguity occurs , it can be sense level , word level or text level . To solve this problem we can use surrounding bag of words that means we focus on the arround of ""bank"". We can focus on the previous word of the ""bank"" or words after came from ""bank"" . So we can extract the correct mean the word ""bank"".",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","We need firstly a target language model and translation model. We look a semantic based. source coast, target financial meaning. We use a statical machine translation system solve this problem. Word bank look used statical. Statical machine translation system paralel corpus and co-occurence.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","Firstly, I see the neighborhood's words. We understanding this Word is noun or verb. Then, we use encoder and decoder. This system input is encoder. This system output decoder. The Word is step by step enter the encoder. We take a information set for a machine. Then, the system translate it as Word that means.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","This problem is semantic ambiguity,we can use word sense disambiguation(wsd),we can give idetify looking sense word has multiple meaning. In wsd have many approaches we can use Decision tree metod,semantic similarity or co-ouccer graph.These are approaces of WSD. ",40
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","For semantic disambiguation in machine translation, we can use a dictionary such as WordNet. And we can use the shortest path algorithm in WordNet. The closest path between words will be true sense. For example; |Fisherman - Bank(Financial)| = 7 |Fisherman - Bank (coast)| = 3",100
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","Bir machine translation oluŸturmak i‡in en az iki Ÿeye ihtiya‡ vardr. Bunlardan biri ‡eviri yaplacak dillerin gramer yaplardr. Di§eride o dillere ait s”zlktr. Word Net kullanlabilecek en iyi s”zlk tipidir. ˜‡erisinde her bir kelimenin sense'lerinin tutuldu§u synsetler bulunur. WordNet'in yaps node'lardan oluŸtu§u i‡in burada shortest path algoritmas ile o kelimenin o cmlede hangi anlamda kullanld§n, iliŸkili kelime ile en ksa path'i oluŸturan bulundu§unda bulunur. Bu sayede ambiguity ortadan kalkmŸ olur.",80
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",1.0- Firstly we look dictionary for the mean of bank and outher words. Fisherman usually being in sea or near the sea. Because he work there. We check neighbour words and sentences. If neighbour words related to money. We can think this word can be bank. But we don't have any word related with money or we don't have word or sentence anymore we look different. 2- We check the verb in the sentence. (went to) 3- We can treat the machine for select related meaning word. In our example fisherman related to coast meaning. If our example contain money or same meaning word we directly think financial institue. But we don't have. Therefore we will think about Fisherman and find coast mean. ,20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","MT have four difficulties .(word order, Syntactic Ambigious, Lexical Ambigious , Semantic Ambigious.) This is the Semantic problem. From types of MT, in my opinion we can't use Rule Based MT, and Statistic MT but we can use Neural Network solutions. with Sense Level Similarity Relations, we can find their (homonym,synonym) and use Vector space Model solutions. And look to their cos values to find the better solutions.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","In this problem we use a tool that give us words means. For example tool says in here two means for ""bank"" word. After that this instructions we can look the the other word in the sentence. In this way we can detect which means is correct.",0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","I think , if we use istatistical Machine transformation method, we will not have ambiguity. I have to a corpus. I can learn how many times bank word use coast meaning when same sentence with fisherman. If the sentence have NB sentence ,if the sentence have fish, sea type words , we can say bank meaning is coast hear.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","if we have a homonym word in a sentence firstly, we can check pos tag of neighberhood of Ambiguity word if sentence still have a ambiguity. the algorithm check nearest sentence semantic.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","We can use a corpus with so many examples to feed the mean level semantic similarity. So this way, for example; when word ""fisherman"" included in a sentence, it changes the behaviour of various words and computer expects another meaning from other words.",0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",Bu bir Morphologic Ambiguity'dir. Bunu morphological disambiguity ile ‡”zebiliriz. ™ncelikle kelimeyi lemmalara sonrada POS-taglere ayrrz. Daha sonra cmledeki di§er kelimelere g”re WordNet'e yerleŸtiririz. WordNet'teki sonuca g”re zplama saysna bakp daha yakn olan se‡eriz.,60
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",Kendinden daha zengin bir dil i‡eri§ine sahip olan dillerde Machine Translate(MT) zor olur. Buradaki belirsizli§i ilk ”nce morphologic disambiguity ile ‡”zmeye ‡alŸrm. €eviri iŸlemini yapaca§mda Neural Based MT kullanarak daha ”ncesinden makineye hedef dilin modelini ve ‡eviri dilinin modellerini ‡eŸitli bir Ÿekilde (farkl farkl datalar kullanlarak) ”§retme iŸlemi yapabilirim.,20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","We need syntax information of source language and target language We need a dictionary We need large parallel bilingual corpus. And we may need pos tagger to take the relation. And we need to focus surrounding bag of words(like previous word) In order to, solve this kind of ambiguity we can use a simple statistic(probabilistic) approach. To do that we need to find all the ""went bank"" in the corpus. The corpus already has the translated target language, so when we find ""went bank"" in source language, we determine how the authors of corpus translated it. So we need to find frequency for each different translation, and should select the most frequently used sense to translation. Example(Turkish to english) Given input is ""Bugn havuzda yzmek istiyorum"" yzmek has a meaning like movement or a sport in the water or a liquit and, has a meaning seperating a surface to itself(like leather of an animal) ""havuzda yzmek"" with first meaning will be more frequently than the second meaning, so that the translation will be like; I want to swim in the pool today.",40
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",This is semantic ambiguity . I can use WORDNET for solve this question . Because WordNet have entries and their synsets so i can find the real semantic in here so WordNet can solve my problem . ,40
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","The problem is about lexical ambiguities. I solve this problem by using categorized database. Maybe wordnet can be beneficial for it. Categorized database means, there are a lot of words which includes same meaning. In my solution there are will be some sub-category for each different meaning. And these sub-category will include related words with homonym word. When we use a word which have different meaning, it will match by using these sub-category. For example word: bank category1(sea, seaside, fish, fisherman, seagull, beach...) category2(money, invest, bank machine...). If we use this sentence: The fisherman went to bank. Fisherman will match with category1 and our translate is going to ""Balk‡ deniz kysna gitti."" it will not ""Balk‡ bankaya gitti.""",60
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","Machine translationda belirsizlik cozme yontemleri 3 tanedir: Rule-based, statistical ve neural tabanl. Bu soruda semantic ambiguity var. Semantic ambiguityde word gorunus, yaps ayn anlam farkldr. Statistical yaklaŸmdan dusunecek olursam kelimeleri tek tek Trk‡e'ye ‡eviririm ve bank kelimesinin Trk‡e karŸlkarnn cumledeki di§er Trk‡e kelimelerle ge‡me skl§n, olasl§n bulurum. Fisherman -> dalg‡ kelimesinin ""banka"" kelimesinden ziyade, sahil kelimesiyle daha ‡ok ge‡ti§ini bulur, do§ru sonucu ”neririm.",0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",This is the semantic ambiguity problem . We can solve it using a number of different methods . One method would be analyzing the words around the ambiguity . We can than solve the ambiguity by choosing the sense that is semantically most related to the words around it .,20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",We can use Machine translation diffuculties.Firstly we can use lexical ambiguity because word bank also means coast. bank -> financial coast ,0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","This is a one of the difficulties in machine translation. The word is bank has two meaning, we can understand this words meaning from the content or near words of sentence as a human. So we should use this approach to the software. In this approach instead of working directly with words we should work with sentences and content. Basically we can vectorize the sentences to the vector space model and represent words as a number, by this way computer will understand better. then we can find the co occurrence and similarities of vectors. After all we can use a cluster algorithm ( like a K-Means) and make subgroups. By this way we see that some words together with semantic relatively not word relatively. So we can use this model for our program.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",The situation occurs from synonym words.We should determine the semantic of the word of ?bank?.Contrasting of taking every word one by one we need a context to predict or determine the sense.We can take the whole sentence as one input like googles neural MT method does.And find the probabilty of each word translation for word ?bank?.The most probable one with the higher rate will be our translation. ,20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","Best solution to solve that problem using the ""Neural Machine Translation"" we need to give so many examples that language pairs. So ""NMT"" can difference between ""bank"" and ""coast"" as a meaning. Target language model lexical and morphological structure will be defined so it will make an easier translation.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","For this project, the Neural Machine Translation method is the best. The Neural MT has huge different sentences in different languages. It takes the words of the given sentence and translate them same time. When do this operation, it controls the words. For example ""the fisherman"" and ""the bank"" words have a relation for each other. In the Neural Machine Translation there are millions of sentences and words. This method will give the best solution",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","This is a lexical ambiguity. We can use ""Surrounding bag of words"" method. This method checks the other words in sentence. When it finds the meaning of ""fisherman"", it decides ""bank"" means ""coasts"".",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","we can slove this problem and reduce the ambiguities by take the lemmas of word and getoff the function and stop and convert it to numeric to represent it by vector space and calculate the similirty function, Nural machine translation which enter all word to decoder and then encoder the translation.",20
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","Most important prob. are related to ambiguites .bank ->banka (financial) .bank-> bank (coast) It is differences of Machine Translation and The name is lexical ambiguity. Solution:when designed software has this ambguty, for ex;environment semantically of ""the bank"",on text, words on environment semantically are used with particular words.""This particular words will be tagged , If the software find this ambguty.And, most relevant text s ->lexical ambiguities",0
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",Lexical WordNet ile ‡”zerim. Semantic Syntatic,40
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",These can be solved by using the rule based machine translation which involves sets of rule to be followed in the translation and flowing dictionary meaning. The synonym should be properly identified and indexed correctly to give proper meaning of the required text The Google neural machine translation can also be used in the context where nodes are trained to give or capture measures to solve such a problem of lexical ambiguity.,40
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.","before translating a word that has many meaning like "" bank"" , the first thing to do is word disambiguation in order to determine which sense of the word in used in the sentence , for this reasons we can use lexical ressources like dictionaries and WordNet ,this ressources will compare each definition (sense) of the ambigous word in the dictionary with neighbor terms of the word in the corpus(determining the context), then translation can be done without any ambigation.",100
+"The problem like that can solve by word sense disambiguation. 
+To do that: 
+Firstly, I will build or select raw lexical materials such as WordNet, BabelNet, etc. The sentence?s each word has a sense and each sense of the word is a node in WordNet. 
+So, I will look up the nodes to relation. If some of the senses are not close enough to the others on the nodes, then I can say that this is not in a meaningful relationship with the others.",In order to solve these problems (which are related to ambiguities) we can use the Neural Machine Translation. => This type of machine translation consider the source sentence as one single unit and tries to determine its translation using Neural Networks. => The architecture of this NMT is : ( Please see the answer sheet ).,40
