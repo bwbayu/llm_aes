@@ -52,3 +52,20 @@ class EssayDataset(Dataset):
                 current_token += 1
         
         return torch.tensor(token_type_ids)
+    
+    def get_max_length(self, index):
+        print(index)
+        question = str(self.questions[index])
+        reference_answer = str(self.reference_answers[index])
+        student_answer = str(self.student_answers[index])
+
+        # concat input text
+        question = question if question is not None else "" # handle some dataset that doesn't have question
+        text = f"Question: {question} [SEP] Reference Answer: {reference_answer} [SEP] Student Answer: {student_answer}"
+        encoding = self.tokenizer.encode_plus(
+            text,
+            add_special_tokens=True,
+            return_tensors='pt',
+        )
+
+        return encoding['input_ids'].flatten().shape[0]
