@@ -2,22 +2,19 @@ from torch.utils.data import Dataset
 import torch
 
 class EssayDataset(Dataset):
-    def __init__(self, questions, reference_answers, student_answers, scores, tokenizer, max_len):
-        self.questions = questions
-        self.reference_answers = reference_answers
-        self.student_answers = student_answers
-        self.scores = scores
+    def __init__(self, df, tokenizer, max_len):
+        self.df = df
         self.tokenizer = tokenizer
         self.max_len = max_len
 
     def __len__(self):
-        return len(self.student_answers)
+        return len(self.df)
     
     def __getitem__(self, index):
-        question = str(self.questions[index])
-        reference_answer = str(self.reference_answers[index])
-        student_answer = str(self.student_answers[index])
-        score = self.scores[index]
+        question = str(self.df.iloc[index]['question'])
+        reference_answer = str(self.df.iloc[index]['reference_answer'])
+        student_answer = str(self.df.iloc[index]['answer'])
+        score = self.df.iloc[index]['score']
 
         # concat input text
         question = question if question is not None else "" # handle some dataset that doesn't have question
@@ -33,31 +30,28 @@ class EssayDataset(Dataset):
             return_tensors = 'pt'
         )
 
-        return {
-            'input_ids': encoding['input_ids'].flatten(),
-            'attention_mask': encoding['attention_mask'].flatten(),
-            'scores': torch.tensor(score, dtype=torch.float)
-        }
-    
-    def get_token_type_ids(input_ids):
         # create token_type_ids manually, this token is used to differentiate between segment
         token_type_ids = []
         current_token = 0
-        for token in input_ids:
+        for token in encoding['input_ids'].flatten():
             if(token == 0):
                 token_type_ids.append(0)
                 continue
             token_type_ids.append(current_token)
-            if(token == 102):
+            if(token == 102 or token == 3): # 102 is token SEP for bert-base and 3 is for albert-lite
                 current_token += 1
         
-        return torch.tensor(token_type_ids)
+        return {
+            'input_ids': encoding['input_ids'].flatten(),
+            'attention_mask': encoding['attention_mask'].flatten(),
+            'scores': torch.tensor(score, dtype=torch.float),
+            'token_type_ids': torch.tensor(token_type_ids)
+        }
     
     def get_max_length(self, index):
-        print(index)
-        question = str(self.questions[index])
-        reference_answer = str(self.reference_answers[index])
-        student_answer = str(self.student_answers[index])
+        question = str(self.df.iloc[index]['question'])
+        reference_answer = str(self.df.iloc[index]['reference_answer'])
+        student_answer = str(self.df.iloc[index]['answer'])
 
         # concat input text
         question = question if question is not None else "" # handle some dataset that doesn't have question
