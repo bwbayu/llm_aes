@@ -12,9 +12,6 @@ class BertRegressionModel(nn.Module):
 
     def forward(self, input_ids, attention_mask=None, token_type_ids=None):
         outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)
-        # print("output:", outputs)
-        # print("last hidden state:", outputs.last_hidden_state)
         cls_embedding = outputs.last_hidden_state[:, 0, :]
-        # print("cls embedding", cls_embedding)
         score = self.regression_layer(cls_embedding)
         return score

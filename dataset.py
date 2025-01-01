@@ -14,11 +14,11 @@ class EssayDataset(Dataset):
         question = str(self.df.iloc[index]['question'])
         reference_answer = str(self.df.iloc[index]['reference_answer'])
         student_answer = str(self.df.iloc[index]['answer'])
-        score = self.df.iloc[index]['score']
+        score = self.df.iloc[index]['normalized_score']
 
         # concat input text
         question = question if question is not None else "" # handle some dataset that doesn't have question
-        text = f"[CLS] Question: {question} [SEP] Reference Answer: {reference_answer} [SEP] Student Answer: {student_answer} [SEP]"
+        text = f"[CLS] Question: {question} Reference Answer: {reference_answer} [SEP] Student Answer: {student_answer} [SEP]"
 
         encoding = self.tokenizer.encode_plus(
             text,
