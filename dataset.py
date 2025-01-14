@@ -17,7 +17,7 @@ class EssayDataset(Dataset):
         score = self.df.iloc[index]['normalized_score']
 
         # concat input text
-        question = question if question is not None else "" # handle some dataset that doesn't have question
+        question = question if question is not None else "[NO_QUESTION]" # handle some dataset that doesn't have question
         text = f"[CLS] Question: {question} Reference Answer: {reference_answer} [SEP] Student Answer: {student_answer} [SEP]"
 
         encoding = self.tokenizer.encode_plus(
@@ -54,8 +54,8 @@ class EssayDataset(Dataset):
         student_answer = str(self.df.iloc[index]['answer'])
 
         # concat input text
-        question = question if question is not None else "" # handle some dataset that doesn't have question
-        text = f"Question: {question} [SEP] Reference Answer: {reference_answer} [SEP] Student Answer: {student_answer}"
+        question = question if question is not None else "[NO_QUESTION]" # handle some dataset that doesn't have question
+        text = f"Question: {question} Reference Answer: {reference_answer} [SEP] Student Answer: {student_answer}"
         encoding = self.tokenizer.encode_plus(
             text,
             add_special_tokens=True,
