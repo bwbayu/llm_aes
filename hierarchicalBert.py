@@ -21,6 +21,9 @@ class HierarchicalBert(nn.Module):
                 input_ids = chunk['input_ids'].unsqueeze(0).to(self.bert.device)
                 attention_mask = chunk['attention_mask'].unsqueeze(0).to(self.bert.device)
                 token_type_ids = chunk['token_type_ids'].unsqueeze(0).to(self.bert.device)
+                # print(f"Size of input_ids: {input_ids.size()} | Device of input_ids: {input_ids.device}")
+                # print(f"Size of attention_mask: {attention_mask.size()} | Device of attention_mask: {attention_mask.device}")
+                # print(f"Size of token_type_ids: {token_type_ids.size()} | Device of token_type_ids: {token_type_ids.device} | Max Token Type ID: {token_type_ids.max()}, Min Token Type ID: {token_type_ids.min()}")
 
                 # masuk ke arsitektur bert -> outputnya [max_seq x [768 token]]
                 outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)

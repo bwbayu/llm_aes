@@ -15,7 +15,7 @@ class LongEssayDataset(Dataset):
         question = str(self.df.iloc[index].get('question', "[NO_QUESTION]"))
         reference_answer = str(self.df.iloc[index]['reference_answer'])
         student_answer = str(self.df.iloc[index]['answer'])
-        score = self.df.iloc[index]['normalized_score']
+        score = self.df.iloc[index]['normalized_score']*100
 
         if(self.df.iloc[index]['max_length1'] > (self.max_len-2)):
             # separate 2 segment for input text
@@ -60,20 +60,23 @@ class LongEssayDataset(Dataset):
             # create token_type_ids manually, this token is used to differentiate between segment
             token_type_ids = []
             current_token = 0
+            flag = 0
             for token in encoding['input_ids'].flatten():
                 if(token == 0):
                     token_type_ids.append(0)
                     continue
                 token_type_ids.append(current_token)
-                if(token == 102 or token == 3): # 102 is token SEP for bert-base and 3 is for albert-lite
-                    current_token += 1
+                if((token == 102 or token == 3) and flag == 0): # 102 is token SEP for bert-base and 3 is for albert-lite
+                    current_token = 1
+                    flag = 1
             
-            return {
+            chunks = [{
                 'input_ids': encoding['input_ids'].flatten(),
                 'attention_mask': encoding['attention_mask'].flatten(),
-                'scores': torch.tensor(score, dtype=torch.float),
                 'token_type_ids': torch.tensor(token_type_ids)
-            }
+            }]
+
+            return chunks, torch.tensor(score, dtype=torch.float)
     
     def create_token_type(self, input_ids, segment_num):
         # create token_type_ids embedding manually
