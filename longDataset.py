@@ -12,14 +12,13 @@ class LongEssayDataset(Dataset):
         return len(self.df)
     
     def __getitem__(self, index):
-        question = str(self.df.iloc[index]['question'])
+        question = str(self.df.iloc[index].get('question', "[NO_QUESTION]"))
         reference_answer = str(self.df.iloc[index]['reference_answer'])
         student_answer = str(self.df.iloc[index]['answer'])
         score = self.df.iloc[index]['normalized_score']
 
         if(self.df.iloc[index]['max_length1'] > (self.max_len-2)):
             # separate 2 segment for input text
-            question = question if question is not None else "[NO_QUESTION]" # handle some dataset that doesn't have question
             text1 = f"Question: {question} Reference Answer: {reference_answer}"
             text2 = f"Student Answer: {student_answer}"
 
@@ -37,27 +36,15 @@ class LongEssayDataset(Dataset):
                 return_tensors='pt'
             )
 
-            # get token_type_ids for each segment
-            # segment 1
-            input_ids1 = tokens1['input_ids'].flatten()
-            attention_mask1 = tokens1['attention_mask'].flatten()
-            token_type_ids1 = self.create_token_type(input_ids1, 0)
-
-            # segment 2
-            input_ids2 = tokens2['input_ids'].flatten()
-            attention_mask2 = tokens2['attention_mask'].flatten()
-            token_type_ids2 = self.create_token_type(input_ids2, 1)
-            print("len tensor : ", str(len(input_ids1)+len(input_ids2)))
             # create chunk for each segment
-            chunks_segment1 = self.create_chunks(input_ids1, attention_mask1, token_type_ids1, segment_num=0, stride=self.max_len-self.overlapping)
-            chunks_segment2 = self.create_chunks(input_ids2, attention_mask2, token_type_ids2, segment_num=1, stride=self.max_len-self.overlapping)
+            chunks_segment1 = self.create_chunks(tokens1, segment_num=0)
+            chunks_segment2 = self.create_chunks(tokens2, segment_num=1)
             chunks = []
             chunks = chunks_segment1 + chunks_segment2
 
             return chunks, torch.tensor(score, dtype=torch.float)
         else:
             # concat input text
-            question = question if question is not None else "[NO_QUESTION]" # handle some dataset that doesn't have question
             text = f"[CLS] Question: {question} Reference Answer: {reference_answer} [SEP] Student Answer: {student_answer} [SEP]"
 
             encoding = self.tokenizer.encode_plus(
@@ -98,13 +85,15 @@ class LongEssayDataset(Dataset):
             token_type_ids.append(segment_num)
         return torch.tensor(token_type_ids)
     
-    def create_chunks(self,input_ids, attention_mask, token_type_ids, segment_num, stride):
+    def create_chunks(self, tokens, segment_num):
+        input_ids, attention_mask = tokens['input_ids'].flatten(), tokens['attention_mask'].flatten()
+        token_type_ids = self.create_token_type(input_ids, segment_num)
+        stride=self.max_len-self.overlapping
         chunk = []
         cls_token = torch.tensor([2])
         sep_token = torch.tensor([3])
 
         for i in range(0, len(input_ids), stride):
-            flag_padding = 0
             chunk_ids = input_ids[i: i+(self.max_len - 2)]
             chunk_mask = attention_mask[i: i+(self.max_len - 2)]
             chunk_type = token_type_ids[i: i+(self.max_len - 2)]
@@ -127,7 +116,6 @@ class LongEssayDataset(Dataset):
 
             # menambahkan padding pada chunk terakhir agar memastikan panjang tiap chunk itu sama
             if len(chunk_ids) < (self.max_len):
-                flag_padding = 1
                 padding_length = (self.max_len) - len(chunk_ids)
 
                 # assign padding 0
@@ -140,9 +128,5 @@ class LongEssayDataset(Dataset):
                 'attention_mask': chunk_mask,
                 'token_type_ids': chunk_type
             })
-
-            if flag_padding == 1:
-                # stop stride chunk
-                break
 
         return chunk
