@@ -1,0 +1,23 @@
+- model varian BERT hanya mendukung 2 segment -> pertanyaan vs jawaban sehingga jika ingin menggunakan 3 segment seperti teks berikut :
+teks = "[CLS] Question: {question} [SEP] Reference Answer: {reference_answer} [SEP] Student Answer: {student_answer} [SEP]" -> maka hal ini tidak bisa dilakukan
+
+Solusi : 
+1. menggabungkan question dan reference_answer sehingga menjadi seperti ini
+teks = "[CLS] Question: {question} Reference Answer: {reference_answer} [SEP] Student Answer: {student_answer} [SEP]"
+2. menambahkan custom embedding [ada di cell 2 file trash.ipynb]
+3. menggunakan arsitektur lain seperti XLNET, T5 dan GPT
+
+Asumsi :
+1. jika hanya untuk fine-tuning kemungkinan besar model belum terlalu belajar banyak mengenai layer ini sehingga lebih bagus untuk melakukan pretraining untuk 3 segment
+
+- ketidakonsistenan format dataset, sebagian ada QRS dan lainnya hanya RS 
+-> perlu ada experiment apakah lebih baik mencampur dataset yang memiliki QRS dan RS saja atau memisah proses training untuk dataset QRS dahulu kemudian RS saja
+
+Solusi : 
+1. bagi dataset -> fine-tuning pada 2 dataset
+2. tetap menggunakan 1 format yaitu QRS tapi jika tidak ada "question" maka tambahkan token "[NO_QUESTION]" daripada ""
+3. menyamakan menjadi 1 format yaitu RS
+4. multi-task learning, feed model with 2 different data and have 2 different output regression layer for each type of dataset
+
+- Perbedaan antara menggunakan self-attention dengan masking diagonal self-attention pada attention pooling layer BERT
+-> perlu ada eksperimen pengaruh ke modelnya apa ?

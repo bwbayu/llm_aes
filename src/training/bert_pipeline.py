@@ -1,13 +1,15 @@
 import os
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
+import sys
+# sys.path.append(os.path.join(os.getcwd(), '..', '..'))
 import pandas as pd
 import numpy as np
 from transformers import BertTokenizer
 from torch.utils.data import DataLoader
 import torch
 from torch.optim import AdamW
-from longDataset import LongEssayDataset
-from hierarchicalBert import HierarchicalBert
+from src.data.longDataset import LongEssayDataset
+from src.models.hierarchicalBert import HierarchicalBert
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import cohen_kappa_score
 import time
@@ -38,6 +40,7 @@ class TrainingBertPipeline:
         self.results_epoch = results_epoch
 
     def split_dataset(self, valid_size, test_size):
+        print("split dataset run...")
         subset_dataset = self.df['dataset'].unique()
         splits = {}
         # split dataset for each "category"
@@ -62,6 +65,7 @@ class TrainingBertPipeline:
         return train_dataset, valid_dataset, test_dataset
 
     def create_dataset(self, train_dataset, valid_dataset, test_dataset):
+        print("create dataset run...")
         train_data = LongEssayDataset(train_dataset, self.tokenizer, 512, self.config['overlapping'])
         valid_data = LongEssayDataset(valid_dataset, self.tokenizer, 512, self.config['overlapping'])
         test_data = LongEssayDataset(test_dataset, self.tokenizer, 512, self.config['overlapping'])
@@ -69,6 +73,7 @@ class TrainingBertPipeline:
         return train_data, valid_data, test_data
     
     def create_dataloader(self, train_data, valid_data, test_data):
+        print("create dataloader run...")
         train_dataloader = DataLoader(train_data, batch_size=self.config["batch_size"], collate_fn=lambda x: list(zip(*x)))
         valid_dataloader = DataLoader(valid_data, batch_size=self.config["batch_size"], collate_fn=lambda x: list(zip(*x)))
         test_dataloader = DataLoader(test_data, batch_size=self.config["batch_size"], collate_fn=lambda x: list(zip(*x)))
@@ -87,14 +92,14 @@ class TrainingBertPipeline:
         all_predictions = []
         all_targets = []
         with torch.no_grad():
-            for batch, targets in tqdm(dataloader, desc=f"Running {mode}", leave=False):
+            for batch, targets in dataloader:
                 try:
                     targets = torch.stack(targets).to(device)
                     predictions = self.model(batch).squeeze(1)
                     loss = self.criterion(predictions, targets)
                     total_mse_loss += loss.item()
-                    all_predictions.extend(predictions.cpu().numpy())
-                    all_targets.extend(targets.cpu().numpy())
+                    all_predictions.extend(predictions.detach().cpu().numpy())
+                    all_targets.extend(targets.detach().cpu().numpy())
                 except Exception as e:
                     logging.error(f"Error during {mode}: {str(e)}")
                     torch.cuda.empty_cache()
@@ -114,13 +119,14 @@ class TrainingBertPipeline:
         # init start training time
         start_time = time.time()
         # experiment process
-        for epoch in range(self.config["epochs"]):
-            print(f"====== Training Epoch {epoch + 1}/{self.config["epochs"]} ======")
+        epochs = self.config["epochs"]
+        for epoch in range(epochs):
+            print(f"====== Training Epoch {epoch + 1}/{epochs} ======")
             self.model.train()
             train_mse_loss = 0
             all_predictions = []
             all_targets = []
-            for batch, targets in tqdm(train_dataloader, desc="Training", leave=False):
+            for batch, targets in train_dataloader:
                 try:
                     self.optimizer.zero_grad()
                     targets = torch.stack(targets).to(device)
@@ -129,8 +135,8 @@ class TrainingBertPipeline:
                     loss.backward()
                     self.optimizer.step()
                     train_mse_loss += loss.item()
-                    all_predictions.extend(predictions.cpu().numpy())
-                    all_targets.extend(targets.cpu().numpy())
+                    all_predictions.extend(predictions.detach().cpu().numpy())
+                    all_targets.extend(targets.detach().cpu().numpy())
                 except Exception as e:
                     logging.error(f"Error during training: {str(e)}")
                     torch.cuda.empty_cache()
@@ -171,66 +177,71 @@ class TrainingBertPipeline:
 
     @staticmethod
     def save_csv(data, filename):
+        os.makedirs(os.path.dirname(filename), exist_ok=True)
         file_exists = os.path.exists(filename)
         pd.DataFrame(data).to_csv(
             filename, mode="a" if file_exists else "w", header=not file_exists, index=False
         )
 
-def main():
-    # Load dataset
-    df = pd.read_csv("dataset/aes_dataset.csv")
+# def main():
+#     # Load dataset
+#     df = pd.read_csv("data/aes_dataset.csv")
 
-    # experiment result
-    results = []
-    results_epoch = []
+#     # experiment result
+#     results = []
+#     results_epoch = []
 
-    # hyperparameter configuration
-    batch_sizes = [4, 8]
-    overlappings = [0, 64, 128]
-    epochs_list = [5, 10]
-    learning_rates = [1e-5, 2e-5, 5e-5]
-    idx = 0  # index untuk setiap kombinasi
+#     # hyperparameter configuration
+#     batch_sizes = [4, 8]
+#     overlappings = [0, 64, 128]
+#     epochs_list = [5, 10]
+#     learning_rates = [1e-5, 2e-5, 5e-5]
+#     idx = 0  # index untuk setiap kombinasi
 
-    for batch_size in tqdm(batch_sizes, desc="Batch Size"):
-        for overlapping in tqdm(overlappings, desc="Overlapping", leave=False):
-            for num_epochs in tqdm(epochs_list, desc="Epochs", leave=False):
-                for lr in tqdm(learning_rates, desc="Learning Rate", leave=False):
-                    config = {
-                        "df": df,
-                        "model_name": "indobenchmark/indobert-lite-base-p2",
-                        "overlapping": overlapping,
-                        "batch_size": batch_size,
-                        "learning_rate": lr,
-                        "epochs": num_epochs,
-                        "config_id": idx
-                    }
+#     for batch_size in tqdm(batch_sizes, desc="Batch Size"):
+#         for overlapping in tqdm(overlappings, desc="Overlapping", leave=False):
+#             for num_epochs in tqdm(epochs_list, desc="Epochs", leave=False):
+#                 for lr in tqdm(learning_rates, desc="Learning Rate", leave=False):
+#                     config = {
+#                         "df": df,
+#                         "model_name": "indobenchmark/indobert-lite-base-p2",
+#                         "overlapping": overlapping,
+#                         "batch_size": batch_size,
+#                         "learning_rate": lr,
+#                         "epochs": num_epochs,
+#                         "config_id": idx
+#                     }
 
-                    logging.info(
-                        f"Running configuration: config_id={idx}, batch_size={batch_size}, "
-                        f"overlapping={overlapping}, epochs={num_epochs}, learning_rate={lr}"
-                    )
+#                     logging.info(
+#                         f"Running configuration: config_id={idx}, batch_size={batch_size}, "
+#                         f"overlapping={overlapping}, epochs={num_epochs}, learning_rate={lr}"
+#                     )
                     
-                    print(
-                        f"\nRunning configuration: config_id={idx}, batch_size={batch_size}, "
-                        f"overlapping={overlapping}, epochs={num_epochs}, learning_rate={lr}"
-                    )
+#                     print(
+#                         f"\nRunning configuration: config_id={idx}, batch_size={batch_size}, "
+#                         f"overlapping={overlapping}, epochs={num_epochs}, learning_rate={lr}"
+#                     )
                     
-                    try:
-                        pipeline = TrainingBertPipeline(config, results, results_epoch)
-                        pipeline.run_training()
+#                     try:
+#                         pipeline = TrainingBertPipeline(config, results, results_epoch)
+#                         pipeline.run_training()
 
-                        # Save results
-                        TrainingBertPipeline.save_csv(results, f"output/results.csv")
-                        TrainingBertPipeline.save_csv(results_epoch, f"output/results_epoch.csv")
-                    except Exception as e:
-                        logging.error(f"Error in config_id={idx}: {str(e)}")
-                        print(f"Error in config_id={idx}: {str(e)}")
-                        torch.cuda.empty_cache()
-                    finally:
-                        # Clear GPU memory after every configuration
-                        del pipeline.model
-                        del pipeline.tokenizer
-                        del pipeline.optimizer
-                        torch.cuda.empty_cache()
+#                         # Save results
+#                         # Dapatkan root project
+#                         ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+#                         results_path = os.path.join(ROOT_DIR, "experiments/results/results.csv")
+#                         results_epoch_path = os.path.join(ROOT_DIR, "experiments/results/results_epoch.csv")
+#                         TrainingBertPipeline.save_csv(results, results_path)
+#                         TrainingBertPipeline.save_csv(results_epoch, results_epoch_path)
+#                     except Exception as e:
+#                         logging.error(f"Error in config_id={idx}: {str(e)}")
+#                         print(f"Error in config_id={idx}: {str(e)}")
+#                         torch.cuda.empty_cache()
+#                     finally:
+#                         # Clear GPU memory after every configuration
+#                         del pipeline.model
+#                         del pipeline.tokenizer
+#                         del pipeline.optimizer
+#                         torch.cuda.empty_cache()
 
-                    idx += 1
+#                     idx += 1
