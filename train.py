@@ -220,8 +220,8 @@ def main():
                         pipeline.run_training()
 
                         # Save results
-                        TrainingBertPipeline.save_csv(results, f"output/results_{idx}.csv")
-                        TrainingBertPipeline.save_csv(results_epoch, f"output/results_epoch_{idx}.csv")
+                        TrainingBertPipeline.save_csv(results, f"output/results.csv")
+                        TrainingBertPipeline.save_csv(results_epoch, f"output/results_epoch.csv")
                     except Exception as e:
                         logging.error(f"Error in config_id={idx}: {str(e)}")
                         print(f"Error in config_id={idx}: {str(e)}")
