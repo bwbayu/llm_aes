@@ -2,10 +2,11 @@ from torch.utils.data import Dataset
 import torch
 
 class EssayDataset(Dataset):
-    def __init__(self, df, tokenizer, max_len):
+    def __init__(self, df, tokenizer, max_len, type):
         self.df = df
         self.tokenizer = tokenizer
         self.max_len = max_len
+        self.type = type
 
     def __len__(self):
         return len(self.df)
@@ -14,11 +15,11 @@ class EssayDataset(Dataset):
         question = str(self.df.iloc[index]['question'])
         reference_answer = str(self.df.iloc[index]['reference_answer'])
         student_answer = str(self.df.iloc[index]['answer'])
-        score = self.df.iloc[index]['normalized_score']
+        score = self.df.iloc[index]['normalized_score2']
 
         # concat input text
         question = question if question is not None else "[NO_QUESTION]" # handle some dataset that doesn't have question
-        text = f"[CLS] Question: {question} Reference Answer: {reference_answer} [SEP] Student Answer: {student_answer} [SEP]"
+        text = f"{self.tokenizer.cls_token} Question: {question} Reference Answer: {reference_answer} {self.tokenizer.sep_token} Student Answer: {student_answer} {self.tokenizer.sep_token}"
 
         encoding = self.tokenizer.encode_plus(
             text,
@@ -33,13 +34,15 @@ class EssayDataset(Dataset):
         # create token_type_ids manually, this token is used to differentiate between segment
         token_type_ids = []
         current_token = 0
+        flag = 0
         for token in encoding['input_ids'].flatten():
-            if(token == 0):
+            if(((self.type == "BERT" or self.type == "ALBERT") and token == 0) or (self.type == "LONGFORMER" and token == 1)):
                 token_type_ids.append(0)
                 continue
             token_type_ids.append(current_token)
-            if(token == 102 or token == 3): # 102 is token SEP for bert-base and 3 is for albert-lite
+            if((self.type == "BERT" and token == 102) or (self.type == "ALBERT" and token == 3) or (self.type == "LONGFORMER" and token == 2) and flag == 0): 
                 current_token += 1
+                flag = 1
         
         return {
             'input_ids': encoding['input_ids'].flatten(),

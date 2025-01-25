@@ -15,7 +15,7 @@ class LongEssayDataset(Dataset):
         question = str(self.df.iloc[index].get('question', "[NO_QUESTION]"))
         reference_answer = str(self.df.iloc[index]['reference_answer'])
         student_answer = str(self.df.iloc[index]['answer'])
-        score = self.df.iloc[index]['normalized_score']*100
+        score = self.df.iloc[index]['normalized_score2']
 
         if(self.df.iloc[index]['max_length1'] > (self.max_len-2)):
             # separate 2 segment for input text
@@ -45,7 +45,7 @@ class LongEssayDataset(Dataset):
             return chunks, torch.tensor(score, dtype=torch.float)
         else:
             # concat input text
-            text = f"[CLS] Question: {question} Reference Answer: {reference_answer} [SEP] Student Answer: {student_answer} [SEP]"
+            text = f"{self.tokenizer.cls_token} Question: {question} Reference Answer: {reference_answer} {self.tokenizer.sep_token} Student Answer: {student_answer} {self.tokenizer.sep_token}"
 
             encoding = self.tokenizer.encode_plus(
                 text,
@@ -60,7 +60,7 @@ class LongEssayDataset(Dataset):
             # create token_type_ids manually, this token is used to differentiate between segment
             token_type_ids = []
             current_token = 0
-            flag = 0
+            flag = 0 # flag buat nandain tokennya udh nambah 1 atau belum, kalau udh nambah 1 maka stop tidak boleh ada token > 1
             for token in encoding['input_ids'].flatten():
                 if(token == 0):
                     token_type_ids.append(0)
@@ -93,8 +93,8 @@ class LongEssayDataset(Dataset):
         token_type_ids = self.create_token_type(input_ids, segment_num)
         stride=self.max_len-self.overlapping
         chunk = []
-        cls_token = torch.tensor([2])
-        sep_token = torch.tensor([3])
+        cls_token = torch.tensor([2]) # 101 untuk type bert | 2 untuk type albert
+        sep_token = torch.tensor([3]) # 102 untuk type bert | 3 untuk type albert
 
         for i in range(0, len(input_ids), stride):
             chunk_ids = input_ids[i: i+(self.max_len - 2)]
