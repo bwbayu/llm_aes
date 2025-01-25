@@ -2,11 +2,11 @@ import torch
 import torch.nn as nn
 from transformers import BertModel, AutoModel
 
-class BertRegressionModel(nn.Module):
-    def __init__(self, bert_model_name='bert-base-uncased'):
+class RegressionModel(nn.Module):
+    def __init__(self, model_name='bert-base-uncased'):
         super().__init__()
         # load pretrained model
-        self.bert = AutoModel.from_pretrained(bert_model_name)
+        self.bert = AutoModel.from_pretrained(model_name)
         # add regression layer
         self.regression_layer = nn.Linear(self.bert.config.hidden_size, 1) # 768 x 1 -> output layer regression
 

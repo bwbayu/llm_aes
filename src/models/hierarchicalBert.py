@@ -3,10 +3,10 @@ import torch.nn as nn
 from transformers import AutoModel
 
 class HierarchicalBert(nn.Module):
-    def __init__(self, pretrained_model='bert-base-uncased', *args, **kwargs):
+    def __init__(self, model_name='bert-base-uncased', *args, **kwargs):
         super().__init__(*args, **kwargs)
         # load pretrained model
-        self.bert = AutoModel.from_pretrained(pretrained_model)
+        self.bert = AutoModel.from_pretrained(model_name)
         # add regression layer
         self.regression_layer = nn.Linear(self.bert.config.hidden_size, 1) # 768 x 1
 
