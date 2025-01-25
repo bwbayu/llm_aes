@@ -55,7 +55,7 @@ class EssayDataset(Dataset):
 
         # concat input text
         question = question if question is not None else "[NO_QUESTION]" # handle some dataset that doesn't have question
-        text = f"Question: {question} Reference Answer: {reference_answer} [SEP] Student Answer: {student_answer}"
+        text = f"Question: {question} Reference Answer: {reference_answer} {self.tokenizer.sep_token} Student Answer: {student_answer}"
         encoding = self.tokenizer.encode_plus(
             text,
             add_special_tokens=True,

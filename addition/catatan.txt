@@ -21,3 +21,5 @@ Solusi :
 
 - Perbedaan antara menggunakan self-attention dengan masking diagonal self-attention pada attention pooling layer BERT
 -> perlu ada eksperimen pengaruh ke modelnya apa ?
+
+- experiment berbagai tokenizer dari yg multilingual, pretrained, dan fine-tuned tokenizer (en-id) untuk bert dan longformer
