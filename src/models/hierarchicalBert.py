@@ -48,6 +48,9 @@ class HierarchicalBert(nn.Module):
 
     def attention_pooling(self, chunk_outputs):
         """Menggabungkan output chunks menggunakan attention pooling."""
+        if len(chunk_outputs) == 1:
+            # Skip attention pooling and return the single chunk
+            return chunk_outputs[0].squeeze(0)
         stacked_chunks = torch.cat(chunk_outputs, dim=0)  # [num_chunks, hidden_size]
         attention_weights = torch.nn.functional.softmax(stacked_chunks @ stacked_chunks.T, dim=1)
         pooled_output = attention_weights @ stacked_chunks
