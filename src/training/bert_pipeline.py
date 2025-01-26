@@ -4,7 +4,7 @@ import sys
 # sys.path.append(os.path.join(os.getcwd(), '..', '..'))
 import pandas as pd
 import numpy as np
-from transformers import BertTokenizer
+from transformers import BertTokenizer, AutoTokenizer
 from torch.utils.data import DataLoader
 import torch
 from torch.optim import AdamW
@@ -12,9 +12,12 @@ from src.data.longDataset import LongEssayDataset
 from src.models.hierarchicalBert import HierarchicalBert
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import cohen_kappa_score
+from peft import get_peft_model, LoraConfig
 import time
 import logging
-from tqdm import tqdm
+
+SEED = 42
+torch.manual_seed(SEED)
 
 # logging setup
 logging.basicConfig(
@@ -29,8 +32,24 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 class TrainingBertPipeline:
     def __init__(self, config, results, results_epoch):
         self.df = config["df"]
-        self.tokenizer = BertTokenizer.from_pretrained(config["model_name"])
+        # implement fallback if there is model that require spesific Tokenizer
+        try:
+            self.tokenizer = AutoTokenizer.from_pretrained(config["model_name"])
+        except TypeError: # "indobenchmark/indobert-lite-base-p2" --> this model only works with BertTokenizer
+            self.tokenizer = BertTokenizer.from_pretrained(config["model_name"])
+        
         self.model = HierarchicalBert(config["model_name"]).to(device)
+        # LoRA Configuration if there is a key that needed
+        if config.get("lora_rank") is not None and config.get("lora_alpha") is not None:
+            peft_config = LoraConfig(
+                task_type="SEQ_CLS",
+                inference_mode=False,
+                r=config["lora_rank"],
+                lora_alpha=config["lora_alpha"],
+                lora_dropout=0.1,
+                target_modules=["query", "key", "value"],
+            )
+            self.model = get_peft_model(self.model, peft_config)
         # konfigurasi parameter
         self.optimizer = AdamW(self.model.parameters(), lr=config["learning_rate"])
         self.criterion = torch.nn.MSELoss()
@@ -48,8 +67,8 @@ class TrainingBertPipeline:
             subset_df = self.df[self.df['dataset'] == subset]
 
             # split dataset
-            train, temp = train_test_split(subset_df, test_size=valid_size, random_state=42)
-            valid, test = train_test_split(temp, test_size=test_size, random_state=42)
+            train, temp = train_test_split(subset_df, test_size=valid_size, random_state=SEED)
+            valid, test = train_test_split(temp, test_size=test_size, random_state=SEED)
 
             splits[subset] = {
                 'train': train,
@@ -66,17 +85,17 @@ class TrainingBertPipeline:
 
     def create_dataset(self, train_dataset, valid_dataset, test_dataset):
         print("create dataset run...")
-        train_data = LongEssayDataset(train_dataset, self.tokenizer, 512, self.config['overlapping'])
-        valid_data = LongEssayDataset(valid_dataset, self.tokenizer, 512, self.config['overlapping'])
-        test_data = LongEssayDataset(test_dataset, self.tokenizer, 512, self.config['overlapping'])
+        train_data = LongEssayDataset(train_dataset, self.tokenizer, self.config['max_seq_len'], self.config['overlapping'], self.config['col_length'])
+        valid_data = LongEssayDataset(valid_dataset, self.tokenizer, self.config['max_seq_len'], self.config['overlapping'], self.config['col_length'])
+        test_data = LongEssayDataset(test_dataset, self.tokenizer, self.config['max_seq_len'], self.config['overlapping'], self.config['col_length'])
 
         return train_data, valid_data, test_data
     
     def create_dataloader(self, train_data, valid_data, test_data):
         print("create dataloader run...")
-        train_dataloader = DataLoader(train_data, batch_size=self.config["batch_size"], collate_fn=lambda x: list(zip(*x)))
-        valid_dataloader = DataLoader(valid_data, batch_size=self.config["batch_size"], collate_fn=lambda x: list(zip(*x)))
-        test_dataloader = DataLoader(test_data, batch_size=self.config["batch_size"], collate_fn=lambda x: list(zip(*x)))
+        train_dataloader = DataLoader(train_data, batch_size=self.config["batch_size"], collate_fn=lambda x: list(zip(*x)), shuffle=True, generator=torch.Generator().manual_seed(SEED),)
+        valid_dataloader = DataLoader(valid_data, batch_size=self.config["batch_size"], collate_fn=lambda x: list(zip(*x)), shuffle=True, generator=torch.Generator().manual_seed(SEED),)
+        test_dataloader = DataLoader(test_data, batch_size=self.config["batch_size"], collate_fn=lambda x: list(zip(*x)), shuffle=True, generator=torch.Generator().manual_seed(SEED),)
 
         return train_dataloader, valid_dataloader, test_dataloader
     
@@ -163,17 +182,28 @@ class TrainingBertPipeline:
         print(f"Test Loss: {test_loss:.4f}, Test QWK: {test_qwk:.4f}")
 
         # save csv per training configuration
-        self.results.append({
-            "config_id": self.config["config_id"],
-            "batch_size": self.config["batch_size"],
-            "overlapping": self.config['overlapping'],
-            "epochs": self.config["epochs"],
-            "learning_rate": self.config["learning_rate"],
+        result = {
+            "config_id": self.config.get("config_id"),
+            "model_name": self.config.get("model_name"),
+            "batch_size": self.config.get("batch_size"),
+            "overlapping": self.config.get("overlapping"),
+            "epochs": self.config.get("epochs"),
+            "learning_rate": self.config.get("learning_rate"),
             "training_time": time.time() - start_time,
-            "peak_memory": torch.cuda.max_memory_allocated(device) / (1024 ** 2), # Convert to MB
+            "peak_memory": torch.cuda.max_memory_allocated(device) / (1024 ** 2),  # Convert to MB
             "test_mse": test_loss,
             "test_qwk": test_qwk,
-        })
+        }
+
+        # Jika ada konfigurasi LoRA, tambahkan ke hasil yang sama
+        if self.config.get("lora_rank") is not None and self.config.get("lora_alpha") is not None:
+            result.update({
+                "lora_rank": self.config.get("lora_rank"),
+                "lora_alpha": self.config.get("lora_alpha"),
+            })
+
+        # Tambahkan hasil ke dalam list results
+        self.results.append(result)
 
     @staticmethod
     def save_csv(data, filename):
@@ -182,66 +212,3 @@ class TrainingBertPipeline:
         pd.DataFrame(data).to_csv(
             filename, mode="a" if file_exists else "w", header=not file_exists, index=False
         )
-
-# def main():
-#     # Load dataset
-#     df = pd.read_csv("data/aes_dataset.csv")
-
-#     # experiment result
-#     results = []
-#     results_epoch = []
-
-#     # hyperparameter configuration
-#     batch_sizes = [4, 8]
-#     overlappings = [0, 64, 128]
-#     epochs_list = [5, 10]
-#     learning_rates = [1e-5, 2e-5, 5e-5]
-#     idx = 0  # index untuk setiap kombinasi
-
-#     for batch_size in tqdm(batch_sizes, desc="Batch Size"):
-#         for overlapping in tqdm(overlappings, desc="Overlapping", leave=False):
-#             for num_epochs in tqdm(epochs_list, desc="Epochs", leave=False):
-#                 for lr in tqdm(learning_rates, desc="Learning Rate", leave=False):
-#                     config = {
-#                         "df": df,
-#                         "model_name": "indobenchmark/indobert-lite-base-p2",
-#                         "overlapping": overlapping,
-#                         "batch_size": batch_size,
-#                         "learning_rate": lr,
-#                         "epochs": num_epochs,
-#                         "config_id": idx
-#                     }
-
-#                     logging.info(
-#                         f"Running configuration: config_id={idx}, batch_size={batch_size}, "
-#                         f"overlapping={overlapping}, epochs={num_epochs}, learning_rate={lr}"
-#                     )
-                    
-#                     print(
-#                         f"\nRunning configuration: config_id={idx}, batch_size={batch_size}, "
-#                         f"overlapping={overlapping}, epochs={num_epochs}, learning_rate={lr}"
-#                     )
-                    
-#                     try:
-#                         pipeline = TrainingBertPipeline(config, results, results_epoch)
-#                         pipeline.run_training()
-
-#                         # Save results
-#                         # Dapatkan root project
-#                         ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
-#                         results_path = os.path.join(ROOT_DIR, "experiments/results/results.csv")
-#                         results_epoch_path = os.path.join(ROOT_DIR, "experiments/results/results_epoch.csv")
-#                         TrainingBertPipeline.save_csv(results, results_path)
-#                         TrainingBertPipeline.save_csv(results_epoch, results_epoch_path)
-#                     except Exception as e:
-#                         logging.error(f"Error in config_id={idx}: {str(e)}")
-#                         print(f"Error in config_id={idx}: {str(e)}")
-#                         torch.cuda.empty_cache()
-#                     finally:
-#                         # Clear GPU memory after every configuration
-#                         del pipeline.model
-#                         del pipeline.tokenizer
-#                         del pipeline.optimizer
-#                         torch.cuda.empty_cache()
-
-#                     idx += 1
