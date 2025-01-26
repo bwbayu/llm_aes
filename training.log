@@ -1,1 +1,22 @@
 2025-01-20 14:12:53,703 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 14:28:53,795 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 14:31:20,238 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 14:32:32,751 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 14:36:24,201 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 15:17:52,066 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 15:51:47,335 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 16:23:39,893 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 16:55:11,550 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 16:58:36,863 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 17:01:08,121 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 17:05:08,162 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 17:05:57,288 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 17:06:57,567 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 17:07:37,447 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 17:11:49,223 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 17:11:59,110 - ERROR - Error in config_id=0: 'list' object has no attribute 'shape'
+2025-01-26 17:12:53,462 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 17:13:03,084 - ERROR - Error in config_id=0: 'list' object has no attribute 'size'
+2025-01-26 17:13:43,672 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 17:17:16,566 - INFO - Running configuration: config_id=0, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
+2025-01-26 17:50:17,974 - INFO - Running configuration: config_id=0, model_name=google-bert/bert-base-multilingual-cased, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
