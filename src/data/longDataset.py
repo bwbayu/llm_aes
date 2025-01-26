@@ -2,11 +2,16 @@ from torch.utils.data import Dataset
 import torch
 
 class LongEssayDataset(Dataset):
-    def __init__(self, dataframe, tokenizer, max_len, overlapping):
+    def __init__(self, dataframe, tokenizer, max_len, overlapping, col_length):
         self.df = dataframe
         self.tokenizer = tokenizer
         self.max_len = max_len
         self.overlapping = overlapping
+        self.col_length = col_length # column name that contain token length
+        # get special token for creating token_type_ids manually
+        self.sep_token = tokenizer.encode_plus(tokenizer.sep_token, add_special_tokens=False)['input_ids'][0]
+        self.pad_token = tokenizer.encode_plus(tokenizer.pad_token, add_special_tokens=False)['input_ids'][0]
+        self.cls_token = tokenizer.encode_plus(tokenizer.cls_token, add_special_tokens=False)['input_ids'][0]
 
     def __len__(self):
         return len(self.df)
@@ -17,7 +22,8 @@ class LongEssayDataset(Dataset):
         student_answer = str(self.df.iloc[index]['answer'])
         score = self.df.iloc[index]['normalized_score2']
 
-        if(self.df.iloc[index]['max_length1'] > (self.max_len-2)):
+        # check if text needs to be separated or not
+        if(self.df.iloc[index][self.col_length] > (self.max_len-2)):
             # separate 2 segment for input text
             text1 = f"Question: {question} Reference Answer: {reference_answer}"
             text2 = f"Student Answer: {student_answer}"
@@ -35,10 +41,12 @@ class LongEssayDataset(Dataset):
                 truncation=False, 
                 return_tensors='pt'
             )
-
+            # print(f"length token 1 : {len(tokens1['input_ids'].flatten())} | length token 2 : {len(tokens2['input_ids'].flatten())}")
             # create chunk for each segment
             chunks_segment1 = self.create_chunks(tokens1, segment_num=0)
             chunks_segment2 = self.create_chunks(tokens2, segment_num=1)
+            # for data in chunks_segment2:
+            #     print(len(data['input_ids']))
             chunks = []
             chunks = chunks_segment1 + chunks_segment2
 
@@ -62,12 +70,12 @@ class LongEssayDataset(Dataset):
             current_token = 0
             flag = 0 # flag buat nandain tokennya udh nambah 1 atau belum, kalau udh nambah 1 maka stop tidak boleh ada token > 1
             for token in encoding['input_ids'].flatten():
-                if(token == 0):
+                if(token == self.pad_token):
                     token_type_ids.append(0)
                     continue
                 token_type_ids.append(current_token)
-                if((token == 102 or token == 3) and flag == 0): # 102 is token SEP for bert-base and 3 is for albert-lite
-                    current_token = 1
+                if((token == self.sep_token) and (flag == 0)):
+                    current_token += 1
                     flag = 1
             
             chunks = [{
@@ -93,8 +101,8 @@ class LongEssayDataset(Dataset):
         token_type_ids = self.create_token_type(input_ids, segment_num)
         stride=self.max_len-self.overlapping
         chunk = []
-        cls_token = torch.tensor([2]) # 101 untuk type bert | 2 untuk type albert
-        sep_token = torch.tensor([3]) # 102 untuk type bert | 3 untuk type albert
+        cls_token = torch.tensor([self.cls_token]) 
+        sep_token = torch.tensor([self.sep_token])
 
         for i in range(0, len(input_ids), stride):
             chunk_ids = input_ids[i: i+(self.max_len - 2)]
