@@ -2,14 +2,13 @@ from torch.utils.data import Dataset
 import torch
 
 class EssayDataset(Dataset):
-    def __init__(self, df, tokenizer, max_len, col_length):
+    def __init__(self, df, tokenizer, max_len):
         self.df = df
         self.tokenizer = tokenizer
         self.max_len = max_len
-        self.col_length = col_length
-        # get special token
-        self.sep_token = tokenizer.encode_plus(tokenizer.sep_token, add_special_tokens=False)['input_ids'][0]
-        self.pad_token = tokenizer.encode_plus(tokenizer.pad_token, add_special_tokens=False)['input_ids'][0]
+        # # get special token
+        # self.sep_token = tokenizer.encode_plus(tokenizer.sep_token, add_special_tokens=False)['input_ids'][0]
+        # self.pad_token = tokenizer.encode_plus(tokenizer.pad_token, add_special_tokens=False)['input_ids'][0]
 
     def __len__(self):
         return len(self.df)
@@ -33,25 +32,25 @@ class EssayDataset(Dataset):
             return_tensors = 'pt'
         )
 
-        # create token_type_ids manually, this token is used to differentiate between segment
-        token_type_ids = []
-        current_token = 0
-        flag = 0
-        for token in encoding['input_ids'].flatten():
-            if(token == self.pad_token):
-                token_type_ids.append(0)
-                continue
-            token_type_ids.append(current_token)
-            if((token == self.sep_token) and (flag == 0)):
-                current_token += 1
-                flag = 1
+        ''' LongFormer doesn't need token_type_ids because it's base architecture '''
+        # # create token_type_ids manually, this token is used to differentiate between segment
+        # token_type_ids = []
+        # current_token = 0
+        # flag = 0
+        # for token in encoding['input_ids'].flatten():
+        #     if(token == self.pad_token):
+        #         token_type_ids.append(0)
+        #         continue
+        #     token_type_ids.append(current_token)
+        #     if((token == self.sep_token) and (flag == 0)):
+        #         current_token += 1
+        #         flag = 1
         
         return {
             'input_ids': encoding['input_ids'].flatten(),
             'attention_mask': encoding['attention_mask'].flatten(),
-            'token_type_ids': torch.tensor(token_type_ids),
-            'scores': torch.tensor(score, dtype=torch.float),
-        }
+            # 'token_type_ids': torch.tensor(token_type_ids),
+        }, torch.tensor(score, dtype=torch.float)
     
     def get_max_length(self, index):
         question = str(self.df.iloc[index]['question'])
