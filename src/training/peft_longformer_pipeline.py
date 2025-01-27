@@ -10,6 +10,7 @@ from src.data.dataset import EssayDataset
 from src.models.regressionModel import RegressionModel
 from src.training.bert_pipeline import TrainingBertPipeline
 from sklearn.model_selection import train_test_split
+from peft import get_peft_model, LoraConfig
 import time
 import logging
 
@@ -31,6 +32,17 @@ class LongFormerPipeline:
         self.df = config["df"]
         self.tokenizer = AutoTokenizer.from_pretrained(config["model_name"])
         self.model = RegressionModel(config["model_name"]).to(device)
+        # # LoRA Configuration if there is a key that needed
+        # if config.get("lora_rank") is not None and config.get("lora_alpha") is not None:
+        #     peft_config = LoraConfig(
+        #         task_type="SEQ_CLS",
+        #         inference_mode=False,
+        #         r=config["lora_rank"],
+        #         lora_alpha=config["lora_alpha"],
+        #         lora_dropout=0.1,
+        #         target_modules=["query", "key", "value"],
+        #     )
+        #     self.model = get_peft_model(self.model, peft_config)
         # konfigurasi parameter
         self.optimizer = AdamW(self.model.parameters(), lr=config["learning_rate"])
         self.criterion = torch.nn.MSELoss()
@@ -173,5 +185,12 @@ class LongFormerPipeline:
             "test_mse": test_loss,
             "test_qwk": test_qwk,
         }
+    
+        # # Jika ada konfigurasi LoRA, tambahkan ke hasil yang sama
+        # if self.config.get("lora_rank") is not None and self.config.get("lora_alpha") is not None:
+        #     result.update({
+        #         "lora_rank": self.config.get("lora_rank"),
+        #         "lora_alpha": self.config.get("lora_alpha"),
+        #     })
 
         self.results.append(result)
