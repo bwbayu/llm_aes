@@ -12,6 +12,7 @@ from src.data.longDataset import LongEssayDataset
 from src.models.hierarchicalBert import HierarchicalBert
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import cohen_kappa_score
+from scipy.stats import pearsonr
 import time
 import logging
 
@@ -93,6 +94,18 @@ class TrainingBertPipeline:
         rounded_targets = [max(min(round(target), max_score), min_score) for target in all_targets]
         return cohen_kappa_score(rounded_targets, rounded_predictions, weights="quadratic")
     
+    @staticmethod
+    def calculate_pearson(all_targets, all_predictions):
+        """Compute Pearson correlation coefficient."""
+        return pearsonr(all_targets, all_predictions)[0]
+    
+    def save_model(self, save_path):
+        """Save the model's state_dict to the specified path."""
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
+        torch.save(self.model.state_dict(), save_path)
+        print(f"Model saved to {save_path}")
+        logging.info(f"Model saved to {save_path}")
+    
     def evaluate(self, dataloader, mode="validation"):
         self.model.eval()
         total_mse_loss = 0
@@ -113,7 +126,8 @@ class TrainingBertPipeline:
 
         avg_mse_loss = total_mse_loss / len(dataloader)
         qwk_score = self.calculate_qwk(all_targets, all_predictions)
-        return avg_mse_loss, qwk_score
+        pearson_score = self.calculate_pearson(all_targets, all_predictions)
+        return avg_mse_loss, qwk_score, pearson_score
 
     def run_training(self):
         # split dataset (70:20:10)
@@ -127,6 +141,8 @@ class TrainingBertPipeline:
         start_time = time.time()
         # experiment process
         epochs = self.config["epochs"]
+        best_valid_metric = float('-inf')
+        best_model_path = os.path.join("experiments", "models", f"{self.config['model_name']}_best_model.pt")
         for epoch in range(epochs):
             print(f"====== Training Epoch {epoch + 1}/{epochs} ======")
             self.model.train()
@@ -150,10 +166,16 @@ class TrainingBertPipeline:
 
             avg_train_loss = train_mse_loss / len(train_dataloader)
             qwk_train = self.calculate_qwk(all_targets, all_predictions)
-            print(f"Train Loss: {avg_train_loss:.4f}, Train QWK: {qwk_train:.4f}")
+            pearson_train = self.calculate_pearson(all_targets, all_predictions)
+            print(f"Train Loss: {avg_train_loss:.4f}, Train QWK: {qwk_train:.4f}, Train Pearson: {pearson_train:.4f}")
 
-            valid_loss, valid_qwk = self.evaluate(valid_dataloader, mode="validation")
-            print(f"Validation Loss: {valid_loss:.4f}, Validation QWK: {valid_qwk:.4f}")
+            valid_loss, valid_qwk, valid_pearson = self.evaluate(valid_dataloader, mode="validation")
+            print(f"Validation Loss: {valid_loss:.4f}, Validation QWK: {valid_qwk:.4f}, Validation Pearson: {valid_pearson:.4f}")
+
+            # Save model if validation QWK improves
+            if valid_qwk > best_valid_metric:
+                best_valid_metric = valid_qwk
+                self.save_model(save_path=best_model_path)    
 
             # save csv per training epoch
             self.results_epoch.append({
@@ -161,13 +183,15 @@ class TrainingBertPipeline:
                 "epoch": epoch + 1,
                 "train_mse": avg_train_loss,
                 "train_qwk": qwk_train,
+                "train_pearson": pearson_train,
                 "valid_mse": valid_loss,
-                "valid_qwk": valid_qwk
+                "valid_qwk": valid_qwk,
+                "valid_pearson": valid_pearson
             })
 
         # run testing
-        test_loss, test_qwk = self.evaluate(test_dataloader, mode="testing")
-        print(f"Test Loss: {test_loss:.4f}, Test QWK: {test_qwk:.4f}")
+        test_loss, test_qwk, test_pearson = self.evaluate(test_dataloader, mode="testing")
+        print(f"Test Loss: {test_loss:.4f}, Test QWK: {test_qwk:.4f}, Test Pearson: {test_pearson:.4f}")
 
         # save csv per training configuration
         result = {
@@ -181,6 +205,7 @@ class TrainingBertPipeline:
             "peak_memory": torch.cuda.max_memory_allocated(device) / (1024 ** 2),  # Convert to MB
             "test_mse": test_loss,
             "test_qwk": test_qwk,
+            "test_pearson": test_pearson,
         }
 
         # Tambahkan hasil ke dalam list results
