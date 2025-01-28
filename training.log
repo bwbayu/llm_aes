@@ -9,3 +9,4 @@
 2025-01-27 20:39:27,933 - ERROR - Error in config_id=0: x and y must have length at least 2.
 2025-01-27 20:40:30,123 - INFO - Running configuration: config_id=0, model_name=bert-base-uncased, batch_size=4, overlapping=128, epochs=1, learning_rate=1e-05
 2025-01-27 20:40:41,223 - INFO - Model saved to experiments\models\bert-base-uncased_best_model.pt
+2025-01-28 08:37:42,164 - INFO - Running configuration: config_id=0, model_name=allenai/longformer-base-4096, batch_size=2, epochs=1, learning_rate=1e-05
