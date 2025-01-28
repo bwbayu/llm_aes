@@ -152,7 +152,7 @@ class LongFormerPipeline:
 
             avg_train_loss = train_mse_loss / len(train_dataloader)
             qwk_train = TrainingBertPipeline.calculate_qwk(all_targets, all_predictions)
-            pearson_train = self.calculate_pearson(all_targets, all_predictions)
+            pearson_train = TrainingBertPipeline.calculate_pearson(all_targets, all_predictions)
             print(f"Train Loss: {avg_train_loss:.4f}, Train QWK: {qwk_train:.4f}, Train Pearson: {pearson_train:.4f}")
 
             valid_loss, valid_qwk, valid_pearson = self.evaluate(valid_dataloader, mode="validation")
