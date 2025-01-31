@@ -14,7 +14,7 @@ class EssayDataset(Dataset):
         return len(self.df)
     
     def __getitem__(self, index):
-        question = str(self.df.iloc[index].get('question', "[NO_QUESTION]"))
+        question = str(self.df.iloc[index].get('question', "[UNK]"))
         reference_answer = str(self.df.iloc[index]['reference_answer'])
         student_answer = str(self.df.iloc[index]['answer'])
         score = self.df.iloc[index]['normalized_score2']
@@ -58,7 +58,7 @@ class EssayDataset(Dataset):
         student_answer = str(self.df.iloc[index]['answer'])
 
         # concat input text
-        question = question if question is not None else "[NO_QUESTION]" # handle some dataset that doesn't have question
+        question = question if question is not None else "[UNK]" # handle some dataset that doesn't have question
         text = f"Question: {question} Reference Answer: {reference_answer} {self.tokenizer.sep_token} Student Answer: {student_answer}"
         encoding = self.tokenizer.encode_plus(
             text,
@@ -67,3 +67,30 @@ class EssayDataset(Dataset):
         )
 
         return encoding['input_ids'].flatten().shape[0]
+    
+    def get_each_length(self, index):
+        question = str(self.df.iloc[index]['question'])
+        reference_answer = str(self.df.iloc[index]['reference_answer'])
+        student_answer = str(self.df.iloc[index]['answer'])
+
+        # concat input text
+        question = f"Question: {question if question is not None else '[UNK]'}"
+        reference = f" Reference Answer: {reference_answer} {self.tokenizer.sep_token}"
+        student = f"Student Answer: {student_answer}"
+        question_encoding = self.tokenizer.encode_plus(
+            question,
+            add_special_tokens=True,
+            return_tensors='pt',
+        )
+        reference_encoding = self.tokenizer.encode_plus(
+            reference,
+            add_special_tokens=True,
+            return_tensors='pt',
+        )
+        student_encoding = self.tokenizer.encode_plus(
+            student,
+            add_special_tokens=True,
+            return_tensors='pt',
+        )
+
+        return question_encoding['input_ids'].flatten().shape[0], reference_encoding['input_ids'].flatten().shape[0], student_encoding['input_ids'].flatten().shape[0]

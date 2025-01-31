@@ -17,7 +17,7 @@ class LongEssayDataset(Dataset):
         return len(self.df)
     
     def __getitem__(self, index):
-        question = str(self.df.iloc[index].get('question', "[NO_QUESTION]"))
+        question = str(self.df.iloc[index].get('question', "[UNK]"))
         reference_answer = str(self.df.iloc[index]['reference_answer'])
         student_answer = str(self.df.iloc[index]['answer'])
         score = self.df.iloc[index]['normalized_score2']
