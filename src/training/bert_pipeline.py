@@ -21,7 +21,7 @@ torch.manual_seed(SEED)
 
 # logging setup
 logging.basicConfig(
-    filename="training.log",
+    filename="training_bert.log",
     filemode="a",
     format="%(asctime)s - %(levelname)s - %(message)s",
     level=logging.INFO
@@ -141,7 +141,7 @@ class TrainingBertPipeline:
         start_time = time.time()
         # experiment process
         epochs = self.config["epochs"]
-        best_valid_metric = float('-inf')
+        best_valid_metric = self.config["best_valid_qwk"] if self.config["best_valid_qwk"] is not None else float('-inf')
         best_model_path = os.path.join("experiments", "models", f"{self.config['model_name']}_best_model.pt")
         for epoch in range(epochs):
             print(f"====== Training Epoch {epoch + 1}/{epochs} ======")
@@ -197,6 +197,7 @@ class TrainingBertPipeline:
         result = {
             "config_id": self.config.get("config_id"),
             "model_name": self.config.get("model_name"),
+            "max_seq_len": self.config.get("max_seq_len"),
             "batch_size": self.config.get("batch_size"),
             "overlapping": self.config.get("overlapping"),
             "epochs": self.config.get("epochs"),
@@ -206,6 +207,8 @@ class TrainingBertPipeline:
             "test_mse": test_loss,
             "test_qwk": test_qwk,
             "test_pearson": test_pearson,
+            "lora_rank": None,
+            "lora_alpha": None
         }
 
         # Tambahkan hasil ke dalam list results

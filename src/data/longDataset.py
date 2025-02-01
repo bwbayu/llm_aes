@@ -6,6 +6,7 @@ class LongEssayDataset(Dataset):
         self.df = dataframe
         self.tokenizer = tokenizer
         self.max_len = max_len
+        # print("max len", self.max_len)
         self.overlapping = overlapping
         self.col_length = col_length # column name that contain token length
         # get special token for creating token_type_ids manually

@@ -18,7 +18,7 @@ torch.manual_seed(SEED)
 
 # logging setup
 logging.basicConfig(
-    filename="training.log",
+    filename="training_longformer.log",
     filemode="a",
     format="%(asctime)s - %(levelname)s - %(message)s",
     level=logging.INFO
@@ -125,7 +125,7 @@ class LongFormerPipeline:
         start_time = time.time()
         # experiment process
         epochs = self.config["epochs"]
-        best_valid_metric = float('-inf')
+        best_valid_metric = self.config["best_valid_qwk"] if self.config["best_valid_qwk"] is not None else float('-inf')
         best_model_path = os.path.join("experiments", "models", f"{self.config['model_name']}_best_model.pt")
         for epoch in range(epochs):
             print(f"====== Training Epoch {epoch + 1}/{epochs} ======")
@@ -186,11 +186,14 @@ class LongFormerPipeline:
             "batch_size": self.config.get("batch_size"),
             "epochs": self.config.get("epochs"),
             "learning_rate": self.config.get("learning_rate"),
+            "max_seq_len": self.config.get("max_seq_len"),
             "training_time": time.time() - start_time,
             "peak_memory": torch.cuda.max_memory_allocated(device) / (1024 ** 2), # Convert to MB
             "test_mse": test_loss,
             "test_qwk": test_qwk,
             "test_pearson": test_pearson,
+            "lora_rank": None,
+            "lora_alpha": None
         }
 
         self.results.append(result)
