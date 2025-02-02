@@ -41,9 +41,15 @@ class LongFormerPipelinePeft:
                 r=config["lora_rank"],
                 lora_alpha=config["lora_alpha"],
                 lora_dropout=0.1,
-                target_modules=["query", "key", "value"],
+                target_modules=["query", "key", "value", "query_global", "key_global", "value_global",],
             )
             self.model = get_peft_model(self.model, peft_config)
+            trainable_params = sum(p.numel() for p in self.model.parameters() if p.requires_grad)
+            total_params = sum(p.numel() for p in self.model.parameters())
+
+            print(f"Trainable Parameters: {trainable_params}")
+            print(f"Total Parameters: {total_params}")
+            print(f"Percentage Trainable: {(trainable_params / total_params) * 100:.2f}%")
         # konfigurasi parameter
         self.optimizer = AdamW(self.model.parameters(), lr=config["learning_rate"])
         self.criterion = torch.nn.MSELoss()

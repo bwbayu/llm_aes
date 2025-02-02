@@ -10,7 +10,7 @@ class LongformerForRegression(LongformerPreTrainedModel):
         
         self.init_weights()
 
-    def forward(self, input_ids=None, attention_mask=None, inputs_embeds=None,
+    def forward(self, input_ids=None, attention_mask=None, inputs_embeds=None, labels=None,
             output_attentions=False, output_hidden_states=False, return_dict=True):
 
         outputs = self.longformer(
