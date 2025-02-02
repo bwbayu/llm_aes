@@ -1,1 +1,4 @@
-config_id,model_name,batch_size,overlapping,epochs,learning_rate,training_time,peak_memory,test_mse,test_qwk,test_pearson
+config_id,model_name,max_seq_len,batch_size,overlapping,epochs,learning_rate,training_time,peak_memory,test_mse,test_qwk,test_pearson
+0,google-bert/bert-base-multilingual-cased,256,4,128,1,1e-05,719.2678580284119,5331.11376953125,3199.3588584524687,0.0,0.1148057023394957
+0,google-bert/bert-base-multilingual-cased,512,4,256,1,1e-05,800.5700778961182,4926.09814453125,3200.743034612937,0.0,-0.011356715641966898
+0,bert-base-uncased,512,4,256,1,1e-05,627.4367470741272,4471.0498046875,3318.13178140609,0.0,0.11910164100762323,,

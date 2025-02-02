@@ -1,0 +1,5 @@
+2025-02-01 20:37:36,175 - INFO - Running configuration: config_id=0, model_name=allenai/longformer-base-4096, batch_size=4, epochs=1, learning_rate=1e-05
+2025-02-01 21:05:09,432 - INFO - Running configuration: config_id=0, model_name=allenai/longformer-base-4096, batch_size=4, epochs=1, learning_rate=1e-05
+2025-02-01 21:17:46,742 - INFO - Running configuration: config_id=0, model_name=allenai/longformer-base-4096, batch_size=4, epochs=1, learning_rate=1e-05
+2025-02-01 21:19:25,640 - INFO - Running configuration: config_id=0, model_name=allenai/longformer-base-4096, batch_size=4, epochs=1, learning_rate=1e-05
+2025-02-02 00:35:40,502 - INFO - Running configuration: config_id=0, model_name=allenai/longformer-base-4096, batch_size=2, epochs=1, learning_rate=1e-05, max_seq=2048
