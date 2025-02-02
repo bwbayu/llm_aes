@@ -1,14 +1,2 @@
-2025-02-01 23:34:26,654 - INFO - Running configuration: config_id=0, model_name=allenai/longformer-base-4096, batch_size=2, epochs=1, learning_rate=1e-05, max_seq=2048, lora_rank=8, lora_alpha=16, 
-2025-02-02 00:28:51,253 - INFO - Model saved to experiments\models\allenai/longformer-base-4096_best_model_lora.pt
-2025-02-02 00:37:45,171 - INFO - Running configuration: config_id=0, model_name=allenai/longformer-base-4096, batch_size=2, epochs=1, learning_rate=1e-05, max_seq=1024
-2025-02-02 00:38:53,378 - INFO - Running configuration: config_id=0, model_name=allenai/longformer-base-4096, batch_size=4, epochs=1, learning_rate=1e-05, max_seq=1024
-2025-02-02 00:39:28,175 - INFO - Running configuration: config_id=0, model_name=allenai/longformer-base-4096, batch_size=2, epochs=1, learning_rate=1e-05, max_seq=2048
-2025-02-02 10:20:59,384 - INFO - Running configuration: config_id=0, model_name=allenai/longformer-base-4096, batch_size=2, epochs=1, learning_rate=1e-05, max_seq=2048, lora_rank=8, lora_alpha=16, 
-2025-02-02 11:26:13,688 - INFO - Running configuration: config_id=0, model_name=allenai/longformer-base-4096, batch_size=2, epochs=1, learning_rate=1e-05, max_seq=2048
-2025-02-02 16:51:45,476 - INFO - Running configuration: config_id=0, model_name=allenai/longformer-base-4096, batch_size=2, epochs=1, learning_rate=1e-05, max_seq=2048
-2025-02-02 16:52:17,605 - INFO - Running configuration: config_id=0, model_name=allenai/longformer-base-4096, batch_size=2, epochs=1, learning_rate=1e-05, max_seq=2048
-2025-02-02 18:46:53,702 - INFO - Running configuration: config_id=0, model_name=bert-base-uncased, batch_size=4, max_seq_length=512, overlapping=256, epochs=1, learning_rate=1e-05
-2025-02-02 18:46:57,429 - ERROR - Error in config_id=0: TrainingBertPipeline.custom_collate_fn() takes 1 positional argument but 2 were given
-2025-02-02 18:48:45,438 - INFO - Running configuration: config_id=0, model_name=bert-base-uncased, batch_size=4, max_seq_length=512, overlapping=256, epochs=1, learning_rate=1e-05
-2025-02-02 18:48:47,506 - ERROR - Error in config_id=0: TrainingBertPipeline.custom_collate_fn() takes 1 positional argument but 2 were given
-2025-02-02 18:50:33,412 - INFO - Running configuration: config_id=0, model_name=bert-base-uncased, batch_size=4, max_seq_length=512, overlapping=256, epochs=1, learning_rate=1e-05
+2025-02-02 21:20:28,952 - INFO - Running configuration: config_id=0, model_name=bert-base-uncased, batch_size=4, max_seq_length=512, overlapping=256, epochs=1, learning_rate=1e-05, lora_rank:8, lora_alpha:16
+2025-02-02 21:27:35,454 - INFO - Model saved to experiments\models\bert-base-uncased_best_model.pt
