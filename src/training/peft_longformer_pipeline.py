@@ -94,8 +94,8 @@ class LongFormerPipelinePeft:
     def create_dataloader(self, train_data, valid_data, test_data):
         print("create dataloader run...")
         train_dataloader = DataLoader(train_data, batch_size=self.config["batch_size"], shuffle=True, generator=torch.Generator().manual_seed(SEED),)
-        valid_dataloader = DataLoader(valid_data, batch_size=self.config["batch_size"], shuffle=True, generator=torch.Generator().manual_seed(SEED),)
-        test_dataloader = DataLoader(test_data, batch_size=self.config["batch_size"], shuffle=True, generator=torch.Generator().manual_seed(SEED),)
+        valid_dataloader = DataLoader(valid_data, batch_size=self.config["batch_size"], shuffle=False, generator=torch.Generator().manual_seed(SEED),)
+        test_dataloader = DataLoader(test_data, batch_size=self.config["batch_size"], shuffle=False, generator=torch.Generator().manual_seed(SEED),)
         print("create dataloader done...")
 
         return train_dataloader, valid_dataloader, test_dataloader

@@ -13,6 +13,7 @@ from src.models.hierarchicalBert import HierarchicalBert
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import cohen_kappa_score
 from scipy.stats import pearsonr
+from torch.nn.utils.rnn import pad_sequence
 import time
 import logging
 
@@ -80,11 +81,29 @@ class TrainingBertPipeline:
 
         return train_data, valid_data, test_data
     
+    @staticmethod
+    def custom_collate_fn(batch):
+        # Separate features and labels
+        features = [item[0] for item in batch]
+        labels = torch.stack([item[1] for item in batch])
+
+        # Pad the input_ids, attention_mask, and token_type_ids
+        padded_input_ids = pad_sequence([f["input_ids"] for f in features], batch_first=True, padding_value=0)
+        padded_attention_mask = pad_sequence([f["attention_mask"] for f in features], batch_first=True, padding_value=0)
+        padded_token_type_ids = pad_sequence([f["token_type_ids"] for f in features], batch_first=True, padding_value=0)
+
+        # Return a dictionary of padded features and labels
+        return {
+            "input_ids": padded_input_ids,
+            "attention_mask": padded_attention_mask,
+            "token_type_ids": padded_token_type_ids,
+        }, labels
+    
     def create_dataloader(self, train_data, valid_data, test_data):
         print("create dataloader run...")
-        train_dataloader = DataLoader(train_data, batch_size=self.config["batch_size"], collate_fn=lambda x: list(zip(*x)), shuffle=True, generator=torch.Generator().manual_seed(SEED),)
-        valid_dataloader = DataLoader(valid_data, batch_size=self.config["batch_size"], collate_fn=lambda x: list(zip(*x)), shuffle=True, generator=torch.Generator().manual_seed(SEED),)
-        test_dataloader = DataLoader(test_data, batch_size=self.config["batch_size"], collate_fn=lambda x: list(zip(*x)), shuffle=True, generator=torch.Generator().manual_seed(SEED),)
+        train_dataloader = DataLoader(train_data, batch_size=self.config["batch_size"], collate_fn=self.custom_collate_fn, shuffle=True, generator=torch.Generator().manual_seed(SEED),)
+        valid_dataloader = DataLoader(valid_data, batch_size=self.config["batch_size"], collate_fn=self.custom_collate_fn, shuffle=False, generator=torch.Generator().manual_seed(SEED),)
+        test_dataloader = DataLoader(test_data, batch_size=self.config["batch_size"], collate_fn=self.custom_collate_fn, shuffle=False, generator=torch.Generator().manual_seed(SEED),)
 
         return train_dataloader, valid_dataloader, test_dataloader
     
@@ -112,11 +131,19 @@ class TrainingBertPipeline:
         all_predictions = []
         all_targets = []
         with torch.no_grad():
-            for batch, targets in dataloader:
+            for batchs, targets in dataloader:
                 try:
-                    targets = torch.stack(targets).to(device)
-                    predictions = self.model(batch).squeeze(1)
+                    input_ids = batchs['input_ids'].to(device)
+                    attention_mask = batchs['attention_mask'].to(device)
+                    token_type_ids = batchs['token_type_ids'].to(device)
+                    targets = targets.to(device)
+                    predictions = self.model(input_ids, attention_mask, token_type_ids).squeeze(1)
                     loss = self.criterion(predictions, targets)
+                    if torch.isnan(loss):
+                        print("⚠️ Warning: NaN detected in loss validation!")
+                        print(f"Predictions: {predictions}")
+                        print(f"Targets: {targets}")
+                        continue
                     total_mse_loss += loss.item()
                     all_predictions.extend(predictions.detach().cpu().numpy())
                     all_targets.extend(targets.detach().cpu().numpy())
@@ -149,12 +176,20 @@ class TrainingBertPipeline:
             train_mse_loss = 0
             all_predictions = []
             all_targets = []
-            for batch, targets in train_dataloader:
+            for batchs, targets in train_dataloader:
                 try:
                     self.optimizer.zero_grad()
-                    targets = torch.stack(targets).to(device)
-                    predictions = self.model(batch).squeeze(1)
+                    input_ids = batchs['input_ids'].to(device)
+                    attention_mask = batchs['attention_mask'].to(device)
+                    token_type_ids = batchs['token_type_ids'].to(device)
+                    targets = targets.to(device)
+                    predictions = self.model(input_ids, attention_mask, token_type_ids).squeeze(1)
                     loss = self.criterion(predictions, targets)
+                    if torch.isnan(loss):
+                        print("⚠️ Warning: NaN detected in loss training!")
+                        print(f"Predictions: {predictions}")
+                        print(f"Targets: {targets}")
+                        continue
                     loss.backward()
                     self.optimizer.step()
                     train_mse_loss += loss.item()
