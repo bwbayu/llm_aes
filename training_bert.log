@@ -1,2 +1,19 @@
 2025-02-02 21:20:28,952 - INFO - Running configuration: config_id=0, model_name=bert-base-uncased, batch_size=4, max_seq_length=512, overlapping=256, epochs=1, learning_rate=1e-05, lora_rank:8, lora_alpha:16
 2025-02-02 21:27:35,454 - INFO - Model saved to experiments\models\bert-base-uncased_best_model.pt
+2025-02-03 12:34:12,957 - INFO - Running configuration: config_id=1, model_name=bert-base-uncased, batch_size=4, max_seq_length=512, overlapping=0, epochs=1, learning_rate=1e-05
+2025-02-03 12:41:52,269 - INFO - Model saved to experiments\models\bert-base-uncased_best_model.pt
+2025-02-03 12:47:25,862 - INFO - Running configuration: config_id=2, model_name=bert-base-uncased, batch_size=4, max_seq_length=512, overlapping=256, epochs=1, learning_rate=1e-05
+2025-02-03 12:55:00,202 - INFO - Model saved to experiments\models\bert-base-uncased_best_model.pt
+2025-02-03 13:29:55,616 - INFO - Running configuration: config_id=3, model_name=bert-base-uncased, batch_size=4, max_seq_length=512, overlapping=256, epochs=1, learning_rate=1e-05
+2025-02-03 13:35:03,046 - INFO - Running configuration: config_id=3, model_name=bert-base-uncased, batch_size=4, max_seq_length=512, overlapping=256, epochs=1, learning_rate=1e-05
+2025-02-03 13:37:30,742 - INFO - Running configuration: config_id=3, model_name=bert-base-uncased, batch_size=4, max_seq_length=512, overlapping=256, epochs=1, learning_rate=1e-05
+2025-02-03 13:38:36,086 - INFO - Running configuration: config_id=3, model_name=bert-base-uncased, batch_size=4, max_seq_length=512, overlapping=256, epochs=1, learning_rate=1e-05
+2025-02-03 13:46:04,642 - INFO - Model saved to experiments\models\bert-base-uncased_best_model.pt
+2025-02-03 13:48:29,126 - INFO - Running configuration: config_id=4, model_name=bert-base-uncased, batch_size=4, max_seq_length=128, overlapping=64, epochs=1, learning_rate=1e-05
+2025-02-03 13:57:13,792 - INFO - Model saved to experiments\models\bert-base-uncased_best_model.pt
+2025-02-03 14:03:40,547 - INFO - Running configuration: config_id=5, model_name=bert-base-uncased, batch_size=4, max_seq_length=512, overlapping=256, epochs=1, learning_rate=1e-05, lora_rank:8, lora_alpha:16
+2025-02-03 14:10:45,376 - INFO - Model saved to experiments\models\bert-base-uncased_best_model.pt
+2025-02-03 14:13:19,680 - INFO - Running configuration: config_id=6, model_name=bert-base-uncased, batch_size=4, max_seq_length=512, overlapping=256, epochs=1, learning_rate=1e-05, lora_rank:8, lora_alpha:16
+2025-02-03 14:15:22,903 - INFO - Running configuration: config_id=1, model_name=allenai/longformer-base-4096, batch_size=2, epochs=1, learning_rate=1e-05, max_seq=2048
+2025-02-03 14:15:44,113 - INFO - Running configuration: config_id=1, model_name=allenai/longformer-base-4096, batch_size=2, epochs=1, learning_rate=1e-05, max_seq=2048
+2025-02-03 14:58:58,408 - INFO - Model saved to experiments\models\allenai/longformer-base-4096_best_model.pt
