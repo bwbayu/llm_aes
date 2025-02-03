@@ -17,7 +17,7 @@ class EssayDataset(Dataset):
         question = str(self.df.iloc[index].get('question', "[UNK]"))
         reference_answer = str(self.df.iloc[index]['reference_answer'])
         student_answer = str(self.df.iloc[index]['answer'])
-        score = self.df.iloc[index]['normalized_score2']
+        score = self.df.iloc[index]['normalized_score']
 
         # concat input text
         text = f"{self.tokenizer.cls_token} Question: {question} Reference Answer: {reference_answer} {self.tokenizer.sep_token} Student Answer: {student_answer} {self.tokenizer.sep_token}"

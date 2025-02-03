@@ -21,7 +21,7 @@ class LongEssayDataset(Dataset):
         question = str(self.df.iloc[index].get('question', "[UNK]"))
         reference_answer = str(self.df.iloc[index]['reference_answer'])
         student_answer = str(self.df.iloc[index]['answer'])
-        score = self.df.iloc[index]['normalized_score2']
+        score = self.df.iloc[index]['normalized_score']
         # check if text needs to be separated or not
         if(self.df.iloc[index][self.col_length] > (self.max_len-2)):
             # separate 2 segment for input text

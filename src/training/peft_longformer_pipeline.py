@@ -121,9 +121,19 @@ class LongFormerPipelinePeft:
                     targets = targets.to(device)
                     predictions = self.model(input_ids, attention_mask).squeeze(1)
                     loss = self.criterion(predictions, targets)
+                    if torch.isnan(loss):
+                        print("⚠️ Warning: NaN detected in loss validation!")
+                        print(f"Predictions: {predictions}")
+                        print(f"Targets: {targets}")
+                        continue
                     total_mse_loss += loss.item()
-                    all_predictions.extend(predictions.detach().cpu().numpy())
-                    all_targets.extend(targets.detach().cpu().numpy())
+
+                    # Rescale predictions and targets back to 0-100
+                    predictions_rescaled = predictions * 100
+                    targets_rescaled = targets * 100
+
+                    all_predictions.extend(predictions_rescaled.detach().cpu().numpy())
+                    all_targets.extend(targets_rescaled.detach().cpu().numpy())
                 except Exception as e:
                     logging.error(f"Error during {mode}: {str(e)}")
                     torch.cuda.empty_cache()
@@ -161,6 +171,11 @@ class LongFormerPipelinePeft:
                     targets = targets.to(device)
                     predictions = self.model(input_ids=input_ids, attention_mask=attention_mask).squeeze(1)
                     loss = self.criterion(predictions, targets)
+                    if torch.isnan(loss):
+                        print("⚠️ Warning: NaN detected in loss validation!")
+                        print(f"Predictions: {predictions}")
+                        print(f"Targets: {targets}")
+                        continue
                     loss.backward()
                     self.optimizer.step()
                     train_mse_loss += loss.item()
