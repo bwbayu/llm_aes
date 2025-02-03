@@ -28,7 +28,7 @@ results_epoch = []
 batch_sizes = [2]
 epochs_list = [1]
 learning_rates = [1e-5]
-idx = df_result['config_id'].iloc[-1] if df_result is not None and not df_result.empty else 0  # index untuk setiap kombinasi
+idx = (df_result['config_id'].iloc[-1] + 1) if df_result is not None and not df_result.empty else 0  # index untuk setiap kombinasi
 best_valid_qwk = min(df_result1['valid_qwk']) if df_result1 is not None and not df_result1.empty else float("-inf")
 ROOT_DIR = os.getcwd()
 
