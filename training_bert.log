@@ -17,3 +17,9 @@
 2025-02-03 14:15:22,903 - INFO - Running configuration: config_id=1, model_name=allenai/longformer-base-4096, batch_size=2, epochs=1, learning_rate=1e-05, max_seq=2048
 2025-02-03 14:15:44,113 - INFO - Running configuration: config_id=1, model_name=allenai/longformer-base-4096, batch_size=2, epochs=1, learning_rate=1e-05, max_seq=2048
 2025-02-03 14:58:58,408 - INFO - Model saved to experiments\models\allenai/longformer-base-4096_best_model.pt
+2025-02-03 20:19:23,270 - INFO - Running configuration: config_id=6, model_name=bert-base-uncased, batch_size=4, max_seq_length=128, epochs=1, learning_rate=1e-05
+2025-02-03 20:19:59,075 - INFO - Running configuration: config_id=6, model_name=bert-base-uncased, batch_size=4, max_seq_length=128, epochs=1, learning_rate=1e-05
+2025-02-03 20:20:02,670 - ERROR - Error in config_id=6: object of type 'TruncateDataset' has no len()
+2025-02-03 20:20:50,286 - INFO - Running configuration: config_id=6, model_name=bert-base-uncased, batch_size=4, max_seq_length=128, epochs=1, learning_rate=1e-05
+2025-02-03 20:21:17,181 - INFO - Running configuration: config_id=6, model_name=bert-base-uncased, batch_size=4, max_seq_length=128, epochs=1, learning_rate=1e-05
+2025-02-03 20:23:13,369 - INFO - Model saved to experiments\models\bert-base-uncased_best_model.pt
