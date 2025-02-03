@@ -23,7 +23,7 @@ torch.manual_seed(SEED)
 
 # logging setup
 logging.basicConfig(
-    filename="training_bert_peft.log",
+    filename="training.log",
     filemode="a",
     format="%(asctime)s - %(levelname)s - %(message)s",
     level=logging.INFO
@@ -181,7 +181,7 @@ class BertPipelinePeft:
 
     def run_training(self):
         # split dataset (70:20:10)
-        train_dataset, valid_dataset, test_dataset = self.split_dataset(0.3, 0.3)
+        train_dataset, valid_dataset, test_dataset = self.split_dataset(0.2, 0.25)
         
         # create dataset and dataLoader
         train_data, valid_data, test_data = self.create_dataset(train_dataset, valid_dataset, test_dataset)
