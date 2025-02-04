@@ -15,14 +15,6 @@ if os.path.exists("experiments/results/results.csv"):
 else:
     print("File 'results.csv' does not exist.")
 
-df_result1 = None
-# Check if the second file exists
-if os.path.exists("experiments/results/results_epoch.csv"):
-    df_result1 = pd.read_csv("experiments/results/results_epoch.csv")
-    print(min(df_result1['valid_qwk']))
-else:
-    print("File 'results_epoch.csv' does not exist.")
-
 results = []
 results_epoch = []
 batch_sizes = [4, 8]
@@ -30,13 +22,19 @@ overlappings = [0, 128, 256]
 epochs_list = [5, 10]
 learning_rates = [1e-5, 2e-5, 5e-5]
 idx = (df_result['config_id'].iloc[-1] + 1) if df_result is not None and not df_result.empty else 0  # index untuk setiap kombinasi
-best_valid_qwk = min(df_result1['valid_qwk']) if df_result1 is not None and not df_result1.empty else float("-inf")
 ROOT_DIR = os.getcwd()
 
 for batch_size in batch_sizes:
     for overlapping in overlappings:
         for num_epochs in epochs_list:
             for lr in learning_rates:
+                df_result1 = None
+                # Check if the second file exists
+                if os.path.exists("experiments/results/results_epoch.csv"):
+                    df_result1 = pd.read_csv("experiments/results/results_epoch.csv")
+                    print(max(df_result1['valid_qwk']))
+                else:
+                    print("File 'results_epoch.csv' does not exist.")
                 config = {
                     "df": df,
                     "model_name": "bert-base-uncased",
@@ -47,7 +45,7 @@ for batch_size in batch_sizes:
                     "config_id": idx,
                     "max_seq_len": 512,
                     "col_length": "bert_length",
-                    "best_valid_qwk": best_valid_qwk
+                    "best_valid_qwk": max(df_result1['valid_qwk']) if df_result1 is not None and not df_result1.empty else float("-inf")
                 }
 
                 logging.info(

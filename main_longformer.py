@@ -15,26 +15,24 @@ if os.path.exists("experiments/results/results_longformer.csv"):
 else:
     print("File 'results_longformer.csv' does not exist.")
 
-df_result1 = None
-# Check if the second file exists
-if os.path.exists("experiments/results/results_epoch_longformer.csv"):
-    df_result1 = pd.read_csv("experiments/results/results_epoch_longformer.csv")
-    print(min(df_result1['valid_qwk']))
-else:
-    print("File 'results_epoch_longformer.csv' does not exist.")
-
 results = []
 results_epoch = []
 batch_sizes = [2]
 epochs_list = [1]
 learning_rates = [1e-5]
 idx = (df_result['config_id'].iloc[-1] + 1) if df_result is not None and not df_result.empty else 0  # index untuk setiap kombinasi
-best_valid_qwk = min(df_result1['valid_qwk']) if df_result1 is not None and not df_result1.empty else float("-inf")
 ROOT_DIR = os.getcwd()
 
 for batch_size in batch_sizes:
     for num_epochs in epochs_list:
         for lr in learning_rates:
+            df_result1 = None
+            # Check if the second file exists
+            if os.path.exists("experiments/results/results_epoch_longformer.csv"):
+                df_result1 = pd.read_csv("experiments/results/results_epoch_longformer.csv")
+                print(max(df_result1['valid_qwk']))
+            else:
+                print("File 'results_epoch_longformer.csv' does not exist.")
             config = {
                 "df": df,
                 "model_name": "allenai/longformer-base-4096",
@@ -43,7 +41,7 @@ for batch_size in batch_sizes:
                 "epochs": num_epochs,
                 "config_id": idx,
                 "max_seq_len": 2048,
-                "best_valid_qwk": best_valid_qwk,
+                "best_valid_qwk": max(df_result1['valid_qwk']) if df_result1 is not None and not df_result1.empty else float("-inf"),
             }
 
             logging.info(
