@@ -16,7 +16,6 @@ class TruncateDataset:
         student_answer = str(self.df.iloc[index]['answer'])
         score = self.df.iloc[index]['normalized_score']
 
-        # Tokenize separately without truncation
         question_tokens = self.tokenizer.tokenize(question)
         ref_tokens = self.tokenizer.tokenize(reference_answer)
         stud_tokens = self.tokenizer.tokenize(student_answer)
@@ -26,29 +25,23 @@ class TruncateDataset:
         sep_token = [self.tokenizer.sep_token]  # [SEP]
         pad_token_id = self.tokenizer.pad_token_id
 
-        # Ensure the question is not truncated
         q_length = len(question_tokens)
         remaining_length = self.max_len - (q_length + 3)  # 3 = [CLS] + [SEP] + [SEP]
-
-        # Initial equal split
         half_remaining = remaining_length // 2
         ref_alloc = min(len(ref_tokens), half_remaining)
         stud_alloc = min(len(stud_tokens), half_remaining)
 
-        # If extra space is left, give it to the longer one
         extra_space = remaining_length - (ref_alloc + stud_alloc)
         if len(ref_tokens) > ref_alloc:
             ref_alloc += extra_space
         elif len(stud_tokens) > stud_alloc:
             stud_alloc += extra_space
 
-        # Truncate
         truncated_ref = ref_tokens[:ref_alloc]
         truncated_stud = stud_tokens[:stud_alloc]
 
         final_tokens = cls_token + question_tokens + truncated_ref + sep_token + truncated_stud + sep_token
 
-        # Convert to input IDs
         input_ids = self.tokenizer.convert_tokens_to_ids(final_tokens)
         attention_mask = [1] * len(input_ids)
 
