@@ -4,7 +4,7 @@ import logging
 import torch
 import os
 
-df = pd.read_csv("data/full_aes_dataset.csv")
+df = pd.read_csv("data/aes_dataset_5k_clean.csv")
 
 # read result csv data
 # Check if the first file exists
@@ -35,16 +35,17 @@ for batch_size in batch_sizes:
                     print(max(df_result1['valid_qwk']))
                 else:
                     print("File 'results_epoch.csv' does not exist.")
+
                 config = {
                     "df": df,
-                    "model_name": "bert-base-uncased",
+                    "model_name": "google-bert/bert-base-multilingual-uncased",
                     "overlapping": overlapping,
                     "batch_size": batch_size,
                     "learning_rate": lr,
                     "epochs": num_epochs,
                     "config_id": idx,
                     "max_seq_len": 512,
-                    "col_length": "bert_length",
+                    "col_length": "multibert_length",
                     "best_valid_qwk": max(df_result1['valid_qwk']) if df_result1 is not None and not df_result1.empty else float("-inf")
                 }
 

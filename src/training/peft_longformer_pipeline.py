@@ -145,7 +145,7 @@ class LongFormerPipelinePeft:
     
     def run_training(self):
         # split dataset (70:20:10)
-        train_dataset, valid_dataset, test_dataset = self.split_dataset(0.2, 0.25)
+        train_dataset, valid_dataset, test_dataset = self.split_dataset(0.2, 0.5)
         
         # create dataset and dataLoader
         train_data, valid_data, test_data = self.create_dataset(train_dataset, valid_dataset, test_dataset)
