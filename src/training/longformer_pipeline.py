@@ -41,11 +41,11 @@ class LongFormerPipeline:
 
     def split_dataset(self, valid_size, test_size):
         print("split dataset run...")
-        subset_dataset = self.df['dataset'].unique()
+        subset_dataset = self.df['dataset_num'].unique()
         splits = {}
         # split dataset for each "category"
         for subset in subset_dataset:
-            subset_df = self.df[self.df['dataset'] == subset]
+            subset_df = self.df[self.df['dataset_num'] == subset]
 
             # split dataset
             train, temp = train_test_split(subset_df, test_size=valid_size, random_state=SEED)
