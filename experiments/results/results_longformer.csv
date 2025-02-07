@@ -1,0 +1,2 @@
+config_id,model_name,batch_size,epochs,learning_rate,max_seq_len,training_time,peak_memory,test_mse,test_qwk,test_pearson,lora_rank,lora_alpha
+0,allenai/longformer-base-4096,2,10,1e-05,2048,28129.73557782173,8158.47265625,0.03029893341273874,0.8672517129800541,0.9130476500645474,,
