@@ -5,7 +5,7 @@ import logging
 import torch
 import os
 
-df = pd.read_csv("data/full_aes_dataset.csv")
+df = pd.read_csv("data/aes_dataset_5k_clean.csv")
 
 # Check if the first file exists
 df_result = None
