@@ -59,3 +59,21 @@
 2025-02-09 15:13:43,406 - INFO - Running configuration: config_id=33, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=512, epochs=10, learning_rate=1e-05
 2025-02-09 16:01:54,164 - INFO - Running configuration: config_id=34, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=512, epochs=10, learning_rate=2e-05
 2025-02-09 16:49:52,259 - INFO - Running configuration: config_id=35, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=512, epochs=10, learning_rate=5e-05
+2025-02-09 18:25:34,823 - INFO - Running configuration: config_id=36, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=256, overlapping=0, epochs=5, learning_rate=1e-05
+2025-02-09 18:59:23,071 - INFO - Running configuration: config_id=37, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=256, overlapping=0, epochs=5, learning_rate=2e-05
+2025-02-09 19:33:16,819 - INFO - Running configuration: config_id=38, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=256, overlapping=0, epochs=5, learning_rate=5e-05
+2025-02-09 22:39:05,805 - INFO - Running configuration: config_id=5, model_name=allenai/longformer-base-4096, batch_size=2, epochs=10, learning_rate=5e-05, max_seq=2048
+2025-02-10 06:49:34,398 - INFO - Running configuration: config_id=39, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=256, overlapping=0, epochs=10, learning_rate=1e-05
+2025-02-10 07:56:01,384 - INFO - Running configuration: config_id=40, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=256, overlapping=0, epochs=10, learning_rate=2e-05
+2025-02-10 09:02:18,567 - INFO - Running configuration: config_id=41, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=256, overlapping=0, epochs=10, learning_rate=5e-05
+2025-02-10 10:42:02,015 - INFO - Running configuration: config_id=42, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=256, overlapping=0, epochs=5, learning_rate=1e-05
+2025-02-10 11:14:31,687 - INFO - Running configuration: config_id=43, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=256, overlapping=0, epochs=5, learning_rate=2e-05
+2025-02-10 11:46:07,046 - INFO - Running configuration: config_id=44, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=256, overlapping=0, epochs=5, learning_rate=5e-05
+2025-02-10 12:18:45,408 - INFO - Running configuration: config_id=45, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=256, overlapping=0, epochs=10, learning_rate=1e-05
+2025-02-10 13:22:46,815 - INFO - Running configuration: config_id=46, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=256, overlapping=0, epochs=10, learning_rate=2e-05
+2025-02-10 14:26:32,587 - INFO - Running configuration: config_id=47, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=256, overlapping=0, epochs=10, learning_rate=5e-05
+2025-02-10 15:35:39,139 - INFO - Running configuration: config_id=48, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=256, overlapping=128, epochs=5, learning_rate=1e-05
+2025-02-10 16:10:32,616 - INFO - Running configuration: config_id=49, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=256, overlapping=128, epochs=5, learning_rate=2e-05
+2025-02-10 16:45:36,517 - INFO - Running configuration: config_id=50, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=256, overlapping=128, epochs=5, learning_rate=5e-05
+2025-02-10 17:25:32,247 - INFO - Running configuration: config_id=51, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=256, overlapping=128, epochs=10, learning_rate=1e-05
+2025-02-10 18:37:56,900 - INFO - Running configuration: config_id=52, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=256, overlapping=128, epochs=10, learning_rate=2e-05
