@@ -1,12 +1,11 @@
 import pandas as pd
 from src.training.bert_pipeline import TrainingBertPipeline
+from src.training.peft_bert_pipeline import BertPipelinePeft
 import logging
 import torch
 import os
 
 df = pd.read_csv("data/aes_dataset_5k_clean.csv")
-
-# read result csv data
 # Check if the first file exists
 df_result = None
 if os.path.exists("experiments/results/results.csv"):
@@ -15,11 +14,10 @@ if os.path.exists("experiments/results/results.csv"):
 else:
     print("File 'results.csv' does not exist.")
 
-
-batch_sizes = [4, 8]
-overlappings = [0, 128, 256]
-epochs_list = [5, 10]
-learning_rates = [1e-5, 2e-5, 5e-5]
+batch_sizes = [4]
+overlappings = [0, 256]
+epochs_list = [5]
+learning_rates = [1e-5, 5e-5]
 idx = (df_result['config_id'].iloc[-1] + 1) if df_result is not None and not df_result.empty else 0  # index untuk setiap kombinasi
 ROOT_DIR = os.getcwd()
 
@@ -36,7 +34,6 @@ for batch_size in batch_sizes:
                     print(max(df_result1['valid_qwk']))
                 else:
                     print("File 'results_epoch.csv' does not exist.")
-
                 config = {
                     "df": df,
                     "model_name": "google-bert/bert-base-multilingual-uncased",
@@ -47,21 +44,25 @@ for batch_size in batch_sizes:
                     "config_id": idx,
                     "max_seq_len": 512,
                     "col_length": "multibert_length",
-                    "best_valid_qwk": max(df_result1['valid_qwk']) if df_result1 is not None and not df_result1.empty else float("-inf")
+                    "best_valid_qwk": max(df_result1['valid_qwk']) if df_result1 is not None and not df_result1.empty else float("-inf"),
+                    "lora_rank": 16,
+                    "lora_alpha": 16,
                 }
 
                 logging.info(
                     f"Running configuration: config_id={idx}, model_name={config['model_name']}, batch_size={batch_size}, "
-                    f"max_seq_length={config['max_seq_len']}, overlapping={overlapping}, epochs={num_epochs}, learning_rate={lr}"
+                    f"max_seq_length={config['max_seq_len']}, overlapping={overlapping}, epochs={num_epochs}, learning_rate={lr}, "
+                    f"lora_rank:{config['lora_rank']}, lora_alpha:{config['lora_alpha']}"
                 )
                 
                 print(
                     f"\nRunning configuration: config_id={idx}, model_name={config['model_name']}, batch_size={batch_size}, "
-                    f"max_seq_length={config['max_seq_len']}, overlapping={overlapping}, epochs={num_epochs}, learning_rate={lr}"
+                    f"max_seq_length={config['max_seq_len']}, overlapping={overlapping}, epochs={num_epochs}, learning_rate={lr}, "
+                    f"lora_rank:{config['lora_rank']}, lora_alpha:{config['lora_alpha']}"
                 )
                 
                 try:
-                    pipeline = TrainingBertPipeline(config, results, results_epoch)
+                    pipeline = BertPipelinePeft(config, results, results_epoch)
                     pipeline.run_training()
 
                     # Save results

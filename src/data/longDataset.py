@@ -1,5 +1,6 @@
 from torch.utils.data import Dataset
 import torch
+import regex as re
 
 class LongEssayDataset(Dataset):
     def __init__(self, dataframe, tokenizer, max_len, overlapping, col_length):
@@ -17,10 +18,20 @@ class LongEssayDataset(Dataset):
     def __len__(self):
         return len(self.df)
     
+    def preprocess_text(self, text):
+        """Add text preprocessing steps"""
+        # Remove extra whitespace
+        text = ' '.join(text.split())
+        # Convert to lowercase
+        text = text.lower()
+        # Remove special characters (keep punctuation)
+        text = re.sub(r'[^a-zA-Z0-9\s.,!?]', '', text)
+        return text
+    
     def __getitem__(self, index):
-        question = str(self.df.iloc[index].get('question', "[UNK]"))
-        reference_answer = str(self.df.iloc[index]['reference_answer'])
-        student_answer = str(self.df.iloc[index]['answer'])
+        question = self.preprocess_text(str(self.df.iloc[index].get('question', "[UNK]")))
+        reference_answer = self.preprocess_text(str(self.df.iloc[index]['reference_answer']))
+        student_answer = self.preprocess_text(str(self.df.iloc[index]['answer']))
         score = self.df.iloc[index]['normalized_score']
         # check if text needs to be separated or not
         if(self.df.iloc[index][self.col_length] > (self.max_len-2)):

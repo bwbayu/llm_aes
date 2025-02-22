@@ -45,3 +45,24 @@ class HierarchicalBert(nn.Module):
         attention_weights = torch.nn.functional.softmax(stacked_chunks @ stacked_chunks.T, dim=1)
         pooled_output = attention_weights @ stacked_chunks
         return pooled_output.mean(dim=0)  # [hidden_size]
+    
+    # def attention_pooling(self, chunk_outputs, num_chunks):
+    #     """Improved attention pooling with scaled dot-product attention"""
+    #     if num_chunks == 1:
+    #         return chunk_outputs[0].squeeze(0)
+        
+    #     stacked_chunks = torch.cat(chunk_outputs, dim=0)  # [num_chunks, hidden_size]
+        
+    #     # Scale dot products by sqrt(d_k)
+    #     scaling_factor = torch.sqrt(torch.tensor(stacked_chunks.size(-1), dtype=torch.float))
+    #     attention_scores = (stacked_chunks @ stacked_chunks.T) / scaling_factor
+        
+    #     # Add attention dropout for regularization
+    #     attention_weights = torch.nn.functional.dropout(
+    #         torch.nn.functional.softmax(attention_scores, dim=1),
+    #         p=0.1,
+    #         training=self.training
+    #     )
+        
+    #     pooled_output = attention_weights @ stacked_chunks
+    #     return pooled_output.mean(dim=0)

@@ -14,6 +14,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import cohen_kappa_score
 from scipy.stats import pearsonr
 from torch.nn.utils.rnn import pad_sequence
+from src.utils.earlyStopping import EarlyStopping
 import time
 import logging
 
@@ -47,6 +48,17 @@ class TrainingBertPipeline:
         self.config = config
         self.results = results
         self.results_epoch = results_epoch
+        # # 3. Implement learning rate scheduling:
+        # self.scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        #     self.optimizer,
+        #     mode='max',
+        #     factor=0.5,
+        #     patience=2,
+        #     verbose=True
+        # )
+
+        # Initialize early stopping
+        # self.early_stopping = EarlyStopping(patience=3, min_delta=0.001)
 
     def split_dataset(self, valid_size, test_size):
         print("split dataset run...")
@@ -196,6 +208,8 @@ class TrainingBertPipeline:
                         print(f"Targets: {targets}")
                         continue
                     loss.backward()
+                    # # Add gradient clipping
+                    # torch.nn.utils.clip_grad_norm_(self.model.parameters(), max_norm=1.0)
                     self.optimizer.step()
                     train_mse_loss += loss.item()
                     all_predictions.extend(predictions.detach().cpu().numpy())
@@ -212,10 +226,19 @@ class TrainingBertPipeline:
             valid_loss, valid_qwk, valid_pearson = self.evaluate(valid_dataloader, mode="validation")
             print(f"Validation Loss: {valid_loss:.4f}, Validation QWK: {valid_qwk:.4f}, Validation Pearson: {valid_pearson:.4f}")
 
+            # # Update learning rate scheduler based on validation QWK
+            # self.scheduler.step(valid_qwk)
+
             # Save model if validation QWK improves
             if valid_qwk > best_valid_metric:
                 best_valid_metric = valid_qwk
                 self.save_model(save_path=best_model_path)    
+
+            # # Early stopping check
+            # self.early_stopping(valid_loss)
+            # if self.early_stopping.early_stop:
+            #     print("Early stopping triggered")
+            #     break
 
             # save csv per training epoch
             self.results_epoch.append({
@@ -226,7 +249,8 @@ class TrainingBertPipeline:
                 "train_pearson": pearson_train,
                 "valid_mse": valid_loss,
                 "valid_qwk": valid_qwk,
-                "valid_pearson": valid_pearson
+                "valid_pearson": valid_pearson,
+                "learning_rate": self.optimizer.param_groups[0]['lr']
             })
 
         # run testing

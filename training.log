@@ -96,3 +96,39 @@
 2025-02-11 20:35:38,786 - INFO - Running configuration: config_id=69, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=256, epochs=10, learning_rate=1e-05
 2025-02-11 21:00:40,346 - INFO - Running configuration: config_id=70, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=256, epochs=10, learning_rate=2e-05
 2025-02-11 21:25:40,395 - INFO - Running configuration: config_id=71, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=256, epochs=10, learning_rate=5e-05
+2025-02-11 22:24:42,146 - INFO - Running configuration: config_id=72, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, overlapping=0, epochs=5, learning_rate=1e-05
+2025-02-11 23:02:21,122 - INFO - Running configuration: config_id=73, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, overlapping=0, epochs=5, learning_rate=2e-05
+2025-02-11 23:39:57,149 - INFO - Running configuration: config_id=74, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, overlapping=0, epochs=5, learning_rate=5e-05
+2025-02-12 00:17:29,612 - INFO - Running configuration: config_id=75, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, overlapping=0, epochs=10, learning_rate=1e-05
+2025-02-12 01:32:24,698 - INFO - Running configuration: config_id=76, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, overlapping=0, epochs=10, learning_rate=2e-05
+2025-02-12 02:47:14,764 - INFO - Running configuration: config_id=77, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, overlapping=0, epochs=10, learning_rate=5e-05
+2025-02-12 04:02:15,379 - INFO - Running configuration: config_id=78, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, overlapping=0, epochs=5, learning_rate=1e-05
+2025-02-12 04:38:16,711 - INFO - Running configuration: config_id=79, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, overlapping=0, epochs=5, learning_rate=2e-05
+2025-02-12 05:14:17,687 - INFO - Running configuration: config_id=80, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, overlapping=0, epochs=5, learning_rate=5e-05
+2025-02-12 05:50:15,197 - INFO - Running configuration: config_id=81, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, overlapping=0, epochs=10, learning_rate=1e-05
+2025-02-12 07:02:00,724 - INFO - Running configuration: config_id=82, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, overlapping=0, epochs=10, learning_rate=2e-05
+2025-02-12 08:13:54,276 - INFO - Running configuration: config_id=83, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, overlapping=0, epochs=10, learning_rate=5e-05
+2025-02-12 09:27:55,012 - INFO - Running configuration: config_id=84, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, overlapping=64, epochs=5, learning_rate=1e-05
+2025-02-12 10:12:32,979 - INFO - Running configuration: config_id=85, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, overlapping=64, epochs=5, learning_rate=2e-05
+2025-02-12 10:56:39,063 - INFO - Running configuration: config_id=86, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, overlapping=64, epochs=5, learning_rate=5e-05
+2025-02-12 11:41:26,778 - INFO - Running configuration: config_id=87, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, overlapping=64, epochs=10, learning_rate=1e-05
+2025-02-12 13:10:12,177 - INFO - Running configuration: config_id=88, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, overlapping=64, epochs=10, learning_rate=2e-05
+2025-02-12 14:41:53,796 - INFO - Running configuration: config_id=89, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, overlapping=64, epochs=10, learning_rate=5e-05
+2025-02-12 16:12:26,464 - INFO - Running configuration: config_id=90, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, overlapping=64, epochs=5, learning_rate=1e-05
+2025-02-12 16:56:20,477 - INFO - Running configuration: config_id=91, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, overlapping=64, epochs=5, learning_rate=2e-05
+2025-02-12 17:38:48,249 - INFO - Running configuration: config_id=92, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, overlapping=64, epochs=5, learning_rate=5e-05
+2025-02-12 18:22:46,882 - INFO - Running configuration: config_id=93, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, overlapping=64, epochs=10, learning_rate=1e-05
+2025-02-12 19:50:18,517 - INFO - Running configuration: config_id=94, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, overlapping=64, epochs=10, learning_rate=2e-05
+2025-02-12 21:21:20,785 - INFO - Running configuration: config_id=95, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, overlapping=64, epochs=10, learning_rate=5e-05
+2025-02-14 01:23:36,694 - INFO - Running configuration: config_id=96, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, epochs=5, learning_rate=1e-05
+2025-02-14 01:34:54,766 - INFO - Running configuration: config_id=97, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, epochs=5, learning_rate=2e-05
+2025-02-14 01:46:13,364 - INFO - Running configuration: config_id=98, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, epochs=5, learning_rate=5e-05
+2025-02-14 01:57:29,994 - INFO - Running configuration: config_id=99, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, epochs=10, learning_rate=1e-05
+2025-02-14 02:19:55,351 - INFO - Running configuration: config_id=100, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, epochs=10, learning_rate=2e-05
+2025-02-14 02:42:20,777 - INFO - Running configuration: config_id=101, model_name=google-bert/bert-base-multilingual-uncased, batch_size=4, max_seq_length=128, epochs=10, learning_rate=5e-05
+2025-02-14 03:04:48,605 - INFO - Running configuration: config_id=102, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, epochs=5, learning_rate=1e-05
+2025-02-14 03:12:43,004 - INFO - Running configuration: config_id=103, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, epochs=5, learning_rate=2e-05
+2025-02-14 03:20:36,734 - INFO - Running configuration: config_id=104, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, epochs=5, learning_rate=5e-05
+2025-02-14 03:28:32,708 - INFO - Running configuration: config_id=105, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, epochs=10, learning_rate=1e-05
+2025-02-14 03:44:15,105 - INFO - Running configuration: config_id=106, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, epochs=10, learning_rate=2e-05
+2025-02-14 03:59:57,857 - INFO - Running configuration: config_id=107, model_name=google-bert/bert-base-multilingual-uncased, batch_size=8, max_seq_length=128, epochs=10, learning_rate=5e-05
