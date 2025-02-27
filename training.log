@@ -1,0 +1,9 @@
+2025-02-27 23:15:12,622 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2batch_size=4, epochs=1, learning_rate=1e-05
+2025-02-27 23:17:13,803 - ERROR - Error in config_id=0: BERTPipeline.save_model() missing 1 required positional argument: 'self'
+2025-02-27 23:19:13,959 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2batch_size=4, epochs=1, learning_rate=1e-05
+2025-02-27 23:21:17,594 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-27 23:22:33,597 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2batch_size=4, epochs=1, learning_rate=1e-05
+2025-02-27 23:32:07,059 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2batch_size=4, epochs=1, learning_rate=1e-05
+2025-02-27 23:34:09,416 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-27 23:34:31,684 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2batch_size=4, epochs=1, learning_rate=1e-05
+2025-02-27 23:38:22,142 - INFO - Running configuration: config_id=2, model_name=indobenchmark/indobert-lite-base-p2batch_size=16, epochs=1, learning_rate=1e-05
