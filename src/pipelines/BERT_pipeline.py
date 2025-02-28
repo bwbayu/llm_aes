@@ -7,6 +7,7 @@ from torch.utils.data import DataLoader
 import torch
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import ReduceLROnPlateau
+from transformers import get_linear_schedule_with_warmup
 from src.datasets.BERTDataset import AutomaticScoringDataset
 from src.models.BERTRegressionModel import RegressionModel
 from sklearn.model_selection import train_test_split
@@ -32,12 +33,24 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 class BERTPipeline:
     def __init__(self, config, results, results_epoch):
         self.df = config['df']
+        # tokenizer and model
         self.tokenizer = BertTokenizer.from_pretrained(config['model_name'])
         self.model = RegressionModel(config['model_name']).to(device)
+        # optimizer and scheduler
         self.optimizer = AdamW(self.model.parameters(), lr=config['learning_rate'])
-        self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min', factor=0.1, patience=5, verbose=True)
+        self.plateau_scheduler = ReduceLROnPlateau(self.optimizer, mode='min', factor=0.1, patience=5, verbose=True)
+        # step calculation for training data
+        train_dataset, _, _ = self.split_dataset(0.8, 0.1, 0.1)
+        num_training_steps = len(train_dataset) // config['batch_size'] * config['epochs']
+        warmup_steps = int(config['warmup_ratio'] * num_training_steps)
+        self.scheduler = get_linear_schedule_with_warmup(
+            self.optimizer,
+            num_warmup_steps=warmup_steps,
+            num_training_steps=num_training_steps
+        )
+        # loss function
         self.criterion = torch.nn.MSELoss()
-        # 
+        # other variable
         self.config = config
         self.results = results
         self.results_epoch = results_epoch
@@ -166,6 +179,7 @@ class BERTPipeline:
                     # backprop
                     loss.backward()
                     self.optimizer.step()
+                    self.scheduler.step()
 
                     # save data for calculation
                     train_mse_loss += loss.item()
@@ -187,7 +201,7 @@ class BERTPipeline:
             print(f"Avg validation loss: {valid_loss:.4f}, MAE: {valid_mae:.4}, RMSE: {valid_rmse:.4}, Pearson Corr: {valid_pearson:.4}")
             
             # update scheduler based on validation loss
-            self.scheduler.step(valid_loss)
+            self.plateau_scheduler.step(valid_loss)
 
             # save model if get better pearson
             if valid_pearson > best_valid_metric:
@@ -220,6 +234,7 @@ class BERTPipeline:
             "batch_size": self.config.get("batch_size"),
             "epochs": self.config.get("epochs"),
             "learning_rate": self.config.get("learning_rate"),
+            "warm_up": self.config['warmup_ratio'],
             "training_time": time.time() - start_time,
             "peak_memory": torch.cuda.max_memory_allocated(device) / (1024 ** 2),  # Convert to MB
             "test_mse": test_loss,
