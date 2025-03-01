@@ -82,9 +82,9 @@ class BERTPipeline:
     
     def create_dataset(self, train_dataset, valid_dataset, test_dataset):
         print("create dataset run...")
-        train_data = AutomaticScoringDataset(train_dataset, self.tokenizer, use_reference=True)
-        valid_data = AutomaticScoringDataset(valid_dataset, self.tokenizer, use_reference=True)
-        test_data = AutomaticScoringDataset(test_dataset, self.tokenizer, use_reference=True)
+        train_data = AutomaticScoringDataset(train_dataset, self.tokenizer, use_reference=False)
+        valid_data = AutomaticScoringDataset(valid_dataset, self.tokenizer, use_reference=False)
+        test_data = AutomaticScoringDataset(test_dataset, self.tokenizer, use_reference=False)
 
         return train_data, valid_data, test_data
     
@@ -241,7 +241,7 @@ class BERTPipeline:
             "test_mae": test_mae,
             "test_rmse": test_rmse,
             "test_pearson": test_pearson,
-            "use_reference": True,
+            "use_reference": False,
         }
 
         # Tambahkan hasil ke dalam list results

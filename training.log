@@ -1,9 +1,109 @@
-2025-02-27 23:15:12,622 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2batch_size=4, epochs=1, learning_rate=1e-05
+2025-02-27 23:15:12,622 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=1, learning_rate=1e-05
 2025-02-27 23:17:13,803 - ERROR - Error in config_id=0: BERTPipeline.save_model() missing 1 required positional argument: 'self'
-2025-02-27 23:19:13,959 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2batch_size=4, epochs=1, learning_rate=1e-05
+2025-02-27 23:19:13,959 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=1, learning_rate=1e-05
 2025-02-27 23:21:17,594 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-27 23:22:33,597 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2batch_size=4, epochs=1, learning_rate=1e-05
-2025-02-27 23:32:07,059 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2batch_size=4, epochs=1, learning_rate=1e-05
+2025-02-27 23:22:33,597 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=1, learning_rate=1e-05
+2025-02-27 23:32:07,059 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=1, learning_rate=1e-05
 2025-02-27 23:34:09,416 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-27 23:34:31,684 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2batch_size=4, epochs=1, learning_rate=1e-05
-2025-02-27 23:38:22,142 - INFO - Running configuration: config_id=2, model_name=indobenchmark/indobert-lite-base-p2batch_size=16, epochs=1, learning_rate=1e-05
+2025-02-27 23:34:31,684 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=1, learning_rate=1e-05
+2025-02-27 23:38:22,142 - INFO - Running configuration: config_id=2, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=1, learning_rate=1e-05
+2025-02-27 23:40:28,488 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=1e-05
+2025-02-27 23:42:27,331 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-27 23:44:22,525 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-27 23:46:17,671 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-27 23:48:12,948 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-27 23:50:08,084 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-27 23:50:13,072 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=2e-05
+2025-02-27 23:59:56,470 - INFO - Running configuration: config_id=2, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=5e-05
+2025-02-28 00:09:39,147 - INFO - Running configuration: config_id=3, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=0.0001
+2025-02-28 00:19:20,078 - INFO - Running configuration: config_id=4, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=1e-05
+2025-02-28 00:34:40,524 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 00:38:35,164 - INFO - Running configuration: config_id=5, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=2e-05
+2025-02-28 00:57:52,422 - INFO - Running configuration: config_id=6, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=5e-05
+2025-02-28 01:17:08,377 - INFO - Running configuration: config_id=7, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=0.0001
+2025-02-28 01:26:44,782 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 01:36:24,424 - INFO - Running configuration: config_id=8, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=1e-05
+2025-02-28 02:14:49,021 - INFO - Running configuration: config_id=9, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=2e-05
+2025-02-28 02:47:22,379 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 02:53:11,740 - INFO - Running configuration: config_id=10, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=5e-05
+2025-02-28 03:12:22,962 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 03:31:37,098 - INFO - Running configuration: config_id=11, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=0.0001
+2025-02-28 04:09:56,188 - INFO - Running configuration: config_id=12, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=1e-05
+2025-02-28 04:18:51,680 - INFO - Running configuration: config_id=13, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=2e-05
+2025-02-28 04:27:47,412 - INFO - Running configuration: config_id=14, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=5e-05
+2025-02-28 04:36:41,705 - INFO - Running configuration: config_id=15, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=0.0001
+2025-02-28 04:45:36,677 - INFO - Running configuration: config_id=16, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=1e-05
+2025-02-28 05:03:19,563 - INFO - Running configuration: config_id=17, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=2e-05
+2025-02-28 05:21:04,094 - INFO - Running configuration: config_id=18, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=5e-05
+2025-02-28 05:38:49,828 - INFO - Running configuration: config_id=19, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=0.0001
+2025-02-28 05:56:33,102 - INFO - Running configuration: config_id=20, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=1e-05
+2025-02-28 06:31:53,273 - INFO - Running configuration: config_id=21, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=2e-05
+2025-02-28 07:07:11,135 - INFO - Running configuration: config_id=22, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=5e-05
+2025-02-28 07:42:27,937 - INFO - Running configuration: config_id=23, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=0.0001
+2025-02-28 08:17:50,175 - INFO - Running configuration: config_id=24, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=1e-05
+2025-02-28 08:26:09,874 - INFO - Running configuration: config_id=25, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=2e-05
+2025-02-28 08:34:29,802 - INFO - Running configuration: config_id=26, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=5e-05
+2025-02-28 08:42:49,839 - INFO - Running configuration: config_id=27, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=0.0001
+2025-02-28 08:51:09,145 - INFO - Running configuration: config_id=28, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=1e-05
+2025-02-28 09:07:48,872 - INFO - Running configuration: config_id=29, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=2e-05
+2025-02-28 09:24:19,776 - INFO - Running configuration: config_id=30, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=5e-05
+2025-02-28 09:41:12,034 - INFO - Running configuration: config_id=31, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=0.0001
+2025-02-28 09:57:43,136 - INFO - Running configuration: config_id=32, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=1e-05
+2025-02-28 10:31:03,270 - INFO - Running configuration: config_id=33, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=2e-05
+2025-02-28 11:04:08,827 - INFO - Running configuration: config_id=34, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=5e-05
+2025-02-28 11:37:05,670 - INFO - Running configuration: config_id=35, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=0.0001
+2025-02-28 12:58:26,741 - INFO - Running configuration: config_id=36, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=1e-05
+2025-02-28 13:00:31,233 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 13:02:29,892 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 13:04:27,523 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 13:08:27,028 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 13:08:32,261 - INFO - Running configuration: config_id=37, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=2e-05
+2025-02-28 13:12:36,338 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 13:18:43,364 - INFO - Running configuration: config_id=38, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=5e-05
+2025-02-28 13:28:51,326 - INFO - Running configuration: config_id=39, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=0.0001
+2025-02-28 13:38:51,362 - INFO - Running configuration: config_id=40, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=1e-05
+2025-02-28 13:58:53,990 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 13:58:59,315 - INFO - Running configuration: config_id=41, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=2e-05
+2025-02-28 14:03:05,397 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 14:19:19,785 - INFO - Running configuration: config_id=42, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=5e-05
+2025-02-28 14:37:33,272 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 14:39:42,889 - INFO - Running configuration: config_id=43, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=0.0001
+2025-02-28 15:00:11,604 - INFO - Running configuration: config_id=44, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=1e-05
+2025-02-28 15:40:43,846 - INFO - Running configuration: config_id=45, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=2e-05
+2025-02-28 15:46:49,751 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 16:05:03,549 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 16:21:07,435 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 16:21:12,631 - INFO - Running configuration: config_id=46, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=5e-05
+2025-02-28 17:01:12,581 - INFO - Running configuration: config_id=47, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=0.0001
+2025-02-28 17:42:12,639 - INFO - Running configuration: config_id=48, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=1e-05
+2025-02-28 17:51:32,980 - INFO - Running configuration: config_id=49, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=2e-05
+2025-02-28 18:00:47,185 - INFO - Running configuration: config_id=50, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=5e-05
+2025-02-28 18:09:56,774 - INFO - Running configuration: config_id=51, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=0.0001
+2025-02-28 18:19:05,630 - INFO - Running configuration: config_id=52, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=1e-05
+2025-02-28 18:37:14,354 - INFO - Running configuration: config_id=53, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=2e-05
+2025-02-28 18:55:24,628 - INFO - Running configuration: config_id=54, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=5e-05
+2025-02-28 19:13:32,876 - INFO - Running configuration: config_id=55, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=0.0001
+2025-02-28 19:31:36,833 - INFO - Running configuration: config_id=56, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=1e-05
+2025-02-28 20:07:47,907 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-02-28 20:07:52,778 - INFO - Running configuration: config_id=57, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=2e-05
+2025-02-28 20:44:19,773 - INFO - Running configuration: config_id=58, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=5e-05
+2025-02-28 21:21:13,593 - INFO - Running configuration: config_id=59, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=0.0001
+2025-02-28 21:57:43,998 - INFO - Running configuration: config_id=60, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=1e-05
+2025-02-28 22:06:07,346 - INFO - Running configuration: config_id=61, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=2e-05
+2025-02-28 22:14:29,910 - INFO - Running configuration: config_id=62, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=5e-05
+2025-02-28 22:22:52,606 - INFO - Running configuration: config_id=63, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=0.0001
+2025-02-28 22:31:15,764 - INFO - Running configuration: config_id=64, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=1e-05
+2025-02-28 22:48:03,990 - INFO - Running configuration: config_id=65, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=2e-05
+2025-02-28 23:04:42,245 - INFO - Running configuration: config_id=66, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=5e-05
+2025-02-28 23:21:20,844 - INFO - Running configuration: config_id=67, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=0.0001
+2025-02-28 23:37:59,449 - INFO - Running configuration: config_id=68, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=1e-05
+2025-03-01 00:11:09,370 - INFO - Running configuration: config_id=69, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=2e-05
+2025-03-01 00:44:20,660 - INFO - Running configuration: config_id=70, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=5e-05
+2025-03-01 01:17:31,304 - INFO - Running configuration: config_id=71, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=0.0001
+2025-03-01 06:54:30,792 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=1e-05
+2025-03-01 06:56:30,489 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-01 06:58:27,921 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-01 07:00:23,305 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-01 07:02:19,347 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-01 07:04:17,226 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-01 07:04:22,340 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=2e-05
