@@ -10,6 +10,7 @@ from src.datasets.SBERTDataset import SBERTDataset
 from src.models.SBERTRegressionModel import SBERTRegressionModel
 from src.models.SiameseIndoBERTModel import SiameseIndoBERTModel
 from src.pipelines.BERT_pipeline import BERTPipeline
+from src.utils.EarlyStopping import EarlyStopping
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 from scipy.stats import pearsonr
@@ -34,10 +35,13 @@ class SBERTPipeline:
     def __init__(self, config, results, results_epoch):
         self.df = config['df']
         # tokenizer and model
-        self.model = SiameseIndoBERTModel().to(device)
+        self.model = SBERTRegressionModel().to(device)
+        # self.model = SiameseIndoBERTModel().to(device)
         # optimizer and scheduler
         self.optimizer = AdamW(self.model.parameters(), lr=config['learning_rate'])
         self.plateau_scheduler = ReduceLROnPlateau(self.optimizer, mode='min', factor=0.1, patience=5, verbose=True)
+        # early stopping
+        self.early_stopping = EarlyStopping(verbose=True, path='experiments/models/checkpoint.pt')
         # loss function
         self.criterion = torch.nn.MSELoss()
         # other variable
@@ -99,6 +103,14 @@ class SBERTPipeline:
         return train_dataloader, valid_dataloader, test_dataloader
     
     def evaluate(self, dataloader, mode="validation"):
+        if mode == 'testing':
+            self.model = SBERTRegressionModel(self.config['model_name']).to(device)
+            # self.model = SiameseIndoBERTModel(self.config['model_name']).to(device)
+            checkpoint = torch.load('experiments/models/checkpoint.pt')
+            if isinstance(checkpoint, dict) and 'model_state_dict' in checkpoint:
+                self.model.load_state_dict(checkpoint['model_state_dict'])
+            else:
+                self.model.load_state_dict(checkpoint)
         self.model.eval()
         total_mse_loss = 0
         all_predictions = []
@@ -142,9 +154,11 @@ class SBERTPipeline:
         start_time = time.time()
         # experiment process
         epochs = self.config["epochs"]
+        num_epochs = 0
         best_valid_metric = self.config["best_valid_pearson"] if self.config["best_valid_pearson"] is not None else float('-inf')
         best_model_path = os.path.join("experiments", "models", f"{self.config['model_name']}_best_model.pt")
         for epoch in range(epochs):
+            num_epochs += 1
             print(f"====== Training Epoch {epoch + 1}/{epochs} ======")
             self.model.train()
             train_mse_loss = 0
@@ -191,6 +205,13 @@ class SBERTPipeline:
             
             # update scheduler based on validation loss
             self.plateau_scheduler.step(valid_loss)
+
+            # check early stopping
+            self.early_stopping(val_loss=valid_loss, model=self.model)
+            if(self.early_stopping.early_stop):
+                logging.info(f"Early stopping triggered")
+                print("Early stopping triggered")
+                break
             
             # save model if get better pearson
             if valid_pearson > best_valid_metric:
@@ -221,7 +242,7 @@ class SBERTPipeline:
             "config_id": self.config.get("config_id"),
             "model_name": self.config.get("model_name"),
             "batch_size": self.config.get("batch_size"),
-            "epochs": self.config.get("epochs"),
+            "epochs": num_epochs,
             "learning_rate": self.config.get("learning_rate"),
             "training_time": time.time() - start_time,
             "peak_memory": torch.cuda.max_memory_allocated(device) / (1024 ** 2),  # Convert to MB

@@ -10,6 +10,7 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 from transformers import get_linear_schedule_with_warmup
 from src.datasets.BERTDataset import AutomaticScoringDataset
 from src.models.BERTRegressionModel import RegressionModel
+from src.utils.EarlyStopping import EarlyStopping
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 from scipy.stats import pearsonr
@@ -48,6 +49,8 @@ class BERTPipeline:
             num_warmup_steps=warmup_steps,
             num_training_steps=num_training_steps
         )
+        # early stopping
+        self.early_stopping = EarlyStopping(patience=10, verbose=True, path='experiments/models/checkpoint.pt')
         # loss function
         self.criterion = torch.nn.MSELoss()
         # other variable
@@ -82,9 +85,9 @@ class BERTPipeline:
     
     def create_dataset(self, train_dataset, valid_dataset, test_dataset):
         print("create dataset run...")
-        train_data = AutomaticScoringDataset(train_dataset, self.tokenizer, use_reference=False)
-        valid_data = AutomaticScoringDataset(valid_dataset, self.tokenizer, use_reference=False)
-        test_data = AutomaticScoringDataset(test_dataset, self.tokenizer, use_reference=False)
+        train_data = AutomaticScoringDataset(train_dataset, self.tokenizer, use_reference=self.config['use_reference'])
+        valid_data = AutomaticScoringDataset(valid_dataset, self.tokenizer, use_reference=self.config['use_reference'])
+        test_data = AutomaticScoringDataset(test_dataset, self.tokenizer, use_reference=self.config['use_reference'])
 
         return train_data, valid_data, test_data
     
@@ -104,6 +107,14 @@ class BERTPipeline:
         logging.info(f"Model saved to {save_path}")
 
     def evaluate(self, dataloader, mode="validation"):
+        if mode == 'testing':
+            self.model = RegressionModel(self.config['model_name']).to(device)
+            checkpoint = torch.load('experiments/models/checkpoint.pt')
+            if isinstance(checkpoint, dict) and 'model_state_dict' in checkpoint:
+                self.model.load_state_dict(checkpoint['model_state_dict'])
+            else:
+                self.model.load_state_dict(checkpoint)
+
         self.model.eval()
         total_mse_loss = 0
         all_predictions = []
@@ -148,9 +159,11 @@ class BERTPipeline:
         start_time = time.time()
         # experiment process
         epochs = self.config["epochs"]
+        num_epochs = 0
         best_valid_metric = self.config["best_valid_pearson"] if self.config["best_valid_pearson"] is not None else float('-inf')
         best_model_path = os.path.join("experiments", "models", f"{self.config['model_name']}_best_model.pt")
         for epoch in range(epochs):
+            num_epochs += 1
             print(f"====== Training Epoch {epoch + 1}/{epochs} ======")
             self.model.train()
             train_mse_loss = 0
@@ -203,6 +216,13 @@ class BERTPipeline:
             # update scheduler based on validation loss
             self.plateau_scheduler.step(valid_loss)
 
+            # check early stopping
+            self.early_stopping(val_loss=valid_loss, model=self.model)
+            if(self.early_stopping.early_stop):
+                logging.info(f"Early stopping triggered")
+                print("Early stopping triggered")
+                break
+
             # save model if get better pearson
             if valid_pearson > best_valid_metric:
                 best_valid_metric = valid_pearson
@@ -232,7 +252,7 @@ class BERTPipeline:
             "config_id": self.config.get("config_id"),
             "model_name": self.config.get("model_name"),
             "batch_size": self.config.get("batch_size"),
-            "epochs": self.config.get("epochs"),
+            "epochs": num_epochs,
             "learning_rate": self.config.get("learning_rate"),
             "warm_up": self.config['warmup_ratio'],
             "training_time": time.time() - start_time,
@@ -241,7 +261,7 @@ class BERTPipeline:
             "test_mae": test_mae,
             "test_rmse": test_rmse,
             "test_pearson": test_pearson,
-            "use_reference": False,
+            "use_reference": self.config['use_reference'],
         }
 
         # Tambahkan hasil ke dalam list results
