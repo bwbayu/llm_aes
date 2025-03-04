@@ -11,6 +11,7 @@ from src.models.SBERTRegressionModel import SBERTRegressionModel
 from src.models.SiameseIndoBERTModel import SiameseIndoBERTModel
 from src.pipelines.BERT_pipeline import BERTPipeline
 from src.utils.EarlyStopping import EarlyStopping
+from transformers import get_linear_schedule_with_warmup
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 from scipy.stats import pearsonr
@@ -35,13 +36,22 @@ class SBERTPipeline:
     def __init__(self, config, results, results_epoch):
         self.df = config['df']
         # tokenizer and model
-        self.model = SBERTRegressionModel().to(device)
-        # self.model = SiameseIndoBERTModel().to(device)
+        self.model = SBERTRegressionModel(config['model_name']).to(device)
+        # self.model = SiameseIndoBERTModel(config['model_name']).to(device)
         # optimizer and scheduler
         self.optimizer = AdamW(self.model.parameters(), lr=config['learning_rate'])
         self.plateau_scheduler = ReduceLROnPlateau(self.optimizer, mode='min', factor=0.1, patience=5, verbose=True)
+        # step calculation for training data
+        train_dataset, _, _ = self.split_dataset(0.8, 0.1, 0.1)
+        num_training_steps = len(train_dataset) // config['batch_size'] * config['epochs']
+        warmup_steps = int(config['warmup_ratio'] * num_training_steps)
+        self.scheduler = get_linear_schedule_with_warmup(
+            self.optimizer,
+            num_warmup_steps=warmup_steps,
+            num_training_steps=num_training_steps
+        )
         # early stopping
-        self.early_stopping = EarlyStopping(verbose=True, path='experiments/models/checkpoint.pt')
+        self.early_stopping = EarlyStopping(verbose=True, path='experiments/models/checkpoint.pt', patience=20)
         # loss function
         self.criterion = torch.nn.MSELoss()
         # other variable
@@ -180,6 +190,7 @@ class SBERTPipeline:
                     loss.backward()
                     torch.nn.utils.clip_grad_norm_(self.model.parameters(), 1.0)
                     self.optimizer.step()
+                    self.scheduler.step()
 
                     # save data for calculation
                     train_mse_loss += loss.item()
@@ -244,6 +255,7 @@ class SBERTPipeline:
             "batch_size": self.config.get("batch_size"),
             "epochs": num_epochs,
             "learning_rate": self.config.get("learning_rate"),
+            "warm_up": self.config['warmup_ratio'],
             "training_time": time.time() - start_time,
             "peak_memory": torch.cuda.max_memory_allocated(device) / (1024 ** 2),  # Convert to MB
             "test_mse": test_loss,
