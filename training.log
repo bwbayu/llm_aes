@@ -1,109 +1,1540 @@
-2025-02-27 23:15:12,622 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=1, learning_rate=1e-05
-2025-02-27 23:17:13,803 - ERROR - Error in config_id=0: BERTPipeline.save_model() missing 1 required positional argument: 'self'
-2025-02-27 23:19:13,959 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=1, learning_rate=1e-05
-2025-02-27 23:21:17,594 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-27 23:22:33,597 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=1, learning_rate=1e-05
-2025-02-27 23:32:07,059 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=1, learning_rate=1e-05
-2025-02-27 23:34:09,416 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-27 23:34:31,684 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=1, learning_rate=1e-05
-2025-02-27 23:38:22,142 - INFO - Running configuration: config_id=2, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=1, learning_rate=1e-05
-2025-02-27 23:40:28,488 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=1e-05
-2025-02-27 23:42:27,331 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-27 23:44:22,525 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-27 23:46:17,671 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-27 23:48:12,948 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-27 23:50:08,084 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-27 23:50:13,072 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=2e-05
-2025-02-27 23:59:56,470 - INFO - Running configuration: config_id=2, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=5e-05
-2025-02-28 00:09:39,147 - INFO - Running configuration: config_id=3, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=0.0001
-2025-02-28 00:19:20,078 - INFO - Running configuration: config_id=4, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=1e-05
-2025-02-28 00:34:40,524 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 00:38:35,164 - INFO - Running configuration: config_id=5, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=2e-05
-2025-02-28 00:57:52,422 - INFO - Running configuration: config_id=6, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=5e-05
-2025-02-28 01:17:08,377 - INFO - Running configuration: config_id=7, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=0.0001
-2025-02-28 01:26:44,782 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 01:36:24,424 - INFO - Running configuration: config_id=8, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=1e-05
-2025-02-28 02:14:49,021 - INFO - Running configuration: config_id=9, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=2e-05
-2025-02-28 02:47:22,379 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 02:53:11,740 - INFO - Running configuration: config_id=10, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=5e-05
-2025-02-28 03:12:22,962 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 03:31:37,098 - INFO - Running configuration: config_id=11, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=0.0001
-2025-02-28 04:09:56,188 - INFO - Running configuration: config_id=12, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=1e-05
-2025-02-28 04:18:51,680 - INFO - Running configuration: config_id=13, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=2e-05
-2025-02-28 04:27:47,412 - INFO - Running configuration: config_id=14, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=5e-05
-2025-02-28 04:36:41,705 - INFO - Running configuration: config_id=15, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=0.0001
-2025-02-28 04:45:36,677 - INFO - Running configuration: config_id=16, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=1e-05
-2025-02-28 05:03:19,563 - INFO - Running configuration: config_id=17, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=2e-05
-2025-02-28 05:21:04,094 - INFO - Running configuration: config_id=18, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=5e-05
-2025-02-28 05:38:49,828 - INFO - Running configuration: config_id=19, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=0.0001
-2025-02-28 05:56:33,102 - INFO - Running configuration: config_id=20, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=1e-05
-2025-02-28 06:31:53,273 - INFO - Running configuration: config_id=21, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=2e-05
-2025-02-28 07:07:11,135 - INFO - Running configuration: config_id=22, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=5e-05
-2025-02-28 07:42:27,937 - INFO - Running configuration: config_id=23, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=0.0001
-2025-02-28 08:17:50,175 - INFO - Running configuration: config_id=24, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=1e-05
-2025-02-28 08:26:09,874 - INFO - Running configuration: config_id=25, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=2e-05
-2025-02-28 08:34:29,802 - INFO - Running configuration: config_id=26, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=5e-05
-2025-02-28 08:42:49,839 - INFO - Running configuration: config_id=27, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=0.0001
-2025-02-28 08:51:09,145 - INFO - Running configuration: config_id=28, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=1e-05
-2025-02-28 09:07:48,872 - INFO - Running configuration: config_id=29, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=2e-05
-2025-02-28 09:24:19,776 - INFO - Running configuration: config_id=30, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=5e-05
-2025-02-28 09:41:12,034 - INFO - Running configuration: config_id=31, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=0.0001
-2025-02-28 09:57:43,136 - INFO - Running configuration: config_id=32, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=1e-05
-2025-02-28 10:31:03,270 - INFO - Running configuration: config_id=33, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=2e-05
-2025-02-28 11:04:08,827 - INFO - Running configuration: config_id=34, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=5e-05
-2025-02-28 11:37:05,670 - INFO - Running configuration: config_id=35, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=0.0001
-2025-02-28 12:58:26,741 - INFO - Running configuration: config_id=36, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=1e-05
-2025-02-28 13:00:31,233 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 13:02:29,892 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 13:04:27,523 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 13:08:27,028 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 13:08:32,261 - INFO - Running configuration: config_id=37, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=2e-05
-2025-02-28 13:12:36,338 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 13:18:43,364 - INFO - Running configuration: config_id=38, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=5e-05
-2025-02-28 13:28:51,326 - INFO - Running configuration: config_id=39, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=0.0001
-2025-02-28 13:38:51,362 - INFO - Running configuration: config_id=40, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=1e-05
-2025-02-28 13:58:53,990 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 13:58:59,315 - INFO - Running configuration: config_id=41, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=2e-05
-2025-02-28 14:03:05,397 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 14:19:19,785 - INFO - Running configuration: config_id=42, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=5e-05
-2025-02-28 14:37:33,272 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 14:39:42,889 - INFO - Running configuration: config_id=43, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=10, learning_rate=0.0001
-2025-02-28 15:00:11,604 - INFO - Running configuration: config_id=44, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=1e-05
-2025-02-28 15:40:43,846 - INFO - Running configuration: config_id=45, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=2e-05
-2025-02-28 15:46:49,751 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 16:05:03,549 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 16:21:07,435 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 16:21:12,631 - INFO - Running configuration: config_id=46, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=5e-05
-2025-02-28 17:01:12,581 - INFO - Running configuration: config_id=47, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=0.0001
-2025-02-28 17:42:12,639 - INFO - Running configuration: config_id=48, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=1e-05
-2025-02-28 17:51:32,980 - INFO - Running configuration: config_id=49, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=2e-05
-2025-02-28 18:00:47,185 - INFO - Running configuration: config_id=50, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=5e-05
-2025-02-28 18:09:56,774 - INFO - Running configuration: config_id=51, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=5, learning_rate=0.0001
-2025-02-28 18:19:05,630 - INFO - Running configuration: config_id=52, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=1e-05
-2025-02-28 18:37:14,354 - INFO - Running configuration: config_id=53, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=2e-05
-2025-02-28 18:55:24,628 - INFO - Running configuration: config_id=54, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=5e-05
-2025-02-28 19:13:32,876 - INFO - Running configuration: config_id=55, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=10, learning_rate=0.0001
-2025-02-28 19:31:36,833 - INFO - Running configuration: config_id=56, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=1e-05
-2025-02-28 20:07:47,907 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-02-28 20:07:52,778 - INFO - Running configuration: config_id=57, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=2e-05
-2025-02-28 20:44:19,773 - INFO - Running configuration: config_id=58, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=5e-05
-2025-02-28 21:21:13,593 - INFO - Running configuration: config_id=59, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=20, learning_rate=0.0001
-2025-02-28 21:57:43,998 - INFO - Running configuration: config_id=60, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=1e-05
-2025-02-28 22:06:07,346 - INFO - Running configuration: config_id=61, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=2e-05
-2025-02-28 22:14:29,910 - INFO - Running configuration: config_id=62, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=5e-05
-2025-02-28 22:22:52,606 - INFO - Running configuration: config_id=63, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=5, learning_rate=0.0001
-2025-02-28 22:31:15,764 - INFO - Running configuration: config_id=64, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=1e-05
-2025-02-28 22:48:03,990 - INFO - Running configuration: config_id=65, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=2e-05
-2025-02-28 23:04:42,245 - INFO - Running configuration: config_id=66, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=5e-05
-2025-02-28 23:21:20,844 - INFO - Running configuration: config_id=67, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=10, learning_rate=0.0001
-2025-02-28 23:37:59,449 - INFO - Running configuration: config_id=68, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=1e-05
-2025-03-01 00:11:09,370 - INFO - Running configuration: config_id=69, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=2e-05
-2025-03-01 00:44:20,660 - INFO - Running configuration: config_id=70, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=5e-05
-2025-03-01 01:17:31,304 - INFO - Running configuration: config_id=71, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=20, learning_rate=0.0001
-2025-03-01 06:54:30,792 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=1e-05
-2025-03-01 06:56:30,489 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-03-01 06:58:27,921 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-03-01 07:00:23,305 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-03-01 07:02:19,347 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-03-01 07:04:17,226 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
-2025-03-01 07:04:22,340 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=5, learning_rate=2e-05
+2025-03-02 14:33:09,340 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=1e-05
+2025-03-02 14:35:11,685 - INFO - Validation loss decreased (inf --> 0.020528). Saving model ...
+2025-03-02 14:35:11,780 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 14:37:09,117 - INFO - Validation loss decreased (0.020528 --> 0.017523). Saving model ...
+2025-03-02 14:37:09,210 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 14:39:06,296 - INFO - Validation loss decreased (0.017523 --> 0.015513). Saving model ...
+2025-03-02 14:39:06,380 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 14:41:01,816 - INFO - Validation loss decreased (0.015513 --> 0.015295). Saving model ...
+2025-03-02 14:41:01,900 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 14:42:57,087 - INFO - Validation loss decreased (0.015295 --> 0.014584). Saving model ...
+2025-03-02 14:42:57,173 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 14:44:49,710 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 14:46:42,314 - INFO - EarlyStopping counter: 2 out of 7
+2025-03-02 14:48:34,708 - INFO - EarlyStopping counter: 3 out of 7
+2025-03-02 14:50:27,041 - INFO - EarlyStopping counter: 4 out of 7
+2025-03-02 14:52:19,411 - INFO - Validation loss decreased (0.014584 --> 0.014136). Saving model ...
+2025-03-02 14:52:19,540 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 14:54:11,740 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 14:56:04,215 - INFO - EarlyStopping counter: 2 out of 7
+2025-03-02 14:57:56,555 - INFO - Validation loss decreased (0.014136 --> 0.013669). Saving model ...
+2025-03-02 14:57:56,642 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 14:59:48,896 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 15:01:41,152 - INFO - EarlyStopping counter: 2 out of 7
+2025-03-02 15:03:34,024 - INFO - Validation loss decreased (0.013669 --> 0.013357). Saving model ...
+2025-03-02 15:03:34,107 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 15:05:26,837 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 15:07:19,236 - INFO - Validation loss decreased (0.013357 --> 0.013261). Saving model ...
+2025-03-02 15:07:19,327 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 15:09:11,896 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 15:11:04,364 - INFO - EarlyStopping counter: 2 out of 7
+2025-03-02 15:12:57,006 - INFO - EarlyStopping counter: 3 out of 7
+2025-03-02 15:14:49,399 - INFO - EarlyStopping counter: 4 out of 7
+2025-03-02 15:16:41,856 - INFO - EarlyStopping counter: 5 out of 7
+2025-03-02 15:18:34,340 - INFO - EarlyStopping counter: 6 out of 7
+2025-03-02 15:20:26,783 - INFO - EarlyStopping counter: 7 out of 7
+2025-03-02 15:20:26,784 - INFO - Early stopping triggered
+2025-03-02 15:20:32,418 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=1e-05
+2025-03-02 15:22:26,197 - INFO - Validation loss decreased (inf --> 0.063378). Saving model ...
+2025-03-02 15:24:18,939 - INFO - Validation loss decreased (0.063378 --> 0.040951). Saving model ...
+2025-03-02 15:26:11,401 - INFO - Validation loss decreased (0.040951 --> 0.028048). Saving model ...
+2025-03-02 15:28:03,917 - INFO - Validation loss decreased (0.028048 --> 0.025058). Saving model ...
+2025-03-02 15:29:56,106 - INFO - Validation loss decreased (0.025058 --> 0.023316). Saving model ...
+2025-03-02 15:31:48,502 - INFO - Validation loss decreased (0.023316 --> 0.020615). Saving model ...
+2025-03-02 15:33:40,981 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 15:35:33,336 - INFO - Validation loss decreased (0.020615 --> 0.017503). Saving model ...
+2025-03-02 15:37:25,739 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 15:39:18,302 - INFO - EarlyStopping counter: 2 out of 7
+2025-03-02 15:41:10,549 - INFO - EarlyStopping counter: 3 out of 7
+2025-03-02 15:43:02,901 - INFO - Validation loss decreased (0.017503 --> 0.016748). Saving model ...
+2025-03-02 15:44:55,208 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 15:46:47,582 - INFO - EarlyStopping counter: 2 out of 7
+2025-03-02 15:48:39,946 - INFO - EarlyStopping counter: 3 out of 7
+2025-03-02 15:50:32,254 - INFO - EarlyStopping counter: 4 out of 7
+2025-03-02 15:52:24,696 - INFO - EarlyStopping counter: 5 out of 7
+2025-03-02 15:54:17,036 - INFO - EarlyStopping counter: 6 out of 7
+2025-03-02 15:56:09,731 - INFO - EarlyStopping counter: 7 out of 7
+2025-03-02 15:56:09,731 - INFO - Early stopping triggered
+2025-03-02 15:56:15,785 - INFO - Running configuration: config_id=2, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=1e-05
+2025-03-02 15:58:12,408 - INFO - Validation loss decreased (inf --> 0.010128). Saving model ...
+2025-03-02 15:58:12,511 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 16:00:06,648 - INFO - Validation loss decreased (0.010128 --> 0.007847). Saving model ...
+2025-03-02 16:00:06,734 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 16:02:00,613 - INFO - Validation loss decreased (0.007847 --> 0.007798). Saving model ...
+2025-03-02 16:03:54,606 - INFO - Validation loss decreased (0.007798 --> 0.007017). Saving model ...
+2025-03-02 16:03:54,697 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 16:05:48,490 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 16:07:42,646 - INFO - EarlyStopping counter: 2 out of 7
+2025-03-02 16:09:36,458 - INFO - EarlyStopping counter: 3 out of 7
+2025-03-02 16:11:30,345 - INFO - EarlyStopping counter: 4 out of 7
+2025-03-02 16:13:24,308 - INFO - EarlyStopping counter: 5 out of 7
+2025-03-02 16:15:18,033 - INFO - EarlyStopping counter: 6 out of 7
+2025-03-02 16:17:11,724 - INFO - EarlyStopping counter: 7 out of 7
+2025-03-02 16:17:11,724 - INFO - Early stopping triggered
+2025-03-02 16:17:17,821 - INFO - Running configuration: config_id=3, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=1e-05
+2025-03-02 16:19:14,510 - INFO - Validation loss decreased (inf --> 0.040686). Saving model ...
+2025-03-02 16:21:08,550 - INFO - Validation loss decreased (0.040686 --> 0.021702). Saving model ...
+2025-03-02 16:23:02,644 - INFO - Validation loss decreased (0.021702 --> 0.013614). Saving model ...
+2025-03-02 16:24:56,677 - INFO - Validation loss decreased (0.013614 --> 0.011024). Saving model ...
+2025-03-02 16:26:50,946 - INFO - Validation loss decreased (0.011024 --> 0.009808). Saving model ...
+2025-03-02 16:28:44,786 - INFO - Validation loss decreased (0.009808 --> 0.008829). Saving model ...
+2025-03-02 16:30:38,658 - INFO - Validation loss decreased (0.008829 --> 0.008554). Saving model ...
+2025-03-02 16:32:32,729 - INFO - Validation loss decreased (0.008554 --> 0.007760). Saving model ...
+2025-03-02 16:34:26,946 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 16:36:20,928 - INFO - EarlyStopping counter: 2 out of 7
+2025-03-02 16:38:14,711 - INFO - EarlyStopping counter: 3 out of 7
+2025-03-02 16:40:08,599 - INFO - Validation loss decreased (0.007760 --> 0.007289). Saving model ...
+2025-03-02 16:42:02,623 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 16:43:56,736 - INFO - EarlyStopping counter: 2 out of 7
+2025-03-02 16:45:50,592 - INFO - EarlyStopping counter: 3 out of 7
+2025-03-02 16:47:44,483 - INFO - EarlyStopping counter: 4 out of 7
+2025-03-02 16:49:38,205 - INFO - Validation loss decreased (0.007289 --> 0.007223). Saving model ...
+2025-03-02 16:51:32,318 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 16:53:26,110 - INFO - EarlyStopping counter: 2 out of 7
+2025-03-02 16:55:20,065 - INFO - EarlyStopping counter: 3 out of 7
+2025-03-02 16:57:14,009 - INFO - EarlyStopping counter: 4 out of 7
+2025-03-02 16:57:14,054 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 16:59:09,564 - INFO - EarlyStopping counter: 5 out of 7
+2025-03-02 17:01:05,529 - INFO - EarlyStopping counter: 6 out of 7
+2025-03-02 17:02:59,381 - INFO - EarlyStopping counter: 7 out of 7
+2025-03-02 17:02:59,382 - INFO - Early stopping triggered
+2025-03-02 17:03:05,079 - INFO - Running configuration: config_id=4, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=2e-05
+2025-03-02 17:04:58,153 - INFO - Validation loss decreased (inf --> 0.025028). Saving model ...
+2025-03-02 17:06:50,352 - INFO - Validation loss decreased (0.025028 --> 0.017080). Saving model ...
+2025-03-02 17:08:42,599 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 17:10:34,777 - INFO - Validation loss decreased (0.017080 --> 0.016718). Saving model ...
+2025-03-02 17:12:27,043 - INFO - Validation loss decreased (0.016718 --> 0.016111). Saving model ...
+2025-03-02 17:14:18,946 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 17:16:11,068 - INFO - EarlyStopping counter: 2 out of 7
+2025-03-02 17:18:03,476 - INFO - EarlyStopping counter: 3 out of 7
+2025-03-02 17:19:55,558 - INFO - Validation loss decreased (0.016111 --> 0.014189). Saving model ...
+2025-03-02 17:21:47,814 - INFO - EarlyStopping counter: 1 out of 7
+2025-03-02 17:23:39,888 - INFO - EarlyStopping counter: 2 out of 7
+2025-03-02 17:25:31,986 - INFO - EarlyStopping counter: 3 out of 7
+2025-03-02 17:27:24,235 - INFO - EarlyStopping counter: 4 out of 7
+2025-03-02 17:29:16,186 - INFO - EarlyStopping counter: 5 out of 7
+2025-03-02 17:31:08,417 - INFO - EarlyStopping counter: 6 out of 7
+2025-03-02 17:33:00,505 - INFO - EarlyStopping counter: 7 out of 7
+2025-03-02 17:33:00,505 - INFO - Early stopping triggered
+2025-03-02 17:33:06,321 - INFO - Running configuration: config_id=5, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=2e-05
+2025-03-02 17:34:59,712 - INFO - Validation loss decreased (inf --> 0.049031). Saving model ...
+2025-03-02 17:36:51,841 - INFO - Validation loss decreased (0.049031 --> 0.029596). Saving model ...
+2025-03-02 18:11:42,799 - INFO - PyTorch version 2.4.1+cu121 available.
+2025-03-02 18:11:42,801 - INFO - Polars version 1.17.1 available.
+2025-03-02 18:11:44,147 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=1e-05
+2025-03-02 18:11:44,149 - INFO - Use pytorch device_name: cuda
+2025-03-02 18:11:44,149 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-02 18:12:22,072 - INFO - Validation loss decreased (inf --> 0.040199). Saving model ...
+2025-03-02 18:12:22,349 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:12:54,496 - INFO - Validation loss decreased (0.040199 --> 0.035625). Saving model ...
+2025-03-02 18:12:54,769 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:13:26,699 - INFO - Validation loss decreased (0.035625 --> 0.031287). Saving model ...
+2025-03-02 18:13:26,966 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:13:59,582 - INFO - Validation loss decreased (0.031287 --> 0.031117). Saving model ...
+2025-03-02 18:13:59,848 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:14:31,327 - INFO - Validation loss decreased (0.031117 --> 0.027987). Saving model ...
+2025-03-02 18:14:31,588 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:15:03,038 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 18:15:34,767 - INFO - EarlyStopping counter: 2 out of 5
+2025-03-02 18:16:06,549 - INFO - EarlyStopping counter: 3 out of 5
+2025-03-02 18:16:38,329 - INFO - Validation loss decreased (0.027987 --> 0.026720). Saving model ...
+2025-03-02 18:16:38,603 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:17:10,488 - INFO - Validation loss decreased (0.026720 --> 0.025131). Saving model ...
+2025-03-02 18:17:42,458 - INFO - Validation loss decreased (0.025131 --> 0.024215). Saving model ...
+2025-03-02 18:17:42,727 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:18:14,468 - INFO - Validation loss decreased (0.024215 --> 0.023962). Saving model ...
+2025-03-02 18:18:46,519 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 18:19:18,500 - INFO - Validation loss decreased (0.023962 --> 0.023269). Saving model ...
+2025-03-02 18:19:18,793 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:19:50,332 - INFO - Validation loss decreased (0.023269 --> 0.021702). Saving model ...
+2025-03-02 18:19:50,584 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:20:22,478 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 18:20:22,607 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:20:54,212 - INFO - EarlyStopping counter: 2 out of 5
+2025-03-02 18:20:54,386 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:21:26,068 - INFO - Validation loss decreased (0.021702 --> 0.021457). Saving model ...
+2025-03-02 18:21:58,032 - INFO - Validation loss decreased (0.021457 --> 0.020967). Saving model ...
+2025-03-02 18:21:58,296 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:22:30,089 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 18:22:30,092 - INFO - Use pytorch device_name: cuda
+2025-03-02 18:22:30,092 - INFO - Load pretrained SentenceTransformer: indobenchmark/indobert-lite-base-p2
+2025-03-02 18:22:31,090 - WARNING - No sentence-transformers model found with name indobenchmark/indobert-lite-base-p2. Creating a new one with mean pooling.
+2025-03-02 18:22:32,771 - ERROR - Error in config_id=0: not a string
+2025-03-02 18:37:54,859 - INFO - PyTorch version 2.4.1+cu121 available.
+2025-03-02 18:37:54,860 - INFO - Polars version 1.17.1 available.
+2025-03-02 18:37:55,371 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=20, learning_rate=1e-05
+2025-03-02 18:37:55,375 - INFO - Use pytorch device_name: cuda
+2025-03-02 18:37:55,375 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-02 18:38:32,289 - INFO - Validation loss decreased (inf --> 0.040199). Saving model ...
+2025-03-02 18:38:32,562 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:39:04,828 - INFO - Validation loss decreased (0.040199 --> 0.035625). Saving model ...
+2025-03-02 18:39:05,127 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:39:37,354 - INFO - Validation loss decreased (0.035625 --> 0.031287). Saving model ...
+2025-03-02 18:39:37,604 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:40:09,903 - INFO - Validation loss decreased (0.031287 --> 0.031117). Saving model ...
+2025-03-02 18:40:10,124 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:40:42,307 - INFO - Validation loss decreased (0.031117 --> 0.027987). Saving model ...
+2025-03-02 18:40:42,524 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:41:14,579 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 18:41:46,725 - INFO - EarlyStopping counter: 2 out of 5
+2025-03-02 18:42:18,871 - INFO - EarlyStopping counter: 3 out of 5
+2025-03-02 18:42:51,171 - INFO - Validation loss decreased (0.027987 --> 0.026720). Saving model ...
+2025-03-02 18:42:51,388 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:43:23,645 - INFO - Validation loss decreased (0.026720 --> 0.025131). Saving model ...
+2025-03-02 18:43:56,039 - INFO - Validation loss decreased (0.025131 --> 0.024215). Saving model ...
+2025-03-02 18:43:56,270 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:44:29,942 - INFO - Validation loss decreased (0.024215 --> 0.023962). Saving model ...
+2025-03-02 18:45:03,681 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 18:45:37,256 - INFO - Validation loss decreased (0.023962 --> 0.023270). Saving model ...
+2025-03-02 18:45:37,504 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:46:11,007 - INFO - Validation loss decreased (0.023270 --> 0.021701). Saving model ...
+2025-03-02 18:46:11,231 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:46:44,994 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 18:46:45,104 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:47:18,248 - INFO - EarlyStopping counter: 2 out of 5
+2025-03-02 18:47:18,353 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 18:47:42,333 - INFO - PyTorch version 2.4.1+cu121 available.
+2025-03-02 18:47:42,334 - INFO - Polars version 1.17.1 available.
+2025-03-02 18:47:42,828 - INFO - Running configuration: config_id=0, model_name=all-MiniLM-L6-v2, batch_size=4, epochs=20, learning_rate=1e-05
+2025-03-02 18:47:42,831 - INFO - Use pytorch device_name: cuda
+2025-03-02 18:47:42,831 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-02 18:48:19,186 - INFO - Validation loss decreased (inf --> 0.040199). Saving model ...
+2025-03-02 18:48:19,411 - INFO - Model saved to experiments\models\all-MiniLM-L6-v2_best_model.pt
+2025-03-02 18:48:51,460 - INFO - Validation loss decreased (0.040199 --> 0.035625). Saving model ...
+2025-03-02 18:48:51,690 - INFO - Model saved to experiments\models\all-MiniLM-L6-v2_best_model.pt
+2025-03-02 18:49:23,462 - INFO - Validation loss decreased (0.035625 --> 0.031287). Saving model ...
+2025-03-02 18:49:23,690 - INFO - Model saved to experiments\models\all-MiniLM-L6-v2_best_model.pt
+2025-03-02 18:49:55,371 - INFO - Validation loss decreased (0.031287 --> 0.031118). Saving model ...
+2025-03-02 18:49:55,591 - INFO - Model saved to experiments\models\all-MiniLM-L6-v2_best_model.pt
+2025-03-02 18:50:27,550 - INFO - Validation loss decreased (0.031118 --> 0.027987). Saving model ...
+2025-03-02 18:50:27,770 - INFO - Model saved to experiments\models\all-MiniLM-L6-v2_best_model.pt
+2025-03-02 18:50:59,459 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 18:51:31,802 - INFO - EarlyStopping counter: 2 out of 5
+2025-03-02 18:52:03,629 - INFO - EarlyStopping counter: 3 out of 5
+2025-03-02 18:52:35,887 - INFO - Validation loss decreased (0.027987 --> 0.026721). Saving model ...
+2025-03-02 18:52:36,127 - INFO - Model saved to experiments\models\all-MiniLM-L6-v2_best_model.pt
+2025-03-02 18:53:09,694 - INFO - Validation loss decreased (0.026721 --> 0.025131). Saving model ...
+2025-03-02 18:53:43,159 - INFO - Validation loss decreased (0.025131 --> 0.024215). Saving model ...
+2025-03-02 18:53:43,405 - INFO - Model saved to experiments\models\all-MiniLM-L6-v2_best_model.pt
+2025-03-02 18:54:16,839 - INFO - Validation loss decreased (0.024215 --> 0.023961). Saving model ...
+2025-03-02 18:54:49,556 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 18:55:21,123 - INFO - Validation loss decreased (0.023961 --> 0.023269). Saving model ...
+2025-03-02 18:55:21,354 - INFO - Model saved to experiments\models\all-MiniLM-L6-v2_best_model.pt
+2025-03-02 18:55:52,885 - INFO - Validation loss decreased (0.023269 --> 0.021702). Saving model ...
+2025-03-02 18:55:53,094 - INFO - Model saved to experiments\models\all-MiniLM-L6-v2_best_model.pt
+2025-03-02 18:56:25,135 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 18:56:25,244 - INFO - Model saved to experiments\models\all-MiniLM-L6-v2_best_model.pt
+2025-03-02 18:56:56,994 - INFO - EarlyStopping counter: 2 out of 5
+2025-03-02 18:56:57,110 - INFO - Model saved to experiments\models\all-MiniLM-L6-v2_best_model.pt
+2025-03-02 18:57:28,811 - INFO - Validation loss decreased (0.021702 --> 0.021457). Saving model ...
+2025-03-02 18:58:00,856 - INFO - Validation loss decreased (0.021457 --> 0.020967). Saving model ...
+2025-03-02 18:58:01,147 - INFO - Model saved to experiments\models\all-MiniLM-L6-v2_best_model.pt
+2025-03-02 18:58:33,009 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 18:58:33,011 - INFO - Use pytorch device_name: cuda
+2025-03-02 18:58:33,011 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-02 19:01:15,986 - INFO - PyTorch version 2.4.1+cu121 available.
+2025-03-02 19:01:15,987 - INFO - Polars version 1.17.1 available.
+2025-03-02 19:01:16,506 - INFO - Running configuration: config_id=1, model_name=all-MiniLM-L6-v2, batch_size=4, epochs=100, learning_rate=1e-05
+2025-03-02 19:01:16,508 - INFO - Use pytorch device_name: cuda
+2025-03-02 19:01:16,508 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-02 19:01:53,675 - INFO - Validation loss decreased (inf --> 0.040199). Saving model ...
+2025-03-02 19:02:26,284 - INFO - Validation loss decreased (0.040199 --> 0.035625). Saving model ...
+2025-03-02 19:02:58,389 - INFO - Validation loss decreased (0.035625 --> 0.031287). Saving model ...
+2025-03-02 19:03:30,419 - INFO - Validation loss decreased (0.031287 --> 0.031117). Saving model ...
+2025-03-02 19:04:02,764 - INFO - Validation loss decreased (0.031117 --> 0.027987). Saving model ...
+2025-03-02 19:04:34,660 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 19:05:06,474 - INFO - EarlyStopping counter: 2 out of 5
+2025-03-02 19:05:38,436 - INFO - EarlyStopping counter: 3 out of 5
+2025-03-02 19:06:11,830 - INFO - Validation loss decreased (0.027987 --> 0.026720). Saving model ...
+2025-03-02 19:06:45,474 - INFO - Validation loss decreased (0.026720 --> 0.025131). Saving model ...
+2025-03-02 19:07:18,559 - INFO - Validation loss decreased (0.025131 --> 0.024215). Saving model ...
+2025-03-02 19:07:52,138 - INFO - Validation loss decreased (0.024215 --> 0.023961). Saving model ...
+2025-03-02 19:08:26,336 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 19:08:59,891 - INFO - Validation loss decreased (0.023961 --> 0.023269). Saving model ...
+2025-03-02 19:09:33,804 - INFO - Validation loss decreased (0.023269 --> 0.021702). Saving model ...
+2025-03-02 19:10:07,817 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 19:10:41,759 - INFO - EarlyStopping counter: 2 out of 5
+2025-03-02 19:11:15,735 - INFO - Validation loss decreased (0.021702 --> 0.021457). Saving model ...
+2025-03-02 19:11:49,664 - INFO - Validation loss decreased (0.021457 --> 0.020967). Saving model ...
+2025-03-02 19:12:23,663 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 19:12:57,417 - INFO - Validation loss decreased (0.020967 --> 0.020724). Saving model ...
+2025-03-02 19:12:57,716 - INFO - Model saved to experiments\models\all-MiniLM-L6-v2_best_model.pt
+2025-03-02 19:13:31,428 - INFO - Validation loss decreased (0.020724 --> 0.019687). Saving model ...
+2025-03-02 19:14:04,684 - INFO - Validation loss decreased (0.019687 --> 0.018691). Saving model ...
+2025-03-02 19:14:04,975 - INFO - Model saved to experiments\models\all-MiniLM-L6-v2_best_model.pt
+2025-03-02 19:14:37,884 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 19:15:11,680 - INFO - EarlyStopping counter: 2 out of 5
+2025-03-02 19:15:45,376 - INFO - EarlyStopping counter: 3 out of 5
+2025-03-02 19:16:18,767 - INFO - EarlyStopping counter: 4 out of 5
+2025-03-02 19:16:52,477 - INFO - EarlyStopping counter: 5 out of 5
+2025-03-02 19:16:52,477 - INFO - Early stopping triggered
+2025-03-02 19:16:52,480 - INFO - Use pytorch device_name: cuda
+2025-03-02 19:16:52,480 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-02 19:17:39,501 - INFO - PyTorch version 2.4.1+cu121 available.
+2025-03-02 19:17:39,502 - INFO - Polars version 1.17.1 available.
+2025-03-02 19:17:40,080 - INFO - Running configuration: config_id=2, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=1e-05
+2025-03-02 19:18:52,174 - INFO - Validation loss decreased (inf --> 0.038729). Saving model ...
+2025-03-02 19:20:01,201 - INFO - Validation loss decreased (0.038729 --> 0.035570). Saving model ...
+2025-03-02 19:21:09,803 - INFO - Validation loss decreased (0.035570 --> 0.027836). Saving model ...
+2025-03-02 19:22:17,125 - INFO - Validation loss decreased (0.027836 --> 0.026591). Saving model ...
+2025-03-02 19:23:21,358 - INFO - Validation loss decreased (0.026591 --> 0.025433). Saving model ...
+2025-03-02 19:24:30,180 - INFO - Validation loss decreased (0.025433 --> 0.023999). Saving model ...
+2025-03-02 19:25:39,791 - INFO - Validation loss decreased (0.023999 --> 0.023350). Saving model ...
+2025-03-02 19:26:50,723 - INFO - Validation loss decreased (0.023350 --> 0.021486). Saving model ...
+2025-03-02 19:28:00,828 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 19:29:09,260 - INFO - Validation loss decreased (0.021486 --> 0.020510). Saving model ...
+2025-03-02 19:30:19,944 - INFO - Validation loss decreased (0.020510 --> 0.019950). Saving model ...
+2025-03-02 19:31:30,655 - INFO - Validation loss decreased (0.019950 --> 0.018774). Saving model ...
+2025-03-02 19:32:41,490 - INFO - Validation loss decreased (0.018774 --> 0.018663). Saving model ...
+2025-03-02 19:33:51,888 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 19:35:02,013 - INFO - EarlyStopping counter: 2 out of 5
+2025-03-02 19:36:09,351 - INFO - Validation loss decreased (0.018663 --> 0.016447). Saving model ...
+2025-03-02 19:36:09,450 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 19:37:17,691 - INFO - Validation loss decreased (0.016447 --> 0.016400). Saving model ...
+2025-03-02 19:37:17,800 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 19:38:26,148 - INFO - EarlyStopping counter: 1 out of 5
+2025-03-02 19:38:26,196 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 19:39:32,647 - INFO - EarlyStopping counter: 2 out of 5
+2025-03-02 19:40:41,163 - INFO - EarlyStopping counter: 3 out of 5
+2025-03-02 19:41:49,261 - INFO - EarlyStopping counter: 4 out of 5
+2025-03-02 19:42:57,204 - INFO - EarlyStopping counter: 5 out of 5
+2025-03-02 19:42:57,205 - INFO - Early stopping triggered
+2025-03-02 20:27:47,362 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=1e-05
+2025-03-02 20:29:48,660 - INFO - Validation loss decreased (inf --> 0.020528). Saving model ...
+2025-03-02 20:29:48,755 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 20:31:47,117 - INFO - Validation loss decreased (0.020528 --> 0.017523). Saving model ...
+2025-03-02 20:31:47,210 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 20:33:45,852 - INFO - Validation loss decreased (0.017523 --> 0.015513). Saving model ...
+2025-03-02 20:33:45,942 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 20:35:44,517 - INFO - Validation loss decreased (0.015513 --> 0.015295). Saving model ...
+2025-03-02 20:35:44,609 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 20:37:43,079 - INFO - Validation loss decreased (0.015295 --> 0.014584). Saving model ...
+2025-03-02 20:37:43,173 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 20:39:41,998 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 20:41:42,091 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-02 20:43:44,952 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-02 20:45:44,160 - INFO - Validation loss decreased (0.014584 --> 0.014537). Saving model ...
+2025-03-02 20:45:44,257 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 20:47:43,604 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 20:49:45,198 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-02 20:51:46,000 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-02 20:53:46,905 - INFO - Validation loss decreased (0.014537 --> 0.013805). Saving model ...
+2025-03-02 20:53:47,007 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 20:55:47,032 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 20:55:47,081 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 20:57:45,627 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-02 20:59:43,515 - INFO - Validation loss decreased (0.013805 --> 0.013298). Saving model ...
+2025-03-02 20:59:43,609 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 21:01:43,283 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 21:03:42,579 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-02 21:05:41,428 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-02 21:07:40,348 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-02 21:09:39,432 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-02 21:11:36,691 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-02 21:13:33,749 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-02 21:15:31,155 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-02 21:17:28,946 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-02 21:19:25,737 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-02 21:19:25,737 - INFO - Early stopping triggered
+2025-03-02 21:19:31,919 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=2e-05
+2025-03-02 21:21:28,076 - INFO - Validation loss decreased (inf --> 0.023483). Saving model ...
+2025-03-02 21:23:25,825 - INFO - Validation loss decreased (0.023483 --> 0.017521). Saving model ...
+2025-03-02 21:25:22,700 - INFO - Validation loss decreased (0.017521 --> 0.016285). Saving model ...
+2025-03-02 21:27:19,361 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 21:29:15,433 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-02 21:31:11,357 - INFO - Validation loss decreased (0.016285 --> 0.015939). Saving model ...
+2025-03-02 21:33:07,262 - INFO - Validation loss decreased (0.015939 --> 0.015407). Saving model ...
+2025-03-02 21:35:03,215 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 21:36:59,826 - INFO - Validation loss decreased (0.015407 --> 0.015212). Saving model ...
+2025-03-02 21:38:55,490 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 21:40:51,283 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-02 21:42:47,202 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-02 21:44:43,090 - INFO - Validation loss decreased (0.015212 --> 0.013667). Saving model ...
+2025-03-02 21:46:39,252 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 21:48:35,416 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-02 21:50:29,722 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-02 21:52:22,386 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-02 21:54:15,010 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-02 21:56:07,525 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-02 21:58:00,065 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-02 21:59:52,863 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-02 22:01:45,446 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-02 22:03:38,170 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-02 22:03:38,170 - INFO - Early stopping triggered
+2025-03-02 22:03:43,791 - INFO - Running configuration: config_id=2, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=5e-05
+2025-03-02 22:05:38,341 - INFO - Validation loss decreased (inf --> 0.025467). Saving model ...
+2025-03-02 22:07:30,992 - INFO - Validation loss decreased (0.025467 --> 0.019787). Saving model ...
+2025-03-02 22:09:23,521 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 22:11:16,135 - INFO - Validation loss decreased (0.019787 --> 0.017397). Saving model ...
+2025-03-02 22:13:08,863 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 22:15:01,438 - INFO - Validation loss decreased (0.017397 --> 0.015427). Saving model ...
+2025-03-02 22:16:54,152 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 22:18:46,762 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-02 22:20:39,339 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-02 22:22:31,937 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-02 22:24:24,679 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-02 22:26:17,250 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-02 22:28:09,814 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-02 22:30:02,299 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-02 22:31:54,785 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-02 22:33:47,382 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-02 22:33:47,382 - INFO - Early stopping triggered
+2025-03-02 22:33:52,923 - INFO - Running configuration: config_id=3, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=0.0001
+2025-03-02 22:35:47,756 - INFO - Validation loss decreased (inf --> 0.066161). Saving model ...
+2025-03-02 22:37:40,313 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 22:39:32,651 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-02 22:41:24,895 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-02 22:43:17,031 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-02 22:45:09,266 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-02 22:47:01,420 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-02 22:48:53,577 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-02 22:50:45,652 - INFO - Validation loss decreased (0.066161 --> 0.064454). Saving model ...
+2025-03-02 22:52:37,882 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 22:54:29,988 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-02 22:56:22,180 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-02 22:58:14,239 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-02 23:00:06,415 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-02 23:01:58,644 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-02 23:03:50,852 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-02 23:05:42,971 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-02 23:07:35,014 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-02 23:09:27,017 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-02 23:09:27,017 - INFO - Early stopping triggered
+2025-03-02 23:09:32,914 - INFO - Running configuration: config_id=4, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=1e-05
+2025-03-02 23:11:17,635 - INFO - Validation loss decreased (inf --> 0.021268). Saving model ...
+2025-03-02 23:13:01,498 - INFO - Validation loss decreased (0.021268 --> 0.016921). Saving model ...
+2025-03-02 23:14:45,268 - INFO - Validation loss decreased (0.016921 --> 0.016235). Saving model ...
+2025-03-02 23:16:29,112 - INFO - Validation loss decreased (0.016235 --> 0.014079). Saving model ...
+2025-03-02 23:18:13,121 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 23:19:56,853 - INFO - Validation loss decreased (0.014079 --> 0.013667). Saving model ...
+2025-03-02 23:21:40,732 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 23:23:24,435 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-02 23:25:08,264 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-02 23:26:52,234 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-02 23:28:35,979 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-02 23:30:19,794 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-02 23:32:03,468 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-02 23:33:47,243 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-02 23:35:31,072 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-02 23:37:14,863 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-02 23:37:14,863 - INFO - Early stopping triggered
+2025-03-02 23:37:20,710 - INFO - Running configuration: config_id=5, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=2e-05
+2025-03-02 23:39:06,674 - INFO - Validation loss decreased (inf --> 0.021139). Saving model ...
+2025-03-02 23:40:50,506 - INFO - Validation loss decreased (0.021139 --> 0.016786). Saving model ...
+2025-03-02 23:42:34,349 - INFO - Validation loss decreased (0.016786 --> 0.015976). Saving model ...
+2025-03-02 23:44:18,111 - INFO - Validation loss decreased (0.015976 --> 0.014763). Saving model ...
+2025-03-02 23:46:01,965 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 23:47:45,803 - INFO - Validation loss decreased (0.014763 --> 0.013680). Saving model ...
+2025-03-02 23:47:45,888 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 23:49:29,647 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-02 23:51:13,301 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-02 23:52:57,102 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-02 23:54:40,813 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-02 23:56:24,561 - INFO - Validation loss decreased (0.013680 --> 0.013258). Saving model ...
+2025-03-02 23:56:24,653 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 23:58:08,455 - INFO - Validation loss decreased (0.013258 --> 0.013088). Saving model ...
+2025-03-02 23:58:08,542 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-02 23:59:52,334 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 00:01:36,223 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 00:03:19,865 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 00:05:03,739 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 00:06:47,421 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 00:08:31,182 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 00:10:14,928 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 00:11:58,669 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 00:13:42,386 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 00:15:26,078 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 00:15:26,078 - INFO - Early stopping triggered
+2025-03-03 00:15:31,787 - INFO - Running configuration: config_id=6, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=5e-05
+2025-03-03 00:17:17,148 - INFO - Validation loss decreased (inf --> 0.022998). Saving model ...
+2025-03-03 00:19:00,830 - INFO - Validation loss decreased (0.022998 --> 0.020348). Saving model ...
+2025-03-03 00:20:44,545 - INFO - Validation loss decreased (0.020348 --> 0.016636). Saving model ...
+2025-03-03 00:22:28,339 - INFO - Validation loss decreased (0.016636 --> 0.016175). Saving model ...
+2025-03-03 00:24:12,106 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 00:25:55,917 - INFO - Validation loss decreased (0.016175 --> 0.015777). Saving model ...
+2025-03-03 00:27:39,715 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 00:29:23,565 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 00:31:07,380 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 00:32:51,178 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 00:34:34,958 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 00:36:18,736 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 00:38:02,514 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 00:39:46,314 - INFO - Validation loss decreased (0.015777 --> 0.015613). Saving model ...
+2025-03-03 00:41:30,161 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 00:43:13,971 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 00:44:57,662 - INFO - Validation loss decreased (0.015613 --> 0.015046). Saving model ...
+2025-03-03 00:46:41,436 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 00:48:25,146 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 00:50:08,870 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 00:51:52,644 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 00:53:36,554 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 00:55:20,264 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 00:57:04,025 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 00:58:47,693 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 01:00:31,545 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 01:02:15,355 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 01:02:15,355 - INFO - Early stopping triggered
+2025-03-03 01:02:21,312 - INFO - Running configuration: config_id=7, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=0.0001
+2025-03-03 01:04:06,712 - INFO - Validation loss decreased (inf --> 0.022667). Saving model ...
+2025-03-03 01:05:50,583 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 01:07:34,384 - INFO - Validation loss decreased (0.022667 --> 0.018199). Saving model ...
+2025-03-03 01:09:18,231 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 01:11:02,010 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 01:12:45,841 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 01:14:29,565 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 01:16:13,391 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 01:17:57,197 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 01:19:40,866 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 01:21:24,762 - INFO - Validation loss decreased (0.018199 --> 0.017826). Saving model ...
+2025-03-03 01:23:08,683 - INFO - Validation loss decreased (0.017826 --> 0.016790). Saving model ...
+2025-03-03 01:24:52,503 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 01:26:36,315 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 01:28:20,566 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 01:30:04,394 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 01:31:48,128 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 01:33:31,944 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 01:35:15,695 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 01:36:59,677 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 01:38:43,492 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 01:40:27,339 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 01:40:27,339 - INFO - Early stopping triggered
+2025-03-03 01:40:33,187 - INFO - Running configuration: config_id=8, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=1e-05
+2025-03-03 01:42:11,490 - INFO - Validation loss decreased (inf --> 0.021974). Saving model ...
+2025-03-03 01:43:48,372 - INFO - Validation loss decreased (0.021974 --> 0.020330). Saving model ...
+2025-03-03 01:45:25,259 - INFO - Validation loss decreased (0.020330 --> 0.019236). Saving model ...
+2025-03-03 01:47:02,058 - INFO - Validation loss decreased (0.019236 --> 0.017323). Saving model ...
+2025-03-03 01:48:38,959 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 01:50:15,737 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 01:51:52,522 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 01:53:29,467 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 01:55:06,267 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 01:56:43,127 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 01:58:19,850 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 01:59:56,591 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 02:01:33,378 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 02:03:10,229 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 02:03:10,229 - INFO - Early stopping triggered
+2025-03-03 02:03:16,227 - INFO - Running configuration: config_id=9, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=2e-05
+2025-03-03 02:04:54,491 - INFO - Validation loss decreased (inf --> 0.023827). Saving model ...
+2025-03-03 02:06:31,322 - INFO - Validation loss decreased (0.023827 --> 0.020216). Saving model ...
+2025-03-03 02:08:08,108 - INFO - Validation loss decreased (0.020216 --> 0.018053). Saving model ...
+2025-03-03 02:09:44,870 - INFO - Validation loss decreased (0.018053 --> 0.017146). Saving model ...
+2025-03-03 02:11:21,590 - INFO - Validation loss decreased (0.017146 --> 0.014648). Saving model ...
+2025-03-03 02:12:58,347 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 02:14:35,085 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 02:16:11,816 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 02:17:48,535 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 02:19:25,196 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 02:21:01,932 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 02:22:38,727 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 02:24:15,686 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 02:25:52,427 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 02:27:29,118 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 02:27:29,118 - INFO - Early stopping triggered
+2025-03-03 02:27:34,215 - INFO - Running configuration: config_id=10, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=5e-05
+2025-03-03 02:29:12,109 - INFO - Validation loss decreased (inf --> 0.024403). Saving model ...
+2025-03-03 02:30:48,975 - INFO - Validation loss decreased (0.024403 --> 0.019811). Saving model ...
+2025-03-03 02:32:25,825 - INFO - Validation loss decreased (0.019811 --> 0.018900). Saving model ...
+2025-03-03 02:34:02,728 - INFO - Validation loss decreased (0.018900 --> 0.017634). Saving model ...
+2025-03-03 02:35:39,608 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 02:37:16,372 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 02:38:53,190 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 02:40:29,928 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 02:42:06,756 - INFO - Validation loss decreased (0.017634 --> 0.017609). Saving model ...
+2025-03-03 02:43:43,586 - INFO - Validation loss decreased (0.017609 --> 0.016556). Saving model ...
+2025-03-03 02:45:20,365 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 02:46:57,094 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 02:48:33,838 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 02:50:10,627 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 02:51:47,362 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 02:53:24,207 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 02:55:00,877 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 02:56:37,624 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 02:58:14,880 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 02:59:51,565 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 02:59:51,565 - INFO - Early stopping triggered
+2025-03-03 02:59:57,082 - INFO - Running configuration: config_id=11, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=0.0001
+2025-03-03 03:01:36,071 - INFO - Validation loss decreased (inf --> 0.029279). Saving model ...
+2025-03-03 03:03:13,057 - INFO - Validation loss decreased (0.029279 --> 0.016833). Saving model ...
+2025-03-03 03:04:49,875 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 03:06:26,724 - INFO - Validation loss decreased (0.016833 --> 0.014519). Saving model ...
+2025-03-03 03:08:03,604 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 03:09:40,316 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 03:11:17,097 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 03:12:53,861 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 03:14:30,636 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 03:16:07,475 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 03:17:44,208 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 03:19:21,008 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 03:20:57,746 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 03:22:34,523 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 03:22:34,523 - INFO - Early stopping triggered
+2025-03-03 03:22:40,556 - INFO - Running configuration: config_id=12, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=1e-05
+2025-03-03 03:24:34,370 - INFO - Validation loss decreased (inf --> 0.067236). Saving model ...
+2025-03-03 03:26:27,240 - INFO - Validation loss decreased (0.067236 --> 0.040595). Saving model ...
+2025-03-03 03:28:19,917 - INFO - Validation loss decreased (0.040595 --> 0.030480). Saving model ...
+2025-03-03 03:30:12,720 - INFO - Validation loss decreased (0.030480 --> 0.028248). Saving model ...
+2025-03-03 03:32:05,443 - INFO - Validation loss decreased (0.028248 --> 0.024880). Saving model ...
+2025-03-03 03:33:58,051 - INFO - Validation loss decreased (0.024880 --> 0.023889). Saving model ...
+2025-03-03 03:35:50,681 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 03:37:43,623 - INFO - Validation loss decreased (0.023889 --> 0.022060). Saving model ...
+2025-03-03 03:39:36,397 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 03:41:29,096 - INFO - Validation loss decreased (0.022060 --> 0.020021). Saving model ...
+2025-03-03 03:43:21,698 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 03:45:14,274 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 03:47:06,835 - INFO - Validation loss decreased (0.020021 --> 0.018609). Saving model ...
+2025-03-03 03:48:59,619 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 03:50:52,388 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 03:52:45,162 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 03:54:37,880 - INFO - Validation loss decreased (0.018609 --> 0.017988). Saving model ...
+2025-03-03 03:56:30,838 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 03:58:23,343 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 04:00:16,192 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 04:02:08,755 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 04:04:01,470 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 04:05:54,006 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 04:07:46,751 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 04:09:39,272 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 04:11:32,076 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 04:13:24,643 - INFO - Validation loss decreased (0.017988 --> 0.017756). Saving model ...
+2025-03-03 04:15:17,324 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 04:17:09,977 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 04:19:02,502 - INFO - Validation loss decreased (0.017756 --> 0.017187). Saving model ...
+2025-03-03 04:20:55,340 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 04:22:48,054 - INFO - Validation loss decreased (0.017187 --> 0.017038). Saving model ...
+2025-03-03 04:24:41,349 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 04:26:35,107 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 04:28:27,939 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 04:30:20,650 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 04:32:13,523 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 04:34:06,222 - INFO - Validation loss decreased (0.017038 --> 0.016202). Saving model ...
+2025-03-03 04:35:59,130 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 04:37:51,876 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 04:39:44,771 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 04:41:37,593 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 04:43:30,338 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 04:45:23,081 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 04:47:15,667 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 04:49:08,425 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 04:51:01,259 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 04:52:54,361 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 04:52:54,361 - INFO - Early stopping triggered
+2025-03-03 04:53:00,120 - INFO - Running configuration: config_id=13, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=2e-05
+2025-03-03 04:54:53,896 - INFO - Validation loss decreased (inf --> 0.046152). Saving model ...
+2025-03-03 04:56:46,926 - INFO - Validation loss decreased (0.046152 --> 0.027607). Saving model ...
+2025-03-03 04:58:39,764 - INFO - Validation loss decreased (0.027607 --> 0.022652). Saving model ...
+2025-03-03 05:00:32,958 - INFO - Validation loss decreased (0.022652 --> 0.021021). Saving model ...
+2025-03-03 05:02:25,997 - INFO - Validation loss decreased (0.021021 --> 0.018991). Saving model ...
+2025-03-03 05:04:19,043 - INFO - Validation loss decreased (0.018991 --> 0.018611). Saving model ...
+2025-03-03 05:06:11,943 - INFO - Validation loss decreased (0.018611 --> 0.017538). Saving model ...
+2025-03-03 05:08:05,212 - INFO - Validation loss decreased (0.017538 --> 0.016041). Saving model ...
+2025-03-03 05:09:58,232 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 05:11:51,170 - INFO - Validation loss decreased (0.016041 --> 0.015244). Saving model ...
+2025-03-03 05:13:44,143 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 05:15:36,981 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 05:17:29,919 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 05:19:23,086 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 05:21:15,976 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 05:23:08,999 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 05:25:01,905 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 05:26:54,815 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 05:28:47,716 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 05:30:40,607 - INFO - Validation loss decreased (0.015244 --> 0.014764). Saving model ...
+2025-03-03 05:32:33,696 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 05:34:26,438 - INFO - Validation loss decreased (0.014764 --> 0.014555). Saving model ...
+2025-03-03 05:36:19,449 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 05:38:12,265 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 05:40:05,163 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 05:41:58,120 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 05:43:51,033 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 05:45:43,804 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 05:47:36,606 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 05:49:29,325 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 05:51:22,236 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 05:53:15,301 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 05:53:15,301 - INFO - Early stopping triggered
+2025-03-03 05:53:21,538 - INFO - Running configuration: config_id=14, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=5e-05
+2025-03-03 05:55:15,807 - INFO - Validation loss decreased (inf --> 0.039834). Saving model ...
+2025-03-03 05:57:08,571 - INFO - Validation loss decreased (0.039834 --> 0.021430). Saving model ...
+2025-03-03 05:59:01,549 - INFO - Validation loss decreased (0.021430 --> 0.020809). Saving model ...
+2025-03-03 06:00:54,554 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 06:02:47,429 - INFO - Validation loss decreased (0.020809 --> 0.014463). Saving model ...
+2025-03-03 06:04:40,242 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 06:06:32,871 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 06:08:26,292 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 06:10:18,868 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 06:12:11,726 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 06:14:04,325 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 06:15:57,148 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 06:17:49,790 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 06:19:42,738 - INFO - Validation loss decreased (0.014463 --> 0.014065). Saving model ...
+2025-03-03 06:21:35,552 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 06:23:28,293 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 06:25:21,116 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 06:27:13,802 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 06:29:06,501 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 06:30:59,721 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 06:32:52,841 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 06:34:45,424 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 06:36:38,189 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 06:38:30,791 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 06:38:30,791 - INFO - Early stopping triggered
+2025-03-03 06:38:37,383 - INFO - Running configuration: config_id=15, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=0.0001
+2025-03-03 06:40:31,184 - INFO - Validation loss decreased (inf --> 0.028650). Saving model ...
+2025-03-03 06:42:24,141 - INFO - Validation loss decreased (0.028650 --> 0.020514). Saving model ...
+2025-03-03 06:44:17,086 - INFO - Validation loss decreased (0.020514 --> 0.017602). Saving model ...
+2025-03-03 06:46:09,834 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 06:48:02,616 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 06:49:55,495 - INFO - Validation loss decreased (0.017602 --> 0.016604). Saving model ...
+2025-03-03 06:51:48,736 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 06:53:41,876 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 06:55:34,723 - INFO - Validation loss decreased (0.016604 --> 0.015545). Saving model ...
+2025-03-03 06:57:27,586 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 06:59:20,415 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 07:01:13,410 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 07:03:06,152 - INFO - Validation loss decreased (0.015545 --> 0.015286). Saving model ...
+2025-03-03 07:04:59,136 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 07:06:52,053 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 07:08:44,902 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 07:10:37,749 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 07:12:30,699 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 07:14:23,500 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 07:16:16,485 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 07:18:08,879 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 07:20:01,360 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 07:21:53,830 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 07:21:53,830 - INFO - Early stopping triggered
+2025-03-03 07:22:00,691 - INFO - Running configuration: config_id=16, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=1e-05
+2025-03-03 07:23:45,911 - INFO - Validation loss decreased (inf --> 0.058831). Saving model ...
+2025-03-03 07:25:29,636 - INFO - Validation loss decreased (0.058831 --> 0.043042). Saving model ...
+2025-03-03 07:27:13,296 - INFO - Validation loss decreased (0.043042 --> 0.033435). Saving model ...
+2025-03-03 07:28:57,056 - INFO - Validation loss decreased (0.033435 --> 0.027221). Saving model ...
+2025-03-03 07:30:40,779 - INFO - Validation loss decreased (0.027221 --> 0.023948). Saving model ...
+2025-03-03 07:32:24,651 - INFO - Validation loss decreased (0.023948 --> 0.022537). Saving model ...
+2025-03-03 07:34:08,519 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 07:35:52,285 - INFO - Validation loss decreased (0.022537 --> 0.020664). Saving model ...
+2025-03-03 07:37:36,267 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 07:39:19,930 - INFO - Validation loss decreased (0.020664 --> 0.018607). Saving model ...
+2025-03-03 07:41:03,806 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 07:42:47,581 - INFO - Validation loss decreased (0.018607 --> 0.018599). Saving model ...
+2025-03-03 07:44:31,297 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 07:46:15,006 - INFO - Validation loss decreased (0.018599 --> 0.017585). Saving model ...
+2025-03-03 07:47:58,779 - INFO - Validation loss decreased (0.017585 --> 0.017485). Saving model ...
+2025-03-03 07:49:42,503 - INFO - Validation loss decreased (0.017485 --> 0.017313). Saving model ...
+2025-03-03 07:51:26,218 - INFO - Validation loss decreased (0.017313 --> 0.016024). Saving model ...
+2025-03-03 07:53:10,195 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 07:54:53,976 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 07:56:37,827 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 07:58:21,576 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 08:00:05,377 - INFO - Validation loss decreased (0.016024 --> 0.015984). Saving model ...
+2025-03-03 08:01:49,139 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 08:03:33,017 - INFO - Validation loss decreased (0.015984 --> 0.015441). Saving model ...
+2025-03-03 08:05:16,876 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 08:07:00,687 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 08:08:44,641 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 08:10:28,460 - INFO - Validation loss decreased (0.015441 --> 0.015046). Saving model ...
+2025-03-03 08:12:12,310 - INFO - Validation loss decreased (0.015046 --> 0.013881). Saving model ...
+2025-03-03 08:13:56,089 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 08:15:39,817 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 08:17:23,648 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 08:19:07,482 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 08:20:51,373 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 08:22:35,232 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 08:24:19,182 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 08:26:02,940 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 08:27:46,713 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 08:29:33,953 - INFO - Validation loss decreased (0.013881 --> 0.013760). Saving model ...
+2025-03-03 08:31:17,953 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 08:33:00,786 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 08:34:44,657 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 08:36:28,401 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 08:38:12,275 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 08:39:55,917 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 08:41:39,618 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 08:43:23,215 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 08:45:07,057 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 08:46:50,794 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 08:46:50,794 - INFO - Early stopping triggered
+2025-03-03 08:46:56,510 - INFO - Running configuration: config_id=17, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=2e-05
+2025-03-03 08:48:41,555 - INFO - Validation loss decreased (inf --> 0.051918). Saving model ...
+2025-03-03 08:50:25,475 - INFO - Validation loss decreased (0.051918 --> 0.033651). Saving model ...
+2025-03-03 08:52:09,251 - INFO - Validation loss decreased (0.033651 --> 0.025836). Saving model ...
+2025-03-03 08:53:53,127 - INFO - Validation loss decreased (0.025836 --> 0.023331). Saving model ...
+2025-03-03 08:55:36,906 - INFO - Validation loss decreased (0.023331 --> 0.021689). Saving model ...
+2025-03-03 08:57:20,757 - INFO - Validation loss decreased (0.021689 --> 0.020101). Saving model ...
+2025-03-03 08:59:04,495 - INFO - Validation loss decreased (0.020101 --> 0.019387). Saving model ...
+2025-03-03 09:00:48,586 - INFO - Validation loss decreased (0.019387 --> 0.017760). Saving model ...
+2025-03-03 09:02:32,659 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 09:04:16,438 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 09:06:00,275 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 09:07:43,955 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 09:09:27,829 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 09:11:11,687 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 09:12:55,468 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 09:14:39,120 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 09:16:22,949 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 09:18:06,735 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 09:18:06,735 - INFO - Early stopping triggered
+2025-03-03 09:18:12,945 - INFO - Running configuration: config_id=18, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=5e-05
+2025-03-03 09:19:57,938 - INFO - Validation loss decreased (inf --> 0.043545). Saving model ...
+2025-03-03 09:21:41,807 - INFO - Validation loss decreased (0.043545 --> 0.028588). Saving model ...
+2025-03-03 09:23:25,625 - INFO - Validation loss decreased (0.028588 --> 0.021418). Saving model ...
+2025-03-03 09:25:09,506 - INFO - Validation loss decreased (0.021418 --> 0.018881). Saving model ...
+2025-03-03 09:26:54,408 - INFO - Validation loss decreased (0.018881 --> 0.016052). Saving model ...
+2025-03-03 09:28:40,985 - INFO - Validation loss decreased (0.016052 --> 0.015264). Saving model ...
+2025-03-03 09:30:26,181 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 09:32:10,069 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 09:33:54,095 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 09:35:38,097 - INFO - Validation loss decreased (0.015264 --> 0.014343). Saving model ...
+2025-03-03 09:37:22,382 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 09:39:06,360 - INFO - Validation loss decreased (0.014343 --> 0.014252). Saving model ...
+2025-03-03 09:40:50,332 - INFO - Validation loss decreased (0.014252 --> 0.013702). Saving model ...
+2025-03-03 09:42:34,314 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 09:44:18,096 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 09:46:02,035 - INFO - Validation loss decreased (0.013702 --> 0.013467). Saving model ...
+2025-03-03 09:47:45,909 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 09:49:30,635 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 09:51:14,867 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 09:53:00,512 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 09:54:44,645 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 09:56:30,134 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 09:58:14,941 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 10:00:00,625 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 10:01:48,855 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 10:03:34,416 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 10:03:34,417 - INFO - Early stopping triggered
+2025-03-03 10:03:40,165 - INFO - Running configuration: config_id=19, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=0.0001
+2025-03-03 10:05:27,274 - INFO - Validation loss decreased (inf --> 0.031712). Saving model ...
+2025-03-03 10:07:13,274 - INFO - Validation loss decreased (0.031712 --> 0.021449). Saving model ...
+2025-03-03 10:09:00,888 - INFO - Validation loss decreased (0.021449 --> 0.018359). Saving model ...
+2025-03-03 10:10:48,131 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 10:12:35,500 - INFO - Validation loss decreased (0.018359 --> 0.018009). Saving model ...
+2025-03-03 10:14:21,594 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 10:16:08,794 - INFO - Validation loss decreased (0.018009 --> 0.017139). Saving model ...
+2025-03-03 10:17:54,793 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 10:19:39,515 - INFO - Validation loss decreased (0.017139 --> 0.015532). Saving model ...
+2025-03-03 10:21:25,298 - INFO - Validation loss decreased (0.015532 --> 0.015180). Saving model ...
+2025-03-03 10:23:12,608 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 10:24:58,752 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 10:26:44,104 - INFO - Validation loss decreased (0.015180 --> 0.014787). Saving model ...
+2025-03-03 10:28:30,052 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 10:30:17,618 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 10:32:04,436 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 10:33:52,173 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 10:35:38,765 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 10:37:25,686 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 10:39:14,040 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 10:41:00,605 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 10:42:47,344 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 10:44:34,016 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 10:44:34,016 - INFO - Early stopping triggered
+2025-03-03 10:44:40,749 - INFO - Running configuration: config_id=20, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=1e-05
+2025-03-03 10:46:23,673 - INFO - Validation loss decreased (inf --> 0.080663). Saving model ...
+2025-03-03 10:48:05,139 - INFO - Validation loss decreased (0.080663 --> 0.054319). Saving model ...
+2025-03-03 10:49:42,937 - INFO - Validation loss decreased (0.054319 --> 0.040262). Saving model ...
+2025-03-03 10:51:20,660 - INFO - Validation loss decreased (0.040262 --> 0.033402). Saving model ...
+2025-03-03 10:53:02,141 - INFO - Validation loss decreased (0.033402 --> 0.029456). Saving model ...
+2025-03-03 10:54:43,004 - INFO - Validation loss decreased (0.029456 --> 0.027261). Saving model ...
+2025-03-03 10:56:22,160 - INFO - Validation loss decreased (0.027261 --> 0.025459). Saving model ...
+2025-03-03 10:58:01,679 - INFO - Validation loss decreased (0.025459 --> 0.024541). Saving model ...
+2025-03-03 10:59:40,694 - INFO - Validation loss decreased (0.024541 --> 0.022108). Saving model ...
+2025-03-03 11:01:20,009 - INFO - Validation loss decreased (0.022108 --> 0.019888). Saving model ...
+2025-03-03 11:03:00,614 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 11:04:40,575 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 11:06:20,767 - INFO - Validation loss decreased (0.019888 --> 0.018589). Saving model ...
+2025-03-03 11:08:02,839 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 11:09:43,012 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 11:11:22,224 - INFO - Validation loss decreased (0.018589 --> 0.017855). Saving model ...
+2025-03-03 11:13:01,195 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 11:14:40,601 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 11:16:20,132 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 11:17:59,690 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 11:19:39,096 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 11:21:19,356 - INFO - Validation loss decreased (0.017855 --> 0.017503). Saving model ...
+2025-03-03 11:22:59,073 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 11:24:38,679 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 11:26:19,020 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 11:27:56,702 - INFO - Validation loss decreased (0.017503 --> 0.016899). Saving model ...
+2025-03-03 11:29:37,211 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 11:31:16,560 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 11:32:55,904 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 11:34:33,328 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 11:36:11,307 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 11:37:49,474 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 11:39:26,661 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 11:41:03,649 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 11:42:40,860 - INFO - Validation loss decreased (0.016899 --> 0.015968). Saving model ...
+2025-03-03 11:44:17,954 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 11:45:55,932 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 11:47:35,685 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 11:49:15,350 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 11:50:53,972 - INFO - Validation loss decreased (0.015968 --> 0.015750). Saving model ...
+2025-03-03 11:52:33,145 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 11:54:13,079 - INFO - Validation loss decreased (0.015750 --> 0.015407). Saving model ...
+2025-03-03 11:55:52,936 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 11:57:31,783 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 11:59:10,650 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 12:00:49,723 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 12:02:30,905 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 12:04:10,076 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 12:05:47,183 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 12:07:24,081 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 12:09:00,958 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 12:10:37,768 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 12:10:37,768 - INFO - Early stopping triggered
+2025-03-03 12:10:43,455 - INFO - Running configuration: config_id=21, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=2e-05
+2025-03-03 12:12:22,524 - INFO - Validation loss decreased (inf --> 0.053342). Saving model ...
+2025-03-03 12:13:59,376 - INFO - Validation loss decreased (0.053342 --> 0.034614). Saving model ...
+2025-03-03 12:15:36,267 - INFO - Validation loss decreased (0.034614 --> 0.026702). Saving model ...
+2025-03-03 12:17:13,182 - INFO - Validation loss decreased (0.026702 --> 0.022858). Saving model ...
+2025-03-03 12:18:50,135 - INFO - Validation loss decreased (0.022858 --> 0.021149). Saving model ...
+2025-03-03 12:20:27,110 - INFO - Validation loss decreased (0.021149 --> 0.018105). Saving model ...
+2025-03-03 12:22:04,053 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 12:23:40,935 - INFO - Validation loss decreased (0.018105 --> 0.017538). Saving model ...
+2025-03-03 12:25:17,910 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 12:26:54,817 - INFO - Validation loss decreased (0.017538 --> 0.015721). Saving model ...
+2025-03-03 12:28:31,776 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 12:30:08,698 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 12:31:45,611 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 12:33:22,453 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 12:34:59,342 - INFO - Validation loss decreased (0.015721 --> 0.015193). Saving model ...
+2025-03-03 12:36:36,297 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 12:38:13,104 - INFO - Validation loss decreased (0.015193 --> 0.013798). Saving model ...
+2025-03-03 12:39:50,006 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 12:41:26,795 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 12:43:05,522 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 12:44:44,601 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 12:46:24,712 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 12:48:04,081 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 12:49:42,801 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 12:51:21,949 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 12:53:00,597 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 12:54:37,651 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 12:54:37,651 - INFO - Early stopping triggered
+2025-03-03 12:54:45,108 - INFO - Running configuration: config_id=22, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=5e-05
+2025-03-03 12:56:23,461 - INFO - Validation loss decreased (inf --> 0.052973). Saving model ...
+2025-03-03 12:58:00,458 - INFO - Validation loss decreased (0.052973 --> 0.030004). Saving model ...
+2025-03-03 12:59:37,466 - INFO - Validation loss decreased (0.030004 --> 0.023348). Saving model ...
+2025-03-03 13:01:14,358 - INFO - Validation loss decreased (0.023348 --> 0.022812). Saving model ...
+2025-03-03 13:02:51,415 - INFO - Validation loss decreased (0.022812 --> 0.019465). Saving model ...
+2025-03-03 13:04:28,374 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 13:06:06,291 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 13:07:48,072 - INFO - Validation loss decreased (0.019465 --> 0.017932). Saving model ...
+2025-03-03 13:09:27,119 - INFO - Validation loss decreased (0.017932 --> 0.017030). Saving model ...
+2025-03-03 13:11:06,600 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 13:12:46,134 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 13:14:25,406 - INFO - Validation loss decreased (0.017030 --> 0.016947). Saving model ...
+2025-03-03 13:16:05,231 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 13:17:45,154 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 13:19:26,207 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 13:21:05,313 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 13:22:44,807 - INFO - Validation loss decreased (0.016947 --> 0.015973). Saving model ...
+2025-03-03 13:24:24,064 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 13:26:03,310 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 13:27:43,216 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 13:29:22,176 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 13:31:01,265 - INFO - Validation loss decreased (0.015973 --> 0.015617). Saving model ...
+2025-03-03 13:32:40,542 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 13:34:17,670 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 13:35:55,438 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 13:37:33,277 - INFO - Validation loss decreased (0.015617 --> 0.015576). Saving model ...
+2025-03-03 13:39:10,616 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 13:40:48,639 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 13:42:26,943 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 13:44:06,446 - INFO - Validation loss decreased (0.015576 --> 0.015267). Saving model ...
+2025-03-03 13:45:44,411 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 13:47:22,829 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 13:49:01,017 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 13:50:38,487 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 13:52:15,703 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 13:53:52,293 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 13:55:27,529 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 13:57:03,114 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 13:58:38,657 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 14:00:16,623 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 14:00:16,624 - INFO - Early stopping triggered
+2025-03-03 14:00:22,236 - INFO - Running configuration: config_id=23, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=0.0001
+2025-03-03 14:02:00,158 - INFO - Validation loss decreased (inf --> 0.037057). Saving model ...
+2025-03-03 14:03:37,780 - INFO - Validation loss decreased (0.037057 --> 0.024686). Saving model ...
+2025-03-03 14:05:15,308 - INFO - Validation loss decreased (0.024686 --> 0.021860). Saving model ...
+2025-03-03 14:06:53,179 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 14:08:31,011 - INFO - Validation loss decreased (0.021860 --> 0.021261). Saving model ...
+2025-03-03 14:10:08,612 - INFO - Validation loss decreased (0.021261 --> 0.018465). Saving model ...
+2025-03-03 14:11:45,816 - INFO - Validation loss decreased (0.018465 --> 0.017558). Saving model ...
+2025-03-03 14:13:23,138 - INFO - Validation loss decreased (0.017558 --> 0.015139). Saving model ...
+2025-03-03 14:15:00,230 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 14:16:37,718 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 14:18:14,540 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 14:19:51,357 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 14:21:28,161 - INFO - Validation loss decreased (0.015139 --> 0.014936). Saving model ...
+2025-03-03 14:23:05,106 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 14:24:41,935 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 14:26:18,822 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 14:27:55,621 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 14:29:32,295 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 14:31:09,133 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 14:32:45,973 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 14:34:22,890 - INFO - Validation loss decreased (0.014936 --> 0.014446). Saving model ...
+2025-03-03 14:35:59,727 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 14:37:36,550 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 14:39:13,329 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 14:40:50,107 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 14:42:27,022 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 14:44:03,789 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 14:45:40,524 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 14:47:17,310 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 14:48:54,092 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 14:50:30,915 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 14:50:30,915 - INFO - Early stopping triggered
+2025-03-03 14:50:36,730 - INFO - Running configuration: config_id=24, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=1e-05
+2025-03-03 14:52:32,920 - INFO - Validation loss decreased (inf --> 0.008545). Saving model ...
+2025-03-03 14:52:33,012 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-03 14:54:31,996 - INFO - Validation loss decreased (0.008545 --> 0.006776). Saving model ...
+2025-03-03 14:54:32,091 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-03 14:56:30,197 - INFO - Validation loss decreased (0.006776 --> 0.006617). Saving model ...
+2025-03-03 14:56:30,292 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-03 14:58:28,270 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 15:00:26,154 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 15:02:23,959 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 15:04:22,220 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 15:06:20,259 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 15:08:18,188 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 15:10:16,036 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 15:12:16,824 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 15:14:15,909 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 15:16:19,250 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 15:16:19,250 - INFO - Early stopping triggered
+2025-03-03 15:16:26,214 - INFO - Running configuration: config_id=25, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=2e-05
+2025-03-03 15:18:27,875 - INFO - Validation loss decreased (inf --> 0.009784). Saving model ...
+2025-03-03 15:20:28,197 - INFO - Validation loss decreased (0.009784 --> 0.007327). Saving model ...
+2025-03-03 15:22:27,559 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 15:24:27,037 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 15:26:26,080 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 15:28:26,362 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 15:30:25,942 - INFO - Validation loss decreased (0.007327 --> 0.007053). Saving model ...
+2025-03-03 15:32:28,012 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 15:34:30,570 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 15:36:31,064 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 15:38:30,479 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 15:40:28,254 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 15:42:27,340 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 15:44:26,458 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 15:46:25,435 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 15:48:26,149 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 15:50:25,197 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 15:50:25,197 - INFO - Early stopping triggered
+2025-03-03 15:50:31,201 - INFO - Running configuration: config_id=26, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=5e-05
+2025-03-03 15:52:33,122 - INFO - Validation loss decreased (inf --> 0.059667). Saving model ...
+2025-03-03 15:54:28,659 - INFO - Validation loss decreased (0.059667 --> 0.013724). Saving model ...
+2025-03-03 15:56:23,719 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 15:58:18,284 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 16:00:12,411 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 16:02:06,869 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 16:04:00,983 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 16:05:55,277 - INFO - Validation loss decreased (0.013724 --> 0.011844). Saving model ...
+2025-03-03 16:07:50,007 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 16:09:50,036 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 16:11:50,808 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 16:13:51,258 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 16:15:52,644 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 16:17:54,426 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 16:19:55,469 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 16:21:55,899 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 16:23:55,036 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 16:25:55,735 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 16:25:55,735 - INFO - Early stopping triggered
+2025-03-03 16:26:02,175 - INFO - Running configuration: config_id=27, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=0.0001
+2025-03-03 16:28:03,602 - INFO - Validation loss decreased (inf --> 0.024698). Saving model ...
+2025-03-03 16:30:04,218 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 16:32:04,981 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 16:34:05,684 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 16:36:05,617 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 16:38:05,016 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 16:40:04,714 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 16:42:04,725 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 16:44:04,761 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 16:46:05,544 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 16:48:05,656 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 16:48:05,656 - INFO - Early stopping triggered
+2025-03-03 16:48:11,901 - INFO - Running configuration: config_id=28, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=1e-05
+2025-03-03 16:50:04,668 - INFO - Validation loss decreased (inf --> 0.009480). Saving model ...
+2025-03-03 16:51:56,111 - INFO - Validation loss decreased (0.009480 --> 0.008495). Saving model ...
+2025-03-03 16:53:47,643 - INFO - Validation loss decreased (0.008495 --> 0.007257). Saving model ...
+2025-03-03 16:55:40,577 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 16:57:31,303 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 16:59:18,210 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 17:01:05,906 - INFO - Validation loss decreased (0.007257 --> 0.007161). Saving model ...
+2025-03-03 17:02:55,166 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 17:04:42,954 - INFO - Validation loss decreased (0.007161 --> 0.006933). Saving model ...
+2025-03-03 17:04:43,043 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-03 17:06:30,505 - INFO - Validation loss decreased (0.006933 --> 0.006255). Saving model ...
+2025-03-03 17:06:30,608 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-03 17:08:18,303 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 17:10:03,495 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 17:11:48,348 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 17:13:33,509 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 17:15:18,527 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 17:17:03,595 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 17:18:48,690 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 17:20:33,823 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 17:22:18,834 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 17:24:03,793 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 17:24:03,793 - INFO - Early stopping triggered
+2025-03-03 17:24:10,171 - INFO - Running configuration: config_id=29, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=2e-05
+2025-03-03 17:25:57,651 - INFO - Validation loss decreased (inf --> 0.008867). Saving model ...
+2025-03-03 17:27:43,175 - INFO - Validation loss decreased (0.008867 --> 0.007906). Saving model ...
+2025-03-03 17:29:28,170 - INFO - Validation loss decreased (0.007906 --> 0.007532). Saving model ...
+2025-03-03 17:31:13,305 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 17:32:57,969 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 17:34:42,941 - INFO - Validation loss decreased (0.007532 --> 0.007374). Saving model ...
+2025-03-03 17:36:28,111 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 17:38:12,924 - INFO - Validation loss decreased (0.007374 --> 0.006920). Saving model ...
+2025-03-03 17:39:57,794 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 17:41:42,572 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 17:43:27,396 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 17:45:12,076 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 17:46:57,211 - INFO - Validation loss decreased (0.006920 --> 0.006740). Saving model ...
+2025-03-03 17:48:42,374 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 17:50:27,245 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 17:52:11,900 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 17:53:57,307 - INFO - Validation loss decreased (0.006740 --> 0.006713). Saving model ...
+2025-03-03 17:55:42,359 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 17:57:27,337 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 17:59:11,944 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 18:00:56,939 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 18:02:41,915 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 18:04:26,687 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 18:06:10,050 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 18:07:53,884 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 18:09:38,995 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 18:11:22,449 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 18:11:22,449 - INFO - Early stopping triggered
+2025-03-03 18:11:28,271 - INFO - Running configuration: config_id=30, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=5e-05
+2025-03-03 18:13:13,900 - INFO - Validation loss decreased (inf --> 0.009789). Saving model ...
+2025-03-03 18:14:57,379 - INFO - Validation loss decreased (0.009789 --> 0.007184). Saving model ...
+2025-03-03 18:16:40,857 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 18:18:26,338 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 18:20:11,345 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 18:21:56,630 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 18:23:41,832 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 18:25:26,887 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 18:27:11,780 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 18:28:56,798 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 18:30:41,779 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 18:32:26,630 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 18:32:26,630 - INFO - Early stopping triggered
+2025-03-03 18:32:32,859 - INFO - Running configuration: config_id=31, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=0.0001
+2025-03-03 18:34:20,464 - INFO - Validation loss decreased (inf --> 0.013765). Saving model ...
+2025-03-03 18:36:14,532 - INFO - Validation loss decreased (0.013765 --> 0.008790). Saving model ...
+2025-03-03 18:38:07,422 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 18:40:00,306 - INFO - Validation loss decreased (0.008790 --> 0.007422). Saving model ...
+2025-03-03 18:41:50,212 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 18:43:38,221 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 18:45:26,742 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 18:47:14,502 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 18:49:01,421 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 18:50:48,974 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 18:52:35,816 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 18:54:22,567 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 18:56:11,442 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 18:58:01,081 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 18:58:01,082 - INFO - Early stopping triggered
+2025-03-03 18:58:06,732 - INFO - Running configuration: config_id=32, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=1e-05
+2025-03-03 18:59:49,437 - INFO - Validation loss decreased (inf --> 0.010756). Saving model ...
+2025-03-03 19:01:31,309 - INFO - Validation loss decreased (0.010756 --> 0.008778). Saving model ...
+2025-03-03 19:03:13,539 - INFO - Validation loss decreased (0.008778 --> 0.007881). Saving model ...
+2025-03-03 19:04:54,216 - INFO - Validation loss decreased (0.007881 --> 0.007764). Saving model ...
+2025-03-03 19:06:32,380 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 19:08:10,481 - INFO - Validation loss decreased (0.007764 --> 0.007623). Saving model ...
+2025-03-03 19:09:48,696 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 19:11:26,515 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 19:13:04,451 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 19:14:42,110 - INFO - Validation loss decreased (0.007623 --> 0.007588). Saving model ...
+2025-03-03 19:16:20,068 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 19:17:57,858 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 19:19:35,916 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 19:21:13,998 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 19:22:52,104 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 19:24:30,010 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 19:26:08,061 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 19:27:46,763 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 19:29:26,931 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 19:31:06,696 - INFO - Validation loss decreased (0.007588 --> 0.007556). Saving model ...
+2025-03-03 19:32:46,725 - INFO - Validation loss decreased (0.007556 --> 0.007436). Saving model ...
+2025-03-03 19:34:25,656 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 19:36:04,085 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 19:37:42,557 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 19:39:20,812 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 19:40:58,930 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 19:42:37,455 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 19:44:16,356 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 19:45:56,366 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 19:47:35,663 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 19:49:14,816 - INFO - Validation loss decreased (0.007436 --> 0.007266). Saving model ...
+2025-03-03 19:50:52,911 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 19:52:31,840 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 19:54:11,288 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 19:55:55,620 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 19:57:38,628 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 19:59:21,822 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 20:01:05,460 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 20:02:48,012 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 20:04:28,415 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 20:06:09,031 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 20:06:09,031 - INFO - Early stopping triggered
+2025-03-03 20:06:14,446 - INFO - Running configuration: config_id=33, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=2e-05
+2025-03-03 20:08:06,943 - INFO - Validation loss decreased (inf --> 0.009019). Saving model ...
+2025-03-03 20:09:52,648 - INFO - Validation loss decreased (0.009019 --> 0.008472). Saving model ...
+2025-03-03 20:11:36,082 - INFO - Validation loss decreased (0.008472 --> 0.008174). Saving model ...
+2025-03-03 20:13:18,921 - INFO - Validation loss decreased (0.008174 --> 0.007062). Saving model ...
+2025-03-03 20:15:02,090 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 20:16:44,565 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 20:18:26,652 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 20:20:06,573 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 20:21:50,457 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 20:23:32,871 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 20:25:15,728 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 20:26:58,527 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 20:28:41,484 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 20:30:24,545 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 20:30:24,545 - INFO - Early stopping triggered
+2025-03-03 20:30:31,097 - INFO - Running configuration: config_id=34, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=5e-05
+2025-03-03 20:32:13,420 - INFO - Validation loss decreased (inf --> 0.018140). Saving model ...
+2025-03-03 20:33:56,225 - INFO - Validation loss decreased (0.018140 --> 0.008844). Saving model ...
+2025-03-03 20:35:37,381 - INFO - Validation loss decreased (0.008844 --> 0.007931). Saving model ...
+2025-03-03 20:37:18,449 - INFO - Validation loss decreased (0.007931 --> 0.007780). Saving model ...
+2025-03-03 20:38:59,845 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 20:40:41,128 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 20:42:21,734 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 20:44:04,534 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 20:45:45,808 - INFO - Validation loss decreased (0.007780 --> 0.007769). Saving model ...
+2025-03-03 20:47:26,527 - INFO - Validation loss decreased (0.007769 --> 0.007731). Saving model ...
+2025-03-03 20:49:07,701 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 20:50:46,057 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 20:52:24,474 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 20:54:02,992 - INFO - Validation loss decreased (0.007731 --> 0.007517). Saving model ...
+2025-03-03 20:55:41,452 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 20:57:19,908 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 20:58:58,261 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 21:00:36,672 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 21:02:15,167 - INFO - Validation loss decreased (0.007517 --> 0.007443). Saving model ...
+2025-03-03 21:03:53,603 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 21:05:32,003 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 21:07:10,380 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 21:08:48,737 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 21:10:27,045 - INFO - Validation loss decreased (0.007443 --> 0.007217). Saving model ...
+2025-03-03 21:12:05,456 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 21:13:43,826 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 21:15:22,179 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 21:17:00,602 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 21:18:38,976 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 21:20:17,352 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 21:21:55,609 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 21:23:33,894 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 21:25:12,308 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 21:26:50,653 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 21:26:50,653 - INFO - Early stopping triggered
+2025-03-03 21:26:56,151 - INFO - Running configuration: config_id=35, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=0.0001
+2025-03-03 21:28:36,174 - INFO - Validation loss decreased (inf --> 0.011120). Saving model ...
+2025-03-03 21:30:14,603 - INFO - Validation loss decreased (0.011120 --> 0.007595). Saving model ...
+2025-03-03 21:31:53,154 - INFO - Validation loss decreased (0.007595 --> 0.007021). Saving model ...
+2025-03-03 21:33:31,618 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 21:35:10,028 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 21:36:48,440 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 21:38:26,824 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 21:40:05,239 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 21:41:43,636 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 21:43:22,089 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 21:45:00,614 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 21:46:39,046 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 21:48:17,511 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 21:48:17,511 - INFO - Early stopping triggered
+2025-03-03 21:48:23,420 - INFO - Running configuration: config_id=36, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=1e-05
+2025-03-03 21:50:20,223 - INFO - Validation loss decreased (inf --> 0.044785). Saving model ...
+2025-03-03 21:52:14,946 - INFO - Validation loss decreased (0.044785 --> 0.024147). Saving model ...
+2025-03-03 21:54:09,816 - INFO - Validation loss decreased (0.024147 --> 0.014933). Saving model ...
+2025-03-03 21:56:04,659 - INFO - Validation loss decreased (0.014933 --> 0.011891). Saving model ...
+2025-03-03 21:57:59,399 - INFO - Validation loss decreased (0.011891 --> 0.010510). Saving model ...
+2025-03-03 21:59:54,170 - INFO - Validation loss decreased (0.010510 --> 0.008583). Saving model ...
+2025-03-03 22:01:48,909 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 22:03:43,859 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 22:05:38,356 - INFO - Validation loss decreased (0.008583 --> 0.008340). Saving model ...
+2025-03-03 22:07:33,326 - INFO - Validation loss decreased (0.008340 --> 0.007830). Saving model ...
+2025-03-03 22:09:28,217 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 22:11:22,833 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 22:13:17,860 - INFO - Validation loss decreased (0.007830 --> 0.007823). Saving model ...
+2025-03-03 22:15:12,600 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 22:17:07,428 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 22:19:02,104 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 22:20:56,737 - INFO - Validation loss decreased (0.007823 --> 0.007735). Saving model ...
+2025-03-03 22:22:51,365 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 22:24:46,355 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 22:26:40,992 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 22:28:35,665 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 22:30:30,405 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 22:32:25,069 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 22:34:19,661 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 22:36:14,465 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 22:38:08,993 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 22:40:03,598 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 22:40:03,598 - INFO - Early stopping triggered
+2025-03-03 22:40:09,851 - INFO - Running configuration: config_id=37, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=2e-05
+2025-03-03 22:42:06,035 - INFO - Validation loss decreased (inf --> 0.041784). Saving model ...
+2025-03-03 22:44:00,996 - INFO - Validation loss decreased (0.041784 --> 0.017209). Saving model ...
+2025-03-03 22:45:55,835 - INFO - Validation loss decreased (0.017209 --> 0.010772). Saving model ...
+2025-03-03 22:47:50,491 - INFO - Validation loss decreased (0.010772 --> 0.009741). Saving model ...
+2025-03-03 22:49:45,082 - INFO - Validation loss decreased (0.009741 --> 0.008127). Saving model ...
+2025-03-03 22:51:39,932 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 22:53:34,737 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 22:55:29,464 - INFO - Validation loss decreased (0.008127 --> 0.007481). Saving model ...
+2025-03-03 22:57:24,075 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 22:59:18,657 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 23:01:13,281 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 23:03:07,855 - INFO - Validation loss decreased (0.007481 --> 0.007448). Saving model ...
+2025-03-03 23:05:02,436 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 23:06:57,263 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 23:08:51,856 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 23:10:46,512 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 23:12:41,341 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 23:14:36,165 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 23:16:30,701 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-03 23:18:25,391 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-03 23:20:20,018 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-03 23:22:14,931 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-03 23:22:14,931 - INFO - Early stopping triggered
+2025-03-03 23:22:21,029 - INFO - Running configuration: config_id=38, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=5e-05
+2025-03-03 23:24:16,839 - INFO - Validation loss decreased (inf --> 0.022880). Saving model ...
+2025-03-03 23:26:11,591 - INFO - Validation loss decreased (0.022880 --> 0.011521). Saving model ...
+2025-03-03 23:28:06,299 - INFO - Validation loss decreased (0.011521 --> 0.008431). Saving model ...
+2025-03-03 23:30:00,958 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 23:31:55,612 - INFO - Validation loss decreased (0.008431 --> 0.008190). Saving model ...
+2025-03-03 23:33:50,298 - INFO - Validation loss decreased (0.008190 --> 0.008036). Saving model ...
+2025-03-03 23:35:44,945 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 23:37:39,564 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 23:39:34,180 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 23:41:28,760 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 23:43:23,636 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 23:45:18,202 - INFO - Validation loss decreased (0.008036 --> 0.007445). Saving model ...
+2025-03-03 23:47:12,913 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-03 23:49:07,522 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-03 23:51:02,227 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-03 23:52:56,798 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-03 23:54:51,771 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-03 23:56:46,355 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-03 23:58:41,118 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-04 00:00:35,901 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-04 00:02:30,827 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-04 00:04:25,338 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-04 00:04:25,338 - INFO - Early stopping triggered
+2025-03-04 00:04:31,511 - INFO - Running configuration: config_id=39, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=0.0001
+2025-03-04 00:06:27,153 - INFO - Validation loss decreased (inf --> 0.017289). Saving model ...
+2025-03-04 00:08:21,927 - INFO - Validation loss decreased (0.017289 --> 0.008674). Saving model ...
+2025-03-04 00:10:16,761 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 00:12:11,552 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 00:14:06,384 - INFO - Validation loss decreased (0.008674 --> 0.008257). Saving model ...
+2025-03-04 00:16:01,183 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 00:17:55,875 - INFO - Validation loss decreased (0.008257 --> 0.007244). Saving model ...
+2025-03-04 00:19:50,483 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 00:21:45,303 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 00:23:39,994 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-04 00:25:34,687 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-04 00:27:28,921 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-04 00:29:23,061 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-04 00:31:17,709 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-04 00:33:11,795 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-04 00:35:05,854 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-04 00:37:00,052 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-04 00:37:00,052 - INFO - Early stopping triggered
+2025-03-04 00:37:06,684 - INFO - Running configuration: config_id=40, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=1e-05
+2025-03-04 00:38:53,655 - INFO - Validation loss decreased (inf --> 0.061113). Saving model ...
+2025-03-04 00:40:39,057 - INFO - Validation loss decreased (0.061113 --> 0.034141). Saving model ...
+2025-03-04 00:42:24,602 - INFO - Validation loss decreased (0.034141 --> 0.020533). Saving model ...
+2025-03-04 00:44:10,212 - INFO - Validation loss decreased (0.020533 --> 0.014227). Saving model ...
+2025-03-04 00:45:55,672 - INFO - Validation loss decreased (0.014227 --> 0.011401). Saving model ...
+2025-03-04 00:47:41,185 - INFO - Validation loss decreased (0.011401 --> 0.009830). Saving model ...
+2025-03-04 00:49:26,805 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 00:51:12,171 - INFO - Validation loss decreased (0.009830 --> 0.008659). Saving model ...
+2025-03-04 00:52:57,650 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 00:54:43,124 - INFO - Validation loss decreased (0.008659 --> 0.007451). Saving model ...
+2025-03-04 00:56:28,539 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 00:58:13,900 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 00:59:59,274 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-04 01:01:44,738 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-04 01:03:30,248 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-04 01:05:15,995 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-04 01:07:01,615 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-04 01:08:46,851 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-04 01:10:32,233 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-04 01:12:17,575 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-04 01:12:17,575 - INFO - Early stopping triggered
+2025-03-04 01:12:23,483 - INFO - Running configuration: config_id=41, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=2e-05
+2025-03-04 01:14:10,320 - INFO - Validation loss decreased (inf --> 0.049344). Saving model ...
+2025-03-04 01:15:55,729 - INFO - Validation loss decreased (0.049344 --> 0.023635). Saving model ...
+2025-03-04 01:17:41,293 - INFO - Validation loss decreased (0.023635 --> 0.014038). Saving model ...
+2025-03-04 01:19:26,581 - INFO - Validation loss decreased (0.014038 --> 0.011230). Saving model ...
+2025-03-04 01:21:11,966 - INFO - Validation loss decreased (0.011230 --> 0.010770). Saving model ...
+2025-03-04 01:22:57,333 - INFO - Validation loss decreased (0.010770 --> 0.008770). Saving model ...
+2025-03-04 01:24:42,839 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 01:26:28,153 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 01:28:13,482 - INFO - Validation loss decreased (0.008770 --> 0.008010). Saving model ...
+2025-03-04 01:29:58,936 - INFO - Validation loss decreased (0.008010 --> 0.007263). Saving model ...
+2025-03-04 01:31:44,370 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 01:33:29,999 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 01:35:15,319 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-04 01:37:00,922 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-04 01:38:46,479 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-04 01:40:31,719 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-04 01:42:17,071 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-04 01:44:02,377 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-04 01:45:47,502 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-04 01:47:32,613 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-04 01:47:32,613 - INFO - Early stopping triggered
+2025-03-04 01:47:38,716 - INFO - Running configuration: config_id=42, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=5e-05
+2025-03-04 01:49:26,119 - INFO - Validation loss decreased (inf --> 0.026653). Saving model ...
+2025-03-04 01:51:11,636 - INFO - Validation loss decreased (0.026653 --> 0.013875). Saving model ...
+2025-03-04 01:52:57,274 - INFO - Validation loss decreased (0.013875 --> 0.010225). Saving model ...
+2025-03-04 01:54:42,797 - INFO - Validation loss decreased (0.010225 --> 0.008909). Saving model ...
+2025-03-04 01:56:28,228 - INFO - Validation loss decreased (0.008909 --> 0.008897). Saving model ...
+2025-03-04 01:58:13,657 - INFO - Validation loss decreased (0.008897 --> 0.007846). Saving model ...
+2025-03-04 01:59:58,992 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 02:01:44,436 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 02:03:29,861 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-04 02:05:15,197 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-04 02:07:00,474 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-04 02:08:45,889 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-04 02:10:31,159 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-04 02:12:16,467 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-04 02:14:01,713 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-04 02:15:46,945 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-04 02:15:46,945 - INFO - Early stopping triggered
+2025-03-04 02:15:53,371 - INFO - Running configuration: config_id=43, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=0.0001
+2025-03-04 02:17:39,849 - INFO - Validation loss decreased (inf --> 0.019996). Saving model ...
+2025-03-04 02:19:25,250 - INFO - Validation loss decreased (0.019996 --> 0.010288). Saving model ...
+2025-03-04 02:21:10,463 - INFO - Validation loss decreased (0.010288 --> 0.008690). Saving model ...
+2025-03-04 02:22:55,755 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 02:24:41,028 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 02:26:26,318 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-04 02:28:11,716 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-04 02:29:56,920 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-04 02:31:42,146 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-04 02:33:27,408 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-04 02:35:12,629 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-04 02:36:58,065 - INFO - Validation loss decreased (0.008690 --> 0.008209). Saving model ...
+2025-03-04 02:38:43,400 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 02:40:28,800 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 02:42:14,238 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-04 02:43:59,629 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-04 02:45:45,294 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-04 02:47:30,807 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-04 02:49:16,323 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-04 02:51:01,717 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-04 02:52:47,245 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-04 02:54:32,536 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-04 02:54:32,537 - INFO - Early stopping triggered
+2025-03-04 02:54:38,443 - INFO - Running configuration: config_id=44, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=1e-05
+2025-03-04 02:56:18,980 - INFO - Validation loss decreased (inf --> 0.078358). Saving model ...
+2025-03-04 02:57:57,418 - INFO - Validation loss decreased (0.078358 --> 0.049411). Saving model ...
+2025-03-04 02:59:35,825 - INFO - Validation loss decreased (0.049411 --> 0.029880). Saving model ...
+2025-03-04 03:01:14,302 - INFO - Validation loss decreased (0.029880 --> 0.019232). Saving model ...
+2025-03-04 03:02:52,732 - INFO - Validation loss decreased (0.019232 --> 0.014411). Saving model ...
+2025-03-04 03:04:31,061 - INFO - Validation loss decreased (0.014411 --> 0.012437). Saving model ...
+2025-03-04 03:06:09,380 - INFO - Validation loss decreased (0.012437 --> 0.010787). Saving model ...
+2025-03-04 03:07:47,860 - INFO - Validation loss decreased (0.010787 --> 0.009717). Saving model ...
+2025-03-04 03:09:26,354 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 03:11:04,694 - INFO - Validation loss decreased (0.009717 --> 0.009511). Saving model ...
+2025-03-04 03:12:43,239 - INFO - Validation loss decreased (0.009511 --> 0.008324). Saving model ...
+2025-03-04 03:14:21,666 - INFO - Validation loss decreased (0.008324 --> 0.007946). Saving model ...
+2025-03-04 03:16:00,107 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 03:17:38,526 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 03:19:16,875 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-04 03:20:55,277 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-04 03:22:33,645 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-04 03:24:12,087 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-04 03:25:50,458 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-04 03:27:28,738 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-04 03:29:07,031 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-04 03:30:45,358 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-04 03:30:45,358 - INFO - Early stopping triggered
+2025-03-04 03:30:51,811 - INFO - Running configuration: config_id=45, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=2e-05
+2025-03-04 03:32:31,765 - INFO - Validation loss decreased (inf --> 0.062239). Saving model ...
+2025-03-04 03:34:10,238 - INFO - Validation loss decreased (0.062239 --> 0.029963). Saving model ...
+2025-03-04 03:35:48,713 - INFO - Validation loss decreased (0.029963 --> 0.018743). Saving model ...
+2025-03-04 03:37:27,152 - INFO - Validation loss decreased (0.018743 --> 0.012291). Saving model ...
+2025-03-04 03:39:05,570 - INFO - Validation loss decreased (0.012291 --> 0.010104). Saving model ...
+2025-03-04 03:40:44,103 - INFO - Validation loss decreased (0.010104 --> 0.009432). Saving model ...
+2025-03-04 03:42:22,479 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 03:44:00,896 - INFO - Validation loss decreased (0.009432 --> 0.008508). Saving model ...
+2025-03-04 03:45:39,354 - INFO - Validation loss decreased (0.008508 --> 0.008463). Saving model ...
+2025-03-04 03:47:17,873 - INFO - Validation loss decreased (0.008463 --> 0.007524). Saving model ...
+2025-03-04 03:48:56,358 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 03:50:34,757 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 03:52:13,147 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-04 03:53:51,525 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-04 03:55:29,963 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-04 03:57:08,299 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-04 03:58:46,695 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-04 04:00:25,172 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-04 04:02:03,608 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-04 04:03:42,043 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-04 04:03:42,043 - INFO - Early stopping triggered
+2025-03-04 04:03:47,311 - INFO - Running configuration: config_id=46, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=5e-05
+2025-03-04 04:05:27,269 - INFO - Validation loss decreased (inf --> 0.036519). Saving model ...
+2025-03-04 04:07:05,757 - INFO - Validation loss decreased (0.036519 --> 0.016480). Saving model ...
+2025-03-04 04:08:44,297 - INFO - Validation loss decreased (0.016480 --> 0.010863). Saving model ...
+2025-03-04 04:10:22,763 - INFO - Validation loss decreased (0.010863 --> 0.008996). Saving model ...
+2025-03-04 04:12:01,247 - INFO - Validation loss decreased (0.008996 --> 0.008302). Saving model ...
+2025-03-04 04:13:39,704 - INFO - Validation loss decreased (0.008302 --> 0.007478). Saving model ...
+2025-03-04 04:15:18,227 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 04:16:56,645 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 04:18:35,090 - INFO - Validation loss decreased (0.007478 --> 0.007027). Saving model ...
+2025-03-04 04:20:13,414 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 04:21:53,112 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 04:23:31,798 - INFO - Validation loss decreased (0.007027 --> 0.006889). Saving model ...
+2025-03-04 04:25:10,038 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 04:26:48,173 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 04:28:26,317 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-04 04:30:04,486 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-04 04:31:42,501 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-04 04:33:20,752 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-04 04:34:58,767 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-04 04:36:36,984 - INFO - Validation loss decreased (0.006889 --> 0.006805). Saving model ...
+2025-03-04 04:38:15,246 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 04:39:53,256 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 04:41:31,448 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-04 04:43:09,422 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-04 04:44:47,674 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-04 04:46:25,813 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-04 04:48:03,939 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-04 04:49:42,172 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-04 04:51:28,364 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-04 04:53:06,676 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-04 04:53:06,676 - INFO - Early stopping triggered
+2025-03-04 04:53:12,589 - INFO - Running configuration: config_id=47, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=0.0001
+2025-03-04 04:54:51,739 - INFO - Validation loss decreased (inf --> 0.021643). Saving model ...
+2025-03-04 04:56:30,106 - INFO - Validation loss decreased (0.021643 --> 0.010973). Saving model ...
+2025-03-04 04:58:08,397 - INFO - Validation loss decreased (0.010973 --> 0.009238). Saving model ...
+2025-03-04 04:59:46,504 - INFO - Validation loss decreased (0.009238 --> 0.008531). Saving model ...
+2025-03-04 05:01:24,915 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 05:03:03,026 - INFO - Validation loss decreased (0.008531 --> 0.007700). Saving model ...
+2025-03-04 05:04:41,356 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 05:06:19,485 - INFO - Validation loss decreased (0.007700 --> 0.007649). Saving model ...
+2025-03-04 05:07:57,734 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 05:09:35,994 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 05:11:14,062 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-04 05:12:52,333 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-04 05:14:30,382 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-04 05:16:08,567 - INFO - Validation loss decreased (0.007649 --> 0.007108). Saving model ...
+2025-03-04 05:17:46,817 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 05:19:24,895 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 05:21:03,057 - INFO - Validation loss decreased (0.007108 --> 0.007097). Saving model ...
+2025-03-04 05:22:41,006 - INFO - EarlyStopping counter: 1 out of 10
+2025-03-04 05:24:19,046 - INFO - EarlyStopping counter: 2 out of 10
+2025-03-04 05:25:57,056 - INFO - EarlyStopping counter: 3 out of 10
+2025-03-04 05:27:35,009 - INFO - EarlyStopping counter: 4 out of 10
+2025-03-04 05:29:13,136 - INFO - EarlyStopping counter: 5 out of 10
+2025-03-04 05:30:51,021 - INFO - EarlyStopping counter: 6 out of 10
+2025-03-04 05:32:29,273 - INFO - EarlyStopping counter: 7 out of 10
+2025-03-04 05:34:07,308 - INFO - EarlyStopping counter: 8 out of 10
+2025-03-04 05:35:45,292 - INFO - EarlyStopping counter: 9 out of 10
+2025-03-04 05:37:23,480 - INFO - EarlyStopping counter: 10 out of 10
+2025-03-04 05:37:23,480 - INFO - Early stopping triggered
