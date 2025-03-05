@@ -38,7 +38,13 @@ class BERTPipeline:
         self.tokenizer = BertTokenizer.from_pretrained(config['model_name'])
         self.model = RegressionModel(config['model_name']).to(device)
         # optimizer and scheduler
-        self.optimizer = AdamW(self.model.parameters(), lr=config['learning_rate'])
+        if "learning_rate" in config and config['learning_rate'] is not None:
+            self.optimizer = AdamW(self.model.parameters(), lr=config['learning_rate'])
+        else:
+            self.optimizer = AdamW([
+                {'params': self.model.model.encoder.parameters(), 'lr': config.get('learning_rate_backbone', 2e-5)},  
+                {'params': self.model.regression_layer.parameters(), 'lr': config.get('learning_rate_head', 1e-3)}
+            ], weight_decay=0.01)
         self.plateau_scheduler = ReduceLROnPlateau(self.optimizer, mode='min', factor=0.1, patience=5, verbose=True)
         # step calculation for training data
         train_dataset, _, _ = self.split_dataset(0.8, 0.1, 0.1)
@@ -240,7 +246,7 @@ class BERTPipeline:
                 "valid_mae": valid_mae,
                 "valid_rmse": valid_rmse,
                 "valid_pearson": valid_pearson,
-                "learning_rate": self.config['learning_rate']
+                # "learning_rate": self.config['learning_rate']
             })
 
         # TESTING PROCESS
@@ -253,7 +259,9 @@ class BERTPipeline:
             "model_name": self.config.get("model_name"),
             "batch_size": self.config.get("batch_size"),
             "epochs": num_epochs,
-            "learning_rate": self.config.get("learning_rate"),
+            # "learning_rate": self.config.get("learning_rate"),
+            "learning_rate_backbone": self.config.get("learning_rate_backbone"),
+            "learning_rate_head": self.config.get("learning_rate_head"),
             "warm_up": self.config['warmup_ratio'],
             "training_time": time.time() - start_time,
             "peak_memory": torch.cuda.max_memory_allocated(device) / (1024 ** 2),  # Convert to MB
