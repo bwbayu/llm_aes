@@ -9,6 +9,7 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 from src.datasets.SBERTDataset import SBERTDataset
 from src.models.SBERTRegressionModel import SBERTRegressionModel
 from src.models.SiameseIndoBERTModel import SiameseIndoBERTModel
+from src.models.SiameseScoringModel import SiameseScoringModel
 from src.pipelines.BERT_pipeline import BERTPipeline
 from src.utils.EarlyStopping import EarlyStopping
 from transformers import get_linear_schedule_with_warmup
@@ -36,8 +37,9 @@ class SBERTPipeline:
     def __init__(self, config, results, results_epoch):
         self.df = config['df']
         # tokenizer and model
-        self.model = SBERTRegressionModel(config['model_name']).to(device)
+        # self.model = SBERTRegressionModel(config['model_name']).to(device)
         # self.model = SiameseIndoBERTModel(config['model_name']).to(device)
+        self.model = SiameseScoringModel(config['model_name']).to(device)
         # optimizer and scheduler
         self.optimizer = AdamW(self.model.parameters(), lr=config['learning_rate'])
         self.plateau_scheduler = ReduceLROnPlateau(self.optimizer, mode='min', factor=0.1, patience=5, verbose=True)
@@ -114,8 +116,9 @@ class SBERTPipeline:
     
     def evaluate(self, dataloader, mode="validation"):
         if mode == 'testing':
-            self.model = SBERTRegressionModel(self.config['model_name']).to(device)
+            # self.model = SBERTRegressionModel(self.config['model_name']).to(device)
             # self.model = SiameseIndoBERTModel(self.config['model_name']).to(device)
+            self.model = SiameseScoringModel(self.config['model_name']).to(device)
             checkpoint = torch.load('experiments/models/checkpoint.pt')
             if isinstance(checkpoint, dict) and 'model_state_dict' in checkpoint:
                 self.model.load_state_dict(checkpoint['model_state_dict'])
