@@ -1,0 +1,5 @@
+config_id,model_name,batch_size,epochs,learning_rate,warm_up,dropout,training_time,peak_memory,test_mse,test_mae,test_rmse,test_pearson
+0,sentence-transformers/paraphrase-multilingual-mpnet-base-v2,4,16,2e-05,0.0,0.3,1774.5991380214691,6415.501953125,0.010976325914331635,0.080296256,0.10505429,0.9140119196329816
+1,sentence-transformers/paraphrase-multilingual-mpnet-base-v2,4,23,2e-05,0.0,0.5,2528.4145860671997,6416.966796875,0.00988406020818123,0.07549697,0.09982498,0.9219608554697276
+2,sentence-transformers/paraphrase-multilingual-mpnet-base-v2,8,28,2e-05,0.0,0.3,2258.933005094528,6607.45947265625,0.010361667737985652,0.07548874,0.10200577,0.918879226253983
+3,sentence-transformers/paraphrase-multilingual-mpnet-base-v2,8,14,2e-05,0.0,0.5,1125.6632041931152,6617.95947265625,0.010746919410303235,0.080759145,0.10377987,0.9205488246341955
