@@ -36,10 +36,11 @@ class BERTPipeline:
         self.df = config['df']
         # tokenizer and model
         self.tokenizer = BertTokenizer.from_pretrained(config['model_name'])
-        self.model = RegressionModel(config['model_name']).to(device)
+        self.model = RegressionModel(config['model_name'], config['dropout'], freeze_transformer=True).to(device)
         # optimizer and scheduler
         if "learning_rate" in config and config['learning_rate'] is not None:
-            self.optimizer = AdamW(self.model.parameters(), lr=config['learning_rate'])
+            self.learning_rate = config['learning_rate']
+            self.optimizer = AdamW(self.model.parameters(), lr=self.learning_rate, weight_decay=0.01)
         else:
             self.optimizer = AdamW([
                 {'params': self.model.model.encoder.parameters(), 'lr': config.get('learning_rate_backbone', 2e-5)},  
@@ -114,7 +115,7 @@ class BERTPipeline:
 
     def evaluate(self, dataloader, mode="validation"):
         if mode == 'testing':
-            self.model = RegressionModel(self.config['model_name']).to(device)
+            self.model = RegressionModel(self.config['model_name'], self.config['dropout'], freeze_transformer=True).to(device)
             checkpoint = torch.load('experiments/models/checkpoint.pt')
             if isinstance(checkpoint, dict) and 'model_state_dict' in checkpoint:
                 self.model.load_state_dict(checkpoint['model_state_dict'])
@@ -246,7 +247,7 @@ class BERTPipeline:
                 "valid_mae": valid_mae,
                 "valid_rmse": valid_rmse,
                 "valid_pearson": valid_pearson,
-                # "learning_rate": self.config['learning_rate']
+                "learning_rate": self.learning_rate,
             })
 
         # TESTING PROCESS
@@ -259,10 +260,11 @@ class BERTPipeline:
             "model_name": self.config.get("model_name"),
             "batch_size": self.config.get("batch_size"),
             "epochs": num_epochs,
-            # "learning_rate": self.config.get("learning_rate"),
-            "learning_rate_backbone": self.config.get("learning_rate_backbone"),
-            "learning_rate_head": self.config.get("learning_rate_head"),
+            "learning_rate": self.config.get("learning_rate"),
+            # "learning_rate_backbone": self.config.get("learning_rate_backbone"),
+            # "learning_rate_head": self.config.get("learning_rate_head"),
             "warm_up": self.config['warmup_ratio'],
+            "dropout": self.config['dropout'],
             "training_time": time.time() - start_time,
             "peak_memory": torch.cuda.max_memory_allocated(device) / (1024 ** 2),  # Convert to MB
             "test_mse": test_loss,

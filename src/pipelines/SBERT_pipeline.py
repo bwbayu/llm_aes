@@ -39,9 +39,10 @@ class SBERTPipeline:
         # tokenizer and model
         # self.model = SBERTRegressionModel(config['model_name']).to(device)
         # self.model = SiameseIndoBERTModel(config['model_name']).to(device)
-        self.model = SiameseScoringModel(config['model_name']).to(device)
+        self.model = SiameseScoringModel(config['model_name'], config['dropout']).to(device)
+        self.learning_rate = config['learning_rate']
         # optimizer and scheduler
-        self.optimizer = AdamW(self.model.parameters(), lr=config['learning_rate'])
+        self.optimizer = AdamW(self.model.parameters(), lr=self.learning_rate, weight_decay=0.01)
         self.plateau_scheduler = ReduceLROnPlateau(self.optimizer, mode='min', factor=0.1, patience=5, verbose=True)
         # step calculation for training data
         train_dataset, _, _ = self.split_dataset(0.8, 0.1, 0.1)
@@ -53,7 +54,7 @@ class SBERTPipeline:
             num_training_steps=num_training_steps
         )
         # early stopping
-        self.early_stopping = EarlyStopping(verbose=True, path='experiments/models/checkpoint.pt', patience=20)
+        self.early_stopping = EarlyStopping(verbose=True, path='experiments/models/checkpoint.pt', patience=10)
         # loss function
         self.criterion = torch.nn.MSELoss()
         # other variable
@@ -118,7 +119,7 @@ class SBERTPipeline:
         if mode == 'testing':
             # self.model = SBERTRegressionModel(self.config['model_name']).to(device)
             # self.model = SiameseIndoBERTModel(self.config['model_name']).to(device)
-            self.model = SiameseScoringModel(self.config['model_name']).to(device)
+            self.model = SiameseScoringModel(self.config['model_name'], self.config['dropout']).to(device)
             checkpoint = torch.load('experiments/models/checkpoint.pt')
             if isinstance(checkpoint, dict) and 'model_state_dict' in checkpoint:
                 self.model.load_state_dict(checkpoint['model_state_dict'])
@@ -244,7 +245,7 @@ class SBERTPipeline:
                 "valid_mae": valid_mae,
                 "valid_rmse": valid_rmse,
                 "valid_pearson": valid_pearson,
-                "learning_rate": self.config['learning_rate']
+                "learning_rate": self.learning_rate
             })
 
         # TESTING PROCESS
@@ -259,6 +260,7 @@ class SBERTPipeline:
             "epochs": num_epochs,
             "learning_rate": self.config.get("learning_rate"),
             "warm_up": self.config['warmup_ratio'],
+            "dropout": self.config['dropout'],
             "training_time": time.time() - start_time,
             "peak_memory": torch.cuda.max_memory_allocated(device) / (1024 ** 2),  # Convert to MB
             "test_mse": test_loss,

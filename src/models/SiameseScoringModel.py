@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
-from transformers import AutoModel, AutoTokenizer
+from transformers import AutoModel, AutoTokenizer, BertTokenizer
 
 class SiameseScoringModel(nn.Module):
-    def __init__(self, model_name='sentence-transformers/paraphrase-multilingual-mpnet-base-v2'):
+    def __init__(self, model_name='sentence-transformers/paraphrase-multilingual-mpnet-base-v2', dropout=0.1):
         super(SiameseScoringModel, self).__init__()
         
         # Load the model and tokenizer
@@ -14,7 +14,7 @@ class SiameseScoringModel(nn.Module):
         self.embedding_dim = self.encoder.config.hidden_size
         
         # Dropout layer
-        self.dropout = nn.Dropout(p=0.1, inplace=False)
+        self.dropout = nn.Dropout(p=dropout, inplace=False)
         
         # Regression head
         self.regression_head = nn.Linear(self.embedding_dim * 2, 1)
@@ -58,6 +58,6 @@ class SiameseScoringModel(nn.Module):
         x = self.dropout(combined)
         
         # Final regression score
-        score = torch.sigmoid(self.regression_head(x))
+        score = self.regression_head(x)
         
         return score
