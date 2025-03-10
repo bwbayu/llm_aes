@@ -7,7 +7,7 @@ class SiameseScoringModel(nn.Module):
         super(SiameseScoringModel, self).__init__()
         
         # Load the model and tokenizer
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.tokenizer = BertTokenizer.from_pretrained(model_name)
         self.encoder = AutoModel.from_pretrained(model_name)
         
         # Get embedding dimension from the model config

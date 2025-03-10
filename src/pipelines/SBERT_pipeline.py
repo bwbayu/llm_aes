@@ -54,7 +54,7 @@ class SBERTPipeline:
             num_training_steps=num_training_steps
         )
         # early stopping
-        self.early_stopping = EarlyStopping(verbose=True, path='experiments/models/checkpoint.pt', patience=10)
+        self.early_stopping = EarlyStopping(verbose=True, path='experiments/models/checkpoint.pt', patience=20)
         # loss function
         self.criterion = torch.nn.MSELoss()
         # other variable

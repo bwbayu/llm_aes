@@ -7012,3 +7012,1447 @@
 2025-03-09 21:31:02,215 - INFO - EarlyStopping counter: 19 out of 20
 2025-03-09 21:31:41,543 - INFO - EarlyStopping counter: 20 out of 20
 2025-03-09 21:31:41,543 - INFO - Early stopping triggered
+2025-03-09 21:38:36,229 - INFO - PyTorch version 2.4.1+cu121 available.
+2025-03-09 21:38:36,244 - INFO - Polars version 1.17.1 available.
+2025-03-09 21:38:37,901 - INFO - Running configuration: config_id=0, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=1e-05
+2025-03-09 21:39:50,204 - INFO - Validation loss decreased (inf --> 0.032858). Saving model ...
+2025-03-09 21:39:50,294 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 21:40:57,477 - INFO - Validation loss decreased (0.032858 --> 0.021422). Saving model ...
+2025-03-09 21:40:57,571 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 21:42:03,506 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 21:43:09,366 - INFO - Validation loss decreased (0.021422 --> 0.017862). Saving model ...
+2025-03-09 21:43:09,469 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 21:44:16,774 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 21:44:16,819 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 21:45:23,048 - INFO - Validation loss decreased (0.017862 --> 0.017557). Saving model ...
+2025-03-09 21:45:23,156 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 21:46:30,776 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 21:46:30,829 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 21:47:37,846 - INFO - Validation loss decreased (0.017557 --> 0.016144). Saving model ...
+2025-03-09 21:48:43,491 - INFO - Validation loss decreased (0.016144 --> 0.015888). Saving model ...
+2025-03-09 21:49:50,127 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 21:50:56,791 - INFO - Validation loss decreased (0.015888 --> 0.015661). Saving model ...
+2025-03-09 21:50:56,889 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 21:52:02,915 - INFO - Validation loss decreased (0.015661 --> 0.015472). Saving model ...
+2025-03-09 21:52:03,009 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 21:53:07,773 - INFO - Validation loss decreased (0.015472 --> 0.014506). Saving model ...
+2025-03-09 21:53:07,857 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 21:54:12,045 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 21:55:18,832 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-09 21:56:24,314 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-09 21:57:29,368 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-09 21:58:34,242 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-09 21:58:34,293 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 21:59:43,503 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-09 22:00:51,377 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-09 22:01:59,388 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-09 22:03:06,088 - INFO - Validation loss decreased (0.014506 --> 0.014370). Saving model ...
+2025-03-09 22:03:06,184 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 22:04:12,550 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 22:05:18,905 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-09 22:06:26,395 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-09 22:07:32,039 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-09 22:08:37,256 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-09 22:09:43,231 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-09 22:10:47,555 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-09 22:11:53,426 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-09 22:12:59,819 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-09 22:14:07,551 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-09 22:15:13,359 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-09 22:16:21,365 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-09 22:17:28,693 - INFO - Validation loss decreased (0.014370 --> 0.014220). Saving model ...
+2025-03-09 22:18:34,803 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 22:19:41,039 - INFO - Validation loss decreased (0.014220 --> 0.014147). Saving model ...
+2025-03-09 22:20:48,605 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 22:21:55,372 - INFO - Validation loss decreased (0.014147 --> 0.014022). Saving model ...
+2025-03-09 22:23:02,238 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 22:24:10,203 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-09 22:25:17,032 - INFO - Validation loss decreased (0.014022 --> 0.013834). Saving model ...
+2025-03-09 22:25:17,125 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 22:26:21,047 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 22:27:27,075 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-09 22:28:34,736 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-09 22:29:38,895 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-09 22:30:42,451 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-09 22:31:48,813 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-09 22:32:55,010 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-09 22:32:55,057 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 22:34:01,269 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-09 22:35:06,117 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-09 22:36:10,168 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-09 22:37:15,474 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-09 22:38:22,493 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-09 22:39:29,007 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-09 22:40:33,114 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-09 22:41:37,042 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-09 22:42:43,094 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-09 22:43:48,289 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-09 22:44:54,239 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-09 22:45:59,542 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-09 22:47:06,765 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-09 22:47:06,765 - INFO - Early stopping triggered
+2025-03-09 22:47:10,543 - INFO - Running configuration: config_id=1, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=1e-05
+2025-03-09 22:48:17,473 - INFO - Validation loss decreased (inf --> 0.050472). Saving model ...
+2025-03-09 22:49:22,355 - INFO - Validation loss decreased (0.050472 --> 0.035898). Saving model ...
+2025-03-09 22:50:26,245 - INFO - Validation loss decreased (0.035898 --> 0.033796). Saving model ...
+2025-03-09 22:51:32,107 - INFO - Validation loss decreased (0.033796 --> 0.024253). Saving model ...
+2025-03-09 22:52:37,682 - INFO - Validation loss decreased (0.024253 --> 0.022951). Saving model ...
+2025-03-09 22:53:42,346 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 22:54:49,840 - INFO - Validation loss decreased (0.022951 --> 0.022642). Saving model ...
+2025-03-09 22:55:55,516 - INFO - Validation loss decreased (0.022642 --> 0.021501). Saving model ...
+2025-03-09 22:57:01,910 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 22:58:05,259 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-09 22:59:10,177 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-09 23:00:17,072 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-09 23:01:22,957 - INFO - Validation loss decreased (0.021501 --> 0.017623). Saving model ...
+2025-03-09 23:02:29,004 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 23:03:34,365 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-09 23:04:40,714 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-09 23:05:46,919 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-09 23:06:54,299 - INFO - Validation loss decreased (0.017623 --> 0.016957). Saving model ...
+2025-03-09 23:08:02,039 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 23:09:06,111 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-09 23:10:11,680 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-09 23:11:19,140 - INFO - Validation loss decreased (0.016957 --> 0.016580). Saving model ...
+2025-03-09 23:12:27,382 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 23:13:34,469 - INFO - Validation loss decreased (0.016580 --> 0.016148). Saving model ...
+2025-03-09 23:14:42,489 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 23:15:49,899 - INFO - Validation loss decreased (0.016148 --> 0.014824). Saving model ...
+2025-03-09 23:16:56,603 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 23:16:56,648 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 23:18:02,846 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-09 23:19:10,054 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-09 23:20:16,759 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-09 23:21:22,522 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-09 23:22:29,299 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-09 23:23:34,299 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-09 23:24:41,577 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-09 23:24:41,632 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 23:25:46,954 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-09 23:26:54,148 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-09 23:28:00,493 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-09 23:29:07,262 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-09 23:30:12,649 - INFO - Validation loss decreased (0.014824 --> 0.014040). Saving model ...
+2025-03-09 23:31:19,452 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 23:32:26,089 - INFO - Validation loss decreased (0.014040 --> 0.013295). Saving model ...
+2025-03-09 23:32:26,189 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 23:33:35,995 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 23:34:43,380 - INFO - Validation loss decreased (0.013295 --> 0.013057). Saving model ...
+2025-03-09 23:34:43,478 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 23:35:54,252 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 23:35:54,300 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 23:37:04,584 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-09 23:38:13,931 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-09 23:39:23,719 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-09 23:40:36,761 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-09 23:40:36,810 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 23:41:49,595 - INFO - Validation loss decreased (0.013057 --> 0.012995). Saving model ...
+2025-03-09 23:43:03,127 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 23:44:13,708 - INFO - Validation loss decreased (0.012995 --> 0.012711). Saving model ...
+2025-03-09 23:44:13,803 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-09 23:45:27,377 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-09 23:46:37,194 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-09 23:47:46,974 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-09 23:48:57,114 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-09 23:50:06,409 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-09 23:51:15,824 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-09 23:52:25,153 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-09 23:53:35,409 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-09 23:54:45,191 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-09 23:55:55,069 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-09 23:57:04,061 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-09 23:58:11,710 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-09 23:59:21,593 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 00:00:33,586 - INFO - Validation loss decreased (0.012711 --> 0.012638). Saving model ...
+2025-03-10 00:00:33,696 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-10 00:01:46,039 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 00:02:50,909 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 00:03:55,830 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 00:04:59,249 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 00:06:02,759 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 00:07:06,455 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 00:08:09,796 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 00:09:12,969 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 00:10:16,082 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 00:11:19,770 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 00:12:23,178 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 00:13:26,392 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 00:14:29,278 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 00:15:33,554 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 00:16:36,583 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 00:17:38,684 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 00:18:40,201 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 00:19:41,688 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 00:20:43,033 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 00:21:44,151 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 00:21:44,151 - INFO - Early stopping triggered
+2025-03-10 00:21:48,089 - INFO - Running configuration: config_id=2, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=2e-05
+2025-03-10 00:22:50,311 - INFO - Validation loss decreased (inf --> 0.025370). Saving model ...
+2025-03-10 00:23:51,956 - INFO - Validation loss decreased (0.025370 --> 0.022083). Saving model ...
+2025-03-10 00:24:53,510 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 00:25:54,585 - INFO - Validation loss decreased (0.022083 --> 0.020337). Saving model ...
+2025-03-10 00:26:55,615 - INFO - Validation loss decreased (0.020337 --> 0.019009). Saving model ...
+2025-03-10 00:27:57,201 - INFO - Validation loss decreased (0.019009 --> 0.015695). Saving model ...
+2025-03-10 00:28:58,698 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 00:30:00,127 - INFO - Validation loss decreased (0.015695 --> 0.014674). Saving model ...
+2025-03-10 00:31:01,572 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 00:32:02,835 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 00:33:04,186 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 00:34:05,861 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 00:35:07,407 - INFO - Validation loss decreased (0.014674 --> 0.013376). Saving model ...
+2025-03-10 00:36:08,897 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 00:37:10,045 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 00:38:11,900 - INFO - Validation loss decreased (0.013376 --> 0.013227). Saving model ...
+2025-03-10 00:39:13,244 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 00:40:14,627 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 00:41:16,165 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 00:42:17,609 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 00:43:18,872 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 00:44:20,238 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 00:45:21,807 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 00:46:23,130 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 00:47:24,347 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 00:48:25,823 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 00:49:27,406 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 00:50:29,169 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 00:51:30,516 - INFO - Validation loss decreased (0.013227 --> 0.013077). Saving model ...
+2025-03-10 00:52:32,150 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 00:53:33,177 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 00:54:34,449 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 00:55:35,369 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 00:56:36,604 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 00:57:37,815 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 00:58:39,572 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 00:59:40,690 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 01:00:42,322 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 01:01:43,804 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 01:02:44,969 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 01:03:45,442 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 01:04:46,779 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 01:05:48,035 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 01:06:49,664 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 01:07:50,876 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 01:08:52,319 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 01:09:53,650 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 01:10:54,503 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 01:11:55,580 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 01:11:55,581 - INFO - Early stopping triggered
+2025-03-10 01:12:00,003 - INFO - Running configuration: config_id=3, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=2e-05
+2025-03-10 01:13:02,267 - INFO - Validation loss decreased (inf --> 0.039860). Saving model ...
+2025-03-10 01:14:03,816 - INFO - Validation loss decreased (0.039860 --> 0.031305). Saving model ...
+2025-03-10 01:15:05,382 - INFO - Validation loss decreased (0.031305 --> 0.025300). Saving model ...
+2025-03-10 01:16:07,360 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 01:17:08,833 - INFO - Validation loss decreased (0.025300 --> 0.022679). Saving model ...
+2025-03-10 01:18:10,183 - INFO - Validation loss decreased (0.022679 --> 0.022407). Saving model ...
+2025-03-10 01:19:11,910 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 01:20:13,941 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 01:21:15,268 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 01:22:16,589 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 01:23:18,157 - INFO - Validation loss decreased (0.022407 --> 0.019698). Saving model ...
+2025-03-10 01:24:20,340 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 01:25:21,975 - INFO - Validation loss decreased (0.019698 --> 0.018042). Saving model ...
+2025-03-10 01:26:23,400 - INFO - Validation loss decreased (0.018042 --> 0.017441). Saving model ...
+2025-03-10 01:27:24,920 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 01:28:26,781 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 01:29:27,694 - INFO - Validation loss decreased (0.017441 --> 0.014608). Saving model ...
+2025-03-10 01:30:28,401 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 01:31:30,095 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 01:32:31,872 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 01:33:33,551 - INFO - Validation loss decreased (0.014608 --> 0.014113). Saving model ...
+2025-03-10 01:34:35,064 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 01:35:36,491 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 01:36:37,756 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 01:37:38,743 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 01:38:39,637 - INFO - Validation loss decreased (0.014113 --> 0.013419). Saving model ...
+2025-03-10 01:39:41,286 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 01:40:43,169 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 01:41:44,468 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 01:42:45,309 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 01:43:46,329 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 01:44:47,662 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 01:45:49,147 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 01:46:50,707 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 01:47:52,468 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 01:48:54,347 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 01:49:55,467 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 01:50:56,909 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 01:51:58,443 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 01:53:00,198 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 01:54:01,387 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 01:55:03,049 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 01:56:04,746 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 01:57:06,601 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 01:58:07,958 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 01:59:09,196 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 01:59:09,196 - INFO - Early stopping triggered
+2025-03-10 01:59:15,792 - INFO - Running configuration: config_id=4, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=5e-05
+2025-03-10 02:00:19,004 - INFO - Validation loss decreased (inf --> 0.038454). Saving model ...
+2025-03-10 02:01:20,674 - INFO - Validation loss decreased (0.038454 --> 0.034290). Saving model ...
+2025-03-10 02:02:22,313 - INFO - Validation loss decreased (0.034290 --> 0.025230). Saving model ...
+2025-03-10 02:03:23,768 - INFO - Validation loss decreased (0.025230 --> 0.018860). Saving model ...
+2025-03-10 02:04:25,640 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 02:05:26,913 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 02:06:28,242 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 02:07:29,643 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 02:08:31,010 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 02:09:32,242 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 02:10:33,952 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 02:11:35,379 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 02:12:37,248 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 02:13:38,688 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 02:14:39,905 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 02:15:41,637 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 02:16:43,186 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 02:17:44,347 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 02:18:45,855 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 02:19:46,682 - INFO - Validation loss decreased (0.018860 --> 0.016941). Saving model ...
+2025-03-10 02:20:47,966 - INFO - Validation loss decreased (0.016941 --> 0.016655). Saving model ...
+2025-03-10 02:21:49,532 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 02:22:50,886 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 02:23:51,872 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 02:24:53,130 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 02:25:54,527 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 02:26:55,967 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 02:27:57,416 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 02:28:58,212 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 02:29:59,121 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 02:31:00,134 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 02:32:01,615 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 02:33:02,709 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 02:34:03,730 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 02:35:04,694 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 02:36:06,421 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 02:37:07,525 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 02:38:08,799 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 02:39:10,117 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 02:40:11,388 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 02:41:12,700 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 02:41:12,700 - INFO - Early stopping triggered
+2025-03-10 02:41:16,669 - INFO - Running configuration: config_id=5, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=5e-05
+2025-03-10 02:42:19,502 - INFO - Validation loss decreased (inf --> 0.031873). Saving model ...
+2025-03-10 02:43:21,093 - INFO - Validation loss decreased (0.031873 --> 0.026503). Saving model ...
+2025-03-10 02:44:22,444 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 02:45:24,554 - INFO - Validation loss decreased (0.026503 --> 0.024109). Saving model ...
+2025-03-10 02:46:26,108 - INFO - Validation loss decreased (0.024109 --> 0.019649). Saving model ...
+2025-03-10 02:47:27,503 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 02:48:28,689 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 02:49:30,574 - INFO - Validation loss decreased (0.019649 --> 0.017456). Saving model ...
+2025-03-10 02:50:32,244 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 02:51:33,803 - INFO - Validation loss decreased (0.017456 --> 0.016156). Saving model ...
+2025-03-10 02:52:35,405 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 02:53:37,233 - INFO - Validation loss decreased (0.016156 --> 0.015833). Saving model ...
+2025-03-10 02:54:38,994 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 02:55:40,575 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 02:56:41,998 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 02:57:44,052 - INFO - Validation loss decreased (0.015833 --> 0.015493). Saving model ...
+2025-03-10 02:58:45,447 - INFO - Validation loss decreased (0.015493 --> 0.014580). Saving model ...
+2025-03-10 02:59:46,905 - INFO - Validation loss decreased (0.014580 --> 0.014349). Saving model ...
+2025-03-10 03:00:48,818 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 03:01:50,438 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 03:02:51,924 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 03:03:52,798 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 03:04:53,827 - INFO - Validation loss decreased (0.014349 --> 0.013981). Saving model ...
+2025-03-10 03:05:55,578 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 03:06:56,965 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 03:07:58,403 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 03:08:59,763 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 03:10:01,615 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 03:11:02,818 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 03:12:03,958 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 03:13:04,691 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 03:14:05,697 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 03:15:06,726 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 03:16:08,257 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 03:17:09,552 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 03:18:11,439 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 03:19:12,600 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 03:20:13,892 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 03:21:21,762 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 03:22:23,446 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 03:23:24,654 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 03:24:26,186 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 03:25:27,345 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 03:25:27,345 - INFO - Early stopping triggered
+2025-03-10 03:25:31,896 - INFO - Running configuration: config_id=6, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=0.0001
+2025-03-10 03:26:35,999 - INFO - Validation loss decreased (inf --> 0.043803). Saving model ...
+2025-03-10 03:27:38,311 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 03:28:40,326 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 03:29:42,457 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 03:30:44,176 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 03:31:45,764 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 03:32:47,237 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 03:33:48,490 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 03:34:49,661 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 03:35:51,057 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 03:36:52,329 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 03:37:54,092 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 03:38:55,932 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 03:39:57,923 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 03:40:59,151 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 03:42:00,570 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 03:43:01,788 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 03:44:03,355 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 03:45:05,229 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 03:46:07,278 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 03:47:10,042 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 03:47:10,042 - INFO - Early stopping triggered
+2025-03-10 03:47:13,721 - INFO - Running configuration: config_id=7, model_name=indobenchmark/indobert-lite-base-p2, batch_size=4, epochs=100, learning_rate=0.0001
+2025-03-10 03:48:15,834 - INFO - Validation loss decreased (inf --> 0.026244). Saving model ...
+2025-03-10 03:49:16,962 - INFO - Validation loss decreased (0.026244 --> 0.023923). Saving model ...
+2025-03-10 03:50:18,597 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 03:51:20,461 - INFO - Validation loss decreased (0.023923 --> 0.020216). Saving model ...
+2025-03-10 03:52:21,940 - INFO - Validation loss decreased (0.020216 --> 0.017833). Saving model ...
+2025-03-10 03:53:23,478 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 03:54:25,015 - INFO - Validation loss decreased (0.017833 --> 0.016537). Saving model ...
+2025-03-10 03:55:27,333 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 03:56:28,856 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 03:57:30,232 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 03:58:31,865 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 03:59:33,845 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 04:00:35,471 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 04:01:36,857 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 04:02:38,338 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 04:03:40,472 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 04:04:41,999 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 04:05:43,281 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 04:06:45,240 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 04:07:47,996 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 04:08:53,424 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 04:09:59,719 - INFO - Validation loss decreased (0.016537 --> 0.015288). Saving model ...
+2025-03-10 04:11:04,640 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 04:12:06,766 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 04:13:09,090 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 04:14:11,316 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 04:15:13,484 - INFO - Validation loss decreased (0.015288 --> 0.014799). Saving model ...
+2025-03-10 04:16:15,815 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 04:17:17,244 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 04:18:19,658 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 04:19:21,157 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 04:20:23,118 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 04:21:25,213 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 04:22:27,523 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 04:23:29,916 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 04:24:32,546 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 04:25:34,521 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 04:26:37,109 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 04:27:39,483 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 04:28:41,604 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 04:29:43,483 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 04:30:46,416 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 04:31:47,779 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 04:32:49,276 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 04:33:51,328 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 04:34:53,976 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 04:35:55,516 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 04:35:55,516 - INFO - Early stopping triggered
+2025-03-10 04:36:00,449 - INFO - Running configuration: config_id=8, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=1e-05
+2025-03-10 04:36:55,106 - INFO - Validation loss decreased (inf --> 0.026515). Saving model ...
+2025-03-10 04:37:49,075 - INFO - Validation loss decreased (0.026515 --> 0.024059). Saving model ...
+2025-03-10 04:38:42,782 - INFO - Validation loss decreased (0.024059 --> 0.019845). Saving model ...
+2025-03-10 04:39:36,918 - INFO - Validation loss decreased (0.019845 --> 0.018879). Saving model ...
+2025-03-10 04:40:30,564 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 04:41:24,124 - INFO - Validation loss decreased (0.018879 --> 0.017104). Saving model ...
+2025-03-10 04:42:17,953 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 04:43:11,426 - INFO - Validation loss decreased (0.017104 --> 0.015813). Saving model ...
+2025-03-10 04:44:04,267 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 04:44:57,849 - INFO - Validation loss decreased (0.015813 --> 0.015287). Saving model ...
+2025-03-10 04:45:51,629 - INFO - Validation loss decreased (0.015287 --> 0.014322). Saving model ...
+2025-03-10 04:46:45,105 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 04:47:38,724 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 04:48:32,888 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 04:49:26,669 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 04:50:20,652 - INFO - Validation loss decreased (0.014322 --> 0.014221). Saving model ...
+2025-03-10 04:51:14,183 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 04:52:07,825 - INFO - Validation loss decreased (0.014221 --> 0.014177). Saving model ...
+2025-03-10 04:53:01,340 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 04:53:54,734 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 04:54:48,227 - INFO - Validation loss decreased (0.014177 --> 0.013999). Saving model ...
+2025-03-10 04:55:42,055 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 04:56:35,829 - INFO - Validation loss decreased (0.013999 --> 0.013886). Saving model ...
+2025-03-10 04:57:29,063 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 04:58:21,636 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 04:59:14,653 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 05:00:08,041 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 05:01:01,054 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 05:01:53,360 - INFO - Validation loss decreased (0.013886 --> 0.013172). Saving model ...
+2025-03-10 05:02:46,010 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 05:03:39,369 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 05:04:33,202 - INFO - Validation loss decreased (0.013172 --> 0.012514). Saving model ...
+2025-03-10 05:04:33,291 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-10 05:05:26,272 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 05:06:19,789 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 05:07:13,039 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 05:08:06,911 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 05:08:59,812 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 05:09:53,894 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 05:10:46,590 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 05:11:39,760 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 05:12:32,649 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 05:13:26,585 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 05:14:19,744 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 05:15:13,157 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 05:16:05,892 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 05:16:58,936 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 05:17:52,600 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 05:18:45,491 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 05:19:38,723 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 05:20:32,940 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 05:21:26,989 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 05:22:20,902 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 05:22:20,902 - INFO - Early stopping triggered
+2025-03-10 05:22:24,735 - INFO - Running configuration: config_id=9, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=1e-05
+2025-03-10 05:23:20,116 - INFO - Validation loss decreased (inf --> 0.078416). Saving model ...
+2025-03-10 05:24:14,654 - INFO - Validation loss decreased (0.078416 --> 0.037252). Saving model ...
+2025-03-10 05:25:07,932 - INFO - Validation loss decreased (0.037252 --> 0.027676). Saving model ...
+2025-03-10 05:26:01,790 - INFO - Validation loss decreased (0.027676 --> 0.026674). Saving model ...
+2025-03-10 05:26:54,820 - INFO - Validation loss decreased (0.026674 --> 0.023726). Saving model ...
+2025-03-10 05:27:48,287 - INFO - Validation loss decreased (0.023726 --> 0.023083). Saving model ...
+2025-03-10 05:28:42,303 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 05:29:35,634 - INFO - Validation loss decreased (0.023083 --> 0.021114). Saving model ...
+2025-03-10 05:30:28,187 - INFO - Validation loss decreased (0.021114 --> 0.020828). Saving model ...
+2025-03-10 05:31:21,527 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 05:32:14,811 - INFO - Validation loss decreased (0.020828 --> 0.020793). Saving model ...
+2025-03-10 05:33:08,457 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 05:34:01,810 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 05:34:55,345 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 05:35:48,687 - INFO - Validation loss decreased (0.020793 --> 0.017810). Saving model ...
+2025-03-10 05:36:42,465 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 05:37:36,605 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 05:38:30,095 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 05:39:23,735 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 05:40:17,514 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 05:41:12,026 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 05:42:05,662 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 05:42:59,635 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 05:43:52,749 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 05:44:45,618 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 05:45:38,917 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 05:46:32,484 - INFO - Validation loss decreased (0.017810 --> 0.015866). Saving model ...
+2025-03-10 05:47:26,602 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 05:48:19,686 - INFO - Validation loss decreased (0.015866 --> 0.015675). Saving model ...
+2025-03-10 05:49:13,033 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 05:50:06,429 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 05:51:00,135 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 05:51:53,342 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 05:52:47,463 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 05:53:41,336 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 05:54:35,338 - INFO - Validation loss decreased (0.015675 --> 0.015248). Saving model ...
+2025-03-10 05:55:28,529 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 05:56:22,428 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 05:57:15,231 - INFO - Validation loss decreased (0.015248 --> 0.014139). Saving model ...
+2025-03-10 05:58:08,725 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 05:59:02,043 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 05:59:56,322 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 06:00:49,803 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 06:01:43,571 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 06:02:36,327 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 06:03:30,048 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 06:04:23,588 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 06:05:16,901 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 06:06:10,403 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 06:07:04,989 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 06:07:59,105 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 06:08:53,104 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 06:09:47,170 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 06:10:41,468 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 06:11:35,699 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 06:12:29,525 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 06:13:23,291 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 06:14:17,009 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 06:15:10,589 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 06:15:10,589 - INFO - Early stopping triggered
+2025-03-10 06:15:15,393 - INFO - Running configuration: config_id=10, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=2e-05
+2025-03-10 06:16:10,060 - INFO - Validation loss decreased (inf --> 0.032205). Saving model ...
+2025-03-10 06:17:03,464 - INFO - Validation loss decreased (0.032205 --> 0.031693). Saving model ...
+2025-03-10 06:17:57,879 - INFO - Validation loss decreased (0.031693 --> 0.017263). Saving model ...
+2025-03-10 06:18:52,262 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 06:19:45,491 - INFO - Validation loss decreased (0.017263 --> 0.015386). Saving model ...
+2025-03-10 06:20:39,525 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 06:21:33,497 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 06:22:27,590 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 06:23:20,256 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 06:24:13,648 - INFO - Validation loss decreased (0.015386 --> 0.014852). Saving model ...
+2025-03-10 06:25:07,169 - INFO - Validation loss decreased (0.014852 --> 0.014154). Saving model ...
+2025-03-10 06:26:01,260 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 06:26:55,078 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 06:27:49,090 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 06:28:42,511 - INFO - Validation loss decreased (0.014154 --> 0.013948). Saving model ...
+2025-03-10 06:29:36,694 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 06:30:30,297 - INFO - Validation loss decreased (0.013948 --> 0.013840). Saving model ...
+2025-03-10 06:31:24,033 - INFO - Validation loss decreased (0.013840 --> 0.013244). Saving model ...
+2025-03-10 06:32:17,534 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 06:33:10,893 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 06:34:04,683 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 06:34:58,497 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 06:35:52,389 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 06:36:45,674 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 06:37:38,831 - INFO - Validation loss decreased (0.013244 --> 0.013139). Saving model ...
+2025-03-10 06:38:32,615 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 06:39:25,976 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 06:40:19,795 - INFO - Validation loss decreased (0.013139 --> 0.012863). Saving model ...
+2025-03-10 06:40:19,880 - INFO - Model saved to experiments\models\indobenchmark/indobert-lite-base-p2_best_model.pt
+2025-03-10 06:41:12,937 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 06:42:06,518 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 06:43:00,073 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 06:43:53,615 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 06:44:46,468 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 06:45:40,357 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 06:46:34,304 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 06:47:28,528 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 06:48:21,794 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 06:49:16,121 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 06:50:09,164 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 06:51:02,228 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 06:51:54,944 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 06:52:49,107 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 06:53:42,646 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 06:54:36,527 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 06:55:29,510 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 06:56:23,195 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 06:57:17,224 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 06:58:10,579 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 06:58:10,579 - INFO - Early stopping triggered
+2025-03-10 06:58:14,986 - INFO - Running configuration: config_id=11, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=2e-05
+2025-03-10 06:59:09,959 - INFO - Validation loss decreased (inf --> 0.061540). Saving model ...
+2025-03-10 07:00:04,502 - INFO - Validation loss decreased (0.061540 --> 0.033060). Saving model ...
+2025-03-10 07:00:58,410 - INFO - Validation loss decreased (0.033060 --> 0.027697). Saving model ...
+2025-03-10 07:01:52,393 - INFO - Validation loss decreased (0.027697 --> 0.023472). Saving model ...
+2025-03-10 07:02:46,229 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 07:03:39,602 - INFO - Validation loss decreased (0.023472 --> 0.022324). Saving model ...
+2025-03-10 07:04:34,177 - INFO - Validation loss decreased (0.022324 --> 0.021632). Saving model ...
+2025-03-10 07:05:27,726 - INFO - Validation loss decreased (0.021632 --> 0.020471). Saving model ...
+2025-03-10 07:06:20,500 - INFO - Validation loss decreased (0.020471 --> 0.018734). Saving model ...
+2025-03-10 07:07:13,712 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 07:08:07,637 - INFO - Validation loss decreased (0.018734 --> 0.017920). Saving model ...
+2025-03-10 07:09:01,460 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 07:09:55,427 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 07:10:49,736 - INFO - Validation loss decreased (0.017920 --> 0.017735). Saving model ...
+2025-03-10 07:11:43,733 - INFO - Validation loss decreased (0.017735 --> 0.017575). Saving model ...
+2025-03-10 07:12:37,806 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 07:13:31,280 - INFO - Validation loss decreased (0.017575 --> 0.017406). Saving model ...
+2025-03-10 07:14:24,981 - INFO - Validation loss decreased (0.017406 --> 0.017390). Saving model ...
+2025-03-10 07:15:18,727 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 07:16:12,834 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 07:17:06,554 - INFO - Validation loss decreased (0.017390 --> 0.017153). Saving model ...
+2025-03-10 07:18:00,631 - INFO - Validation loss decreased (0.017153 --> 0.015750). Saving model ...
+2025-03-10 07:18:54,480 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 07:19:48,143 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 07:20:41,255 - INFO - Validation loss decreased (0.015750 --> 0.015606). Saving model ...
+2025-03-10 07:21:34,907 - INFO - Validation loss decreased (0.015606 --> 0.015044). Saving model ...
+2025-03-10 07:22:28,027 - INFO - Validation loss decreased (0.015044 --> 0.014921). Saving model ...
+2025-03-10 07:23:21,548 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 07:24:14,287 - INFO - Validation loss decreased (0.014921 --> 0.014634). Saving model ...
+2025-03-10 07:25:07,128 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 07:26:01,182 - INFO - Validation loss decreased (0.014634 --> 0.013425). Saving model ...
+2025-03-10 07:26:55,159 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 07:27:48,302 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 07:28:41,873 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 07:29:35,211 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 07:30:28,830 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 07:31:22,056 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 07:32:16,304 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 07:33:08,912 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 07:34:01,834 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 07:34:54,726 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 07:35:49,045 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 07:36:42,557 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 07:37:36,487 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 07:38:29,365 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 07:39:22,885 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 07:40:16,678 - INFO - Validation loss decreased (0.013425 --> 0.012828). Saving model ...
+2025-03-10 07:41:09,863 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 07:42:03,045 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 07:42:56,807 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 07:43:51,084 - INFO - Validation loss decreased (0.012828 --> 0.012805). Saving model ...
+2025-03-10 07:44:45,268 - INFO - Validation loss decreased (0.012805 --> 0.012652). Saving model ...
+2025-03-10 07:45:39,244 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 07:46:33,163 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 07:47:27,143 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 07:48:20,679 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 07:49:14,326 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 07:50:07,663 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 07:51:00,602 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 07:51:54,058 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 07:52:47,999 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 07:53:41,731 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 07:54:34,856 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 07:55:28,463 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 07:56:21,948 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 07:57:15,818 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 07:58:09,395 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 07:59:03,133 - INFO - Validation loss decreased (0.012652 --> 0.012238). Saving model ...
+2025-03-10 07:59:56,532 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 08:00:49,985 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 08:01:43,660 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 08:02:37,741 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 08:03:31,300 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 08:04:26,643 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 08:05:20,383 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 08:06:13,120 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 08:07:05,676 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 08:07:58,669 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 08:08:51,766 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 08:09:45,196 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 08:10:39,137 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 08:11:33,463 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 08:12:27,378 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 08:13:20,708 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 08:14:14,318 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 08:15:08,073 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 08:16:01,026 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 08:16:54,454 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 08:16:54,454 - INFO - Early stopping triggered
+2025-03-10 08:16:58,703 - INFO - Running configuration: config_id=12, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=5e-05
+2025-03-10 08:17:54,042 - INFO - Validation loss decreased (inf --> 0.052789). Saving model ...
+2025-03-10 08:18:48,342 - INFO - Validation loss decreased (0.052789 --> 0.038459). Saving model ...
+2025-03-10 08:19:42,099 - INFO - Validation loss decreased (0.038459 --> 0.022448). Saving model ...
+2025-03-10 08:20:36,785 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 08:21:30,318 - INFO - Validation loss decreased (0.022448 --> 0.019676). Saving model ...
+2025-03-10 08:22:23,820 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 08:23:17,487 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 08:24:12,041 - INFO - Validation loss decreased (0.019676 --> 0.017964). Saving model ...
+2025-03-10 08:25:05,040 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 08:25:58,153 - INFO - Validation loss decreased (0.017964 --> 0.016885). Saving model ...
+2025-03-10 08:26:51,630 - INFO - Validation loss decreased (0.016885 --> 0.016093). Saving model ...
+2025-03-10 08:27:45,497 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 08:28:39,098 - INFO - Validation loss decreased (0.016093 --> 0.015346). Saving model ...
+2025-03-10 08:29:32,917 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 08:30:26,468 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 08:31:20,224 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 08:32:13,623 - INFO - Validation loss decreased (0.015346 --> 0.013940). Saving model ...
+2025-03-10 08:33:07,184 - INFO - Validation loss decreased (0.013940 --> 0.013909). Saving model ...
+2025-03-10 08:34:05,922 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 08:35:00,057 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 08:35:53,795 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 08:36:48,246 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 08:37:41,195 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 08:38:33,440 - INFO - Validation loss decreased (0.013909 --> 0.013676). Saving model ...
+2025-03-10 08:39:25,358 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 08:40:17,968 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 08:41:10,567 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 08:42:02,719 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 08:42:54,201 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 08:43:46,019 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 08:44:38,220 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 08:45:31,029 - INFO - Validation loss decreased (0.013676 --> 0.013568). Saving model ...
+2025-03-10 08:46:23,319 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 08:47:16,215 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 08:48:09,106 - INFO - Validation loss decreased (0.013568 --> 0.013404). Saving model ...
+2025-03-10 08:49:02,204 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 08:49:54,762 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 08:50:48,017 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 08:51:40,102 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 08:52:32,443 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 08:53:24,441 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 08:54:17,772 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 08:55:10,355 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 08:56:03,432 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 08:56:55,359 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 08:57:47,963 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 08:58:40,727 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 08:59:33,278 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 09:00:25,826 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 09:01:18,909 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 09:02:11,873 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 09:03:04,722 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 09:03:57,195 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 09:04:49,770 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 09:05:42,808 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 09:05:42,808 - INFO - Early stopping triggered
+2025-03-10 09:05:46,105 - INFO - Running configuration: config_id=13, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=5e-05
+2025-03-10 09:06:40,004 - INFO - Validation loss decreased (inf --> 0.039624). Saving model ...
+2025-03-10 09:07:33,099 - INFO - Validation loss decreased (0.039624 --> 0.032524). Saving model ...
+2025-03-10 09:08:26,102 - INFO - Validation loss decreased (0.032524 --> 0.025657). Saving model ...
+2025-03-10 09:09:20,347 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 09:10:14,331 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 09:11:08,329 - INFO - Validation loss decreased (0.025657 --> 0.024092). Saving model ...
+2025-03-10 09:12:01,016 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 09:12:53,588 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 09:13:45,679 - INFO - Validation loss decreased (0.024092 --> 0.022119). Saving model ...
+2025-03-10 09:14:38,292 - INFO - Validation loss decreased (0.022119 --> 0.016286). Saving model ...
+2025-03-10 09:15:31,119 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 09:16:24,193 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 09:17:17,130 - INFO - Validation loss decreased (0.016286 --> 0.016150). Saving model ...
+2025-03-10 09:18:10,458 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 09:19:03,359 - INFO - Validation loss decreased (0.016150 --> 0.015735). Saving model ...
+2025-03-10 09:19:56,605 - INFO - Validation loss decreased (0.015735 --> 0.013878). Saving model ...
+2025-03-10 09:20:49,329 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 09:21:42,262 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 09:22:35,054 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 09:23:27,947 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 09:24:21,110 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 09:25:14,350 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 09:26:07,561 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 09:27:00,495 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 09:27:52,740 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 09:28:45,465 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 09:29:38,184 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 09:30:30,995 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 09:31:23,183 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 09:32:15,632 - INFO - Validation loss decreased (0.013878 --> 0.013726). Saving model ...
+2025-03-10 09:33:08,553 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 09:34:02,711 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 09:35:01,108 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 09:35:55,549 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 09:36:50,266 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 09:37:46,900 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 09:38:43,219 - INFO - Validation loss decreased (0.013726 --> 0.012872). Saving model ...
+2025-03-10 09:39:39,932 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 09:40:37,704 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 09:41:34,554 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 09:42:29,618 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 09:43:25,824 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 09:44:21,144 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 09:45:19,337 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 09:46:16,021 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 09:47:12,394 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 09:48:07,755 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 09:49:03,906 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 09:50:01,309 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 09:50:57,505 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 09:51:55,363 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 09:52:51,288 - INFO - Validation loss decreased (0.012872 --> 0.012734). Saving model ...
+2025-03-10 09:53:46,409 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 09:54:41,220 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 09:55:36,498 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 09:56:32,770 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 09:57:30,299 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 09:58:27,494 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 09:59:25,035 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 10:00:22,830 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 10:01:20,238 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 10:02:17,244 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 10:03:13,063 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 10:04:09,624 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 10:05:06,817 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 10:06:04,828 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 10:07:03,265 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 10:08:01,982 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 10:09:00,646 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 10:09:57,093 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 10:10:54,506 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 10:11:52,113 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 10:11:52,113 - INFO - Early stopping triggered
+2025-03-10 10:11:56,793 - INFO - Running configuration: config_id=14, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=0.0001
+2025-03-10 10:12:54,754 - INFO - Validation loss decreased (inf --> 0.056481). Saving model ...
+2025-03-10 10:13:52,068 - INFO - Validation loss decreased (0.056481 --> 0.032091). Saving model ...
+2025-03-10 10:14:49,851 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 10:15:47,402 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 10:16:44,846 - INFO - Validation loss decreased (0.032091 --> 0.029127). Saving model ...
+2025-03-10 10:17:41,608 - INFO - Validation loss decreased (0.029127 --> 0.020954). Saving model ...
+2025-03-10 10:18:38,742 - INFO - Validation loss decreased (0.020954 --> 0.020798). Saving model ...
+2025-03-10 10:19:35,914 - INFO - Validation loss decreased (0.020798 --> 0.019868). Saving model ...
+2025-03-10 10:20:31,968 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 10:21:29,521 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 10:22:26,499 - INFO - Validation loss decreased (0.019868 --> 0.016451). Saving model ...
+2025-03-10 10:23:23,397 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 10:24:21,040 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 10:25:17,976 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 10:26:13,302 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 10:27:09,381 - INFO - Validation loss decreased (0.016451 --> 0.015736). Saving model ...
+2025-03-10 10:28:05,271 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 10:29:01,715 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 10:29:58,534 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 10:30:55,764 - INFO - Validation loss decreased (0.015736 --> 0.015697). Saving model ...
+2025-03-10 10:31:52,297 - INFO - Validation loss decreased (0.015697 --> 0.014777). Saving model ...
+2025-03-10 10:32:48,684 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 10:33:44,616 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 10:34:40,777 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 10:35:36,270 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 10:36:32,639 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 10:37:27,514 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 10:38:24,130 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 10:39:19,083 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 10:40:15,351 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 10:41:11,008 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 10:42:06,660 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 10:43:01,606 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 10:43:56,808 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 10:44:54,626 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 10:45:51,841 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 10:46:47,709 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 10:47:45,157 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 10:48:40,540 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 10:49:37,307 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 10:50:33,540 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 10:50:33,540 - INFO - Early stopping triggered
+2025-03-10 10:50:37,280 - INFO - Running configuration: config_id=15, model_name=indobenchmark/indobert-lite-base-p2, batch_size=8, epochs=100, learning_rate=0.0001
+2025-03-10 10:51:35,907 - INFO - Validation loss decreased (inf --> 0.028714). Saving model ...
+2025-03-10 10:52:32,864 - INFO - Validation loss decreased (0.028714 --> 0.026773). Saving model ...
+2025-03-10 10:53:29,521 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 10:54:26,341 - INFO - Validation loss decreased (0.026773 --> 0.021889). Saving model ...
+2025-03-10 10:55:21,506 - INFO - Validation loss decreased (0.021889 --> 0.021375). Saving model ...
+2025-03-10 10:56:16,876 - INFO - Validation loss decreased (0.021375 --> 0.016513). Saving model ...
+2025-03-10 10:57:11,359 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 10:58:05,243 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 10:58:59,387 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 10:59:53,918 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 11:00:48,157 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 11:01:45,117 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 11:02:41,263 - INFO - Validation loss decreased (0.016513 --> 0.015309). Saving model ...
+2025-03-10 11:03:38,206 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 11:04:33,580 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 11:05:30,418 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 11:06:26,117 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 11:07:21,768 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 11:08:16,115 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 11:09:11,556 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 11:10:07,799 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 11:11:04,701 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 11:12:00,549 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 11:12:55,815 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 11:13:49,995 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 11:14:44,547 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 11:15:39,368 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 11:16:34,545 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 11:17:28,818 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 11:18:23,512 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 11:19:18,293 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 11:20:13,604 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 11:21:08,402 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 11:21:08,402 - INFO - Early stopping triggered
+2025-03-10 11:21:11,443 - INFO - Running configuration: config_id=16, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=1e-05
+2025-03-10 11:22:09,404 - INFO - Validation loss decreased (inf --> 0.030419). Saving model ...
+2025-03-10 11:23:06,006 - INFO - Validation loss decreased (0.030419 --> 0.026465). Saving model ...
+2025-03-10 11:24:03,818 - INFO - Validation loss decreased (0.026465 --> 0.019511). Saving model ...
+2025-03-10 11:25:00,734 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 11:25:57,816 - INFO - Validation loss decreased (0.019511 --> 0.018490). Saving model ...
+2025-03-10 11:26:55,276 - INFO - Validation loss decreased (0.018490 --> 0.018339). Saving model ...
+2025-03-10 11:27:53,919 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 11:28:50,271 - INFO - Validation loss decreased (0.018339 --> 0.017644). Saving model ...
+2025-03-10 11:29:46,379 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 11:30:42,676 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 11:31:39,713 - INFO - Validation loss decreased (0.017644 --> 0.017388). Saving model ...
+2025-03-10 11:32:38,128 - INFO - Validation loss decreased (0.017388 --> 0.016627). Saving model ...
+2025-03-10 11:33:35,187 - INFO - Validation loss decreased (0.016627 --> 0.016234). Saving model ...
+2025-03-10 11:34:33,344 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 11:35:31,391 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 11:36:28,637 - INFO - Validation loss decreased (0.016234 --> 0.016202). Saving model ...
+2025-03-10 11:37:25,032 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 11:38:22,583 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 11:39:20,028 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 11:40:17,415 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 11:41:13,680 - INFO - Validation loss decreased (0.016202 --> 0.015535). Saving model ...
+2025-03-10 11:42:11,087 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 11:43:09,389 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 11:44:05,919 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 11:45:02,282 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 11:45:59,484 - INFO - Validation loss decreased (0.015535 --> 0.015411). Saving model ...
+2025-03-10 11:46:58,122 - INFO - Validation loss decreased (0.015411 --> 0.014879). Saving model ...
+2025-03-10 11:47:55,865 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 11:48:53,782 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 11:49:50,198 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 11:50:48,345 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 11:51:48,501 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 11:52:46,175 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 11:53:44,120 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 11:54:41,685 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 11:55:38,735 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 11:56:35,082 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 11:57:31,090 - INFO - Validation loss decreased (0.014879 --> 0.014734). Saving model ...
+2025-03-10 11:58:26,868 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 11:59:22,474 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 12:00:18,538 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 12:01:15,874 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 12:02:11,919 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 12:03:08,557 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 12:04:04,508 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 12:05:01,617 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 12:05:58,802 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 12:06:55,087 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 12:07:50,955 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 12:08:47,395 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 12:09:44,333 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 12:10:41,312 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 12:11:38,045 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 12:12:33,592 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 12:13:30,518 - INFO - Validation loss decreased (0.014734 --> 0.014561). Saving model ...
+2025-03-10 12:14:27,579 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 12:15:24,070 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 12:16:20,459 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 12:17:17,262 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 12:18:13,980 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 12:19:11,399 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 12:20:07,778 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 12:21:03,801 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 12:22:00,461 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 12:22:57,707 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 12:23:53,281 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 12:24:48,645 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 12:25:43,857 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 12:26:39,736 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 12:27:37,570 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 12:28:34,587 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 12:29:31,898 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 12:30:31,288 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 12:31:29,489 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 12:32:26,922 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 12:32:26,922 - INFO - Early stopping triggered
+2025-03-10 12:32:31,242 - INFO - Running configuration: config_id=17, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=1e-05
+2025-03-10 12:33:29,316 - INFO - Validation loss decreased (inf --> 0.139613). Saving model ...
+2025-03-10 12:34:25,675 - INFO - Validation loss decreased (0.139613 --> 0.039799). Saving model ...
+2025-03-10 12:35:23,394 - INFO - Validation loss decreased (0.039799 --> 0.030958). Saving model ...
+2025-03-10 12:36:22,034 - INFO - Validation loss decreased (0.030958 --> 0.026193). Saving model ...
+2025-03-10 12:37:20,373 - INFO - Validation loss decreased (0.026193 --> 0.024190). Saving model ...
+2025-03-10 12:38:18,507 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 12:39:23,020 - INFO - Validation loss decreased (0.024190 --> 0.021872). Saving model ...
+2025-03-10 12:40:21,360 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 12:41:20,542 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 12:42:20,235 - INFO - Validation loss decreased (0.021872 --> 0.019263). Saving model ...
+2025-03-10 12:43:20,443 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 12:44:19,832 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 12:45:16,931 - INFO - Validation loss decreased (0.019263 --> 0.018313). Saving model ...
+2025-03-10 12:46:14,497 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 12:47:11,830 - INFO - Validation loss decreased (0.018313 --> 0.017669). Saving model ...
+2025-03-10 12:48:09,344 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 12:49:05,713 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 12:50:04,370 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 12:51:02,675 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 12:52:01,464 - INFO - Validation loss decreased (0.017669 --> 0.017085). Saving model ...
+2025-03-10 12:52:59,426 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 12:53:56,959 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 12:54:53,818 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 12:55:49,579 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 12:56:45,614 - INFO - Validation loss decreased (0.017085 --> 0.016735). Saving model ...
+2025-03-10 12:57:43,018 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 12:58:39,793 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 12:59:35,031 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 13:00:30,121 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 13:01:25,012 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 13:02:20,603 - INFO - Validation loss decreased (0.016735 --> 0.016722). Saving model ...
+2025-03-10 13:03:19,336 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 13:04:16,207 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 13:05:14,816 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 13:06:14,126 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 13:07:12,976 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 13:08:11,277 - INFO - Validation loss decreased (0.016722 --> 0.015771). Saving model ...
+2025-03-10 13:09:10,375 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 13:10:08,136 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 13:11:04,902 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 13:12:01,827 - INFO - Validation loss decreased (0.015771 --> 0.015301). Saving model ...
+2025-03-10 13:13:01,772 - INFO - Validation loss decreased (0.015301 --> 0.015258). Saving model ...
+2025-03-10 13:14:00,250 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 13:14:58,904 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 13:15:56,414 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 13:16:54,465 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 13:17:53,219 - INFO - Validation loss decreased (0.015258 --> 0.015079). Saving model ...
+2025-03-10 13:18:50,835 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 13:19:47,646 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 13:20:45,674 - INFO - Validation loss decreased (0.015079 --> 0.014890). Saving model ...
+2025-03-10 13:21:43,857 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 13:22:42,714 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 13:23:41,267 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 13:24:38,031 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 13:25:35,153 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 13:26:32,897 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 13:27:30,510 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 13:28:28,171 - INFO - Validation loss decreased (0.014890 --> 0.014694). Saving model ...
+2025-03-10 13:29:26,053 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 13:30:25,158 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 13:31:26,193 - INFO - Validation loss decreased (0.014694 --> 0.014091). Saving model ...
+2025-03-10 13:32:25,385 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 13:33:22,585 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 13:34:19,094 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 13:35:16,159 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 13:36:13,647 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 13:37:10,825 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 13:38:07,505 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 13:39:04,274 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 13:40:01,602 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 13:40:59,155 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 13:41:57,698 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 13:42:56,158 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 13:43:53,094 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 13:44:51,143 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 13:45:48,572 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 13:46:45,353 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 13:47:43,149 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 13:48:41,591 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 13:49:40,549 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 13:50:40,895 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 13:50:40,896 - INFO - Early stopping triggered
+2025-03-10 13:50:45,821 - INFO - Running configuration: config_id=18, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=2e-05
+2025-03-10 13:51:45,647 - INFO - Validation loss decreased (inf --> 0.040916). Saving model ...
+2025-03-10 13:52:42,346 - INFO - Validation loss decreased (0.040916 --> 0.024067). Saving model ...
+2025-03-10 13:53:42,108 - INFO - Validation loss decreased (0.024067 --> 0.021298). Saving model ...
+2025-03-10 13:54:41,793 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 13:55:40,141 - INFO - Validation loss decreased (0.021298 --> 0.017855). Saving model ...
+2025-03-10 13:56:37,512 - INFO - Validation loss decreased (0.017855 --> 0.014968). Saving model ...
+2025-03-10 13:57:36,701 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 13:58:34,513 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 13:59:32,696 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 14:00:30,171 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 14:01:28,745 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 14:02:29,070 - INFO - Validation loss decreased (0.014968 --> 0.014905). Saving model ...
+2025-03-10 14:03:27,337 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 14:04:26,106 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 14:05:24,762 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 14:06:22,992 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 14:07:20,631 - INFO - Validation loss decreased (0.014905 --> 0.014202). Saving model ...
+2025-03-10 14:08:19,973 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 14:09:18,228 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 14:10:15,879 - INFO - Validation loss decreased (0.014202 --> 0.014193). Saving model ...
+2025-03-10 14:11:13,787 - INFO - Validation loss decreased (0.014193 --> 0.013750). Saving model ...
+2025-03-10 14:12:13,096 - INFO - Validation loss decreased (0.013750 --> 0.013439). Saving model ...
+2025-03-10 14:13:11,767 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 14:14:10,005 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 14:15:08,267 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 14:16:07,107 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 14:17:06,575 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 14:18:04,502 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 14:19:02,017 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 14:19:59,422 - INFO - Validation loss decreased (0.013439 --> 0.013426). Saving model ...
+2025-03-10 14:20:56,617 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 14:21:55,451 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 14:22:53,662 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 14:23:52,161 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 14:24:50,417 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 14:25:49,900 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 14:26:47,606 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 14:27:44,665 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 14:28:42,390 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 14:29:39,688 - INFO - Validation loss decreased (0.013426 --> 0.013006). Saving model ...
+2025-03-10 14:30:37,305 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 14:31:36,333 - INFO - Validation loss decreased (0.013006 --> 0.012862). Saving model ...
+2025-03-10 14:32:33,985 - INFO - Validation loss decreased (0.012862 --> 0.012418). Saving model ...
+2025-03-10 14:33:31,716 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 14:34:28,602 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 14:35:27,218 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 14:36:25,994 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 14:37:23,883 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 14:38:21,463 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 14:39:20,209 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 14:40:18,809 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 14:41:16,864 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 14:42:14,747 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 14:43:10,983 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 14:44:09,433 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 14:45:08,080 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 14:46:06,434 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 14:47:04,665 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 14:48:02,950 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 14:49:00,448 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 14:49:58,743 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 14:50:57,863 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 14:51:55,533 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 14:51:55,533 - INFO - Early stopping triggered
+2025-03-10 14:51:59,245 - INFO - Running configuration: config_id=19, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=2e-05
+2025-03-10 14:52:59,759 - INFO - Validation loss decreased (inf --> 0.079293). Saving model ...
+2025-03-10 14:53:57,307 - INFO - Validation loss decreased (0.079293 --> 0.040309). Saving model ...
+2025-03-10 14:54:56,726 - INFO - Validation loss decreased (0.040309 --> 0.034328). Saving model ...
+2025-03-10 14:55:55,610 - INFO - Validation loss decreased (0.034328 --> 0.026238). Saving model ...
+2025-03-10 14:56:53,942 - INFO - Validation loss decreased (0.026238 --> 0.024407). Saving model ...
+2025-03-10 14:57:52,586 - INFO - Validation loss decreased (0.024407 --> 0.024129). Saving model ...
+2025-03-10 14:58:51,744 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 14:59:48,872 - INFO - Validation loss decreased (0.024129 --> 0.023424). Saving model ...
+2025-03-10 15:00:45,776 - INFO - Validation loss decreased (0.023424 --> 0.021976). Saving model ...
+2025-03-10 15:01:43,132 - INFO - Validation loss decreased (0.021976 --> 0.021323). Saving model ...
+2025-03-10 15:02:41,037 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 15:03:39,360 - INFO - Validation loss decreased (0.021323 --> 0.021192). Saving model ...
+2025-03-10 15:04:36,916 - INFO - Validation loss decreased (0.021192 --> 0.020709). Saving model ...
+2025-03-10 15:05:35,964 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 15:06:34,834 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 15:07:32,522 - INFO - Validation loss decreased (0.020709 --> 0.018896). Saving model ...
+2025-03-10 15:08:29,874 - INFO - Validation loss decreased (0.018896 --> 0.018683). Saving model ...
+2025-03-10 15:09:28,608 - INFO - Validation loss decreased (0.018683 --> 0.017709). Saving model ...
+2025-03-10 15:10:26,782 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 15:11:23,801 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 15:12:21,946 - INFO - Validation loss decreased (0.017709 --> 0.016346). Saving model ...
+2025-03-10 15:13:21,170 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 15:14:19,798 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 15:15:18,614 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 15:16:16,978 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 15:17:15,823 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 15:18:14,308 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 15:19:10,641 - INFO - Validation loss decreased (0.016346 --> 0.015841). Saving model ...
+2025-03-10 15:20:07,905 - INFO - Validation loss decreased (0.015841 --> 0.015568). Saving model ...
+2025-03-10 15:21:05,065 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 15:22:03,790 - INFO - Validation loss decreased (0.015568 --> 0.014844). Saving model ...
+2025-03-10 15:23:02,816 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 15:24:02,910 - INFO - Validation loss decreased (0.014844 --> 0.014559). Saving model ...
+2025-03-10 15:25:02,551 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 15:26:01,561 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 15:26:59,551 - INFO - Validation loss decreased (0.014559 --> 0.013912). Saving model ...
+2025-03-10 15:27:56,169 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 15:28:52,893 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 15:29:49,903 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 15:30:46,189 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 15:31:43,388 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 15:32:40,413 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 15:33:35,786 - INFO - Validation loss decreased (0.013912 --> 0.013639). Saving model ...
+2025-03-10 15:34:31,733 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 15:35:27,073 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 15:36:23,625 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 15:37:20,292 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 15:38:15,947 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 15:39:11,309 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 15:40:07,138 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 15:41:03,662 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 15:42:00,190 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 15:42:56,358 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 15:43:51,424 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 15:44:47,846 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 15:45:44,531 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 15:46:40,692 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 15:47:36,758 - INFO - Validation loss decreased (0.013639 --> 0.013466). Saving model ...
+2025-03-10 15:48:32,805 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 15:49:28,078 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 15:50:24,785 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 15:51:21,060 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 15:52:16,754 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 15:53:12,287 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 15:54:07,570 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 15:55:03,020 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 15:55:58,431 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 15:56:53,930 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 15:57:49,501 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 15:58:45,171 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 15:59:41,368 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 16:00:37,486 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 16:01:33,722 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 16:02:29,929 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 16:03:26,291 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 16:04:22,228 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 16:05:17,810 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 16:06:13,647 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 16:06:13,647 - INFO - Early stopping triggered
+2025-03-10 16:06:17,110 - INFO - Running configuration: config_id=20, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=5e-05
+2025-03-10 16:07:14,086 - INFO - Validation loss decreased (inf --> 0.024477). Saving model ...
+2025-03-10 16:08:09,486 - INFO - Validation loss decreased (0.024477 --> 0.022864). Saving model ...
+2025-03-10 16:09:06,006 - INFO - Validation loss decreased (0.022864 --> 0.022536). Saving model ...
+2025-03-10 16:10:02,523 - INFO - Validation loss decreased (0.022536 --> 0.018287). Saving model ...
+2025-03-10 16:10:58,765 - INFO - Validation loss decreased (0.018287 --> 0.015695). Saving model ...
+2025-03-10 16:11:55,024 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 16:12:51,744 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 16:13:47,147 - INFO - Validation loss decreased (0.015695 --> 0.014127). Saving model ...
+2025-03-10 16:14:42,308 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 16:15:37,727 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 16:16:35,759 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 16:17:35,118 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 16:18:33,588 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 16:19:32,610 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 16:20:31,126 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 16:21:28,484 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 16:22:25,075 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 16:23:22,880 - INFO - Validation loss decreased (0.014127 --> 0.013788). Saving model ...
+2025-03-10 16:24:20,223 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 16:25:16,873 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 16:26:13,703 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 16:27:11,503 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 16:28:08,609 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 16:29:05,431 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 16:30:02,481 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 16:31:00,181 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 16:31:57,888 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 16:32:53,863 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 16:33:49,920 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 16:34:46,250 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 16:35:42,904 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 16:36:40,870 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 16:37:38,067 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 16:38:35,403 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 16:39:32,623 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 16:40:30,116 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 16:41:26,896 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 16:42:23,745 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 16:42:23,745 - INFO - Early stopping triggered
+2025-03-10 16:42:28,145 - INFO - Running configuration: config_id=21, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=5e-05
+2025-03-10 16:43:27,638 - INFO - Validation loss decreased (inf --> 0.042362). Saving model ...
+2025-03-10 16:44:25,304 - INFO - Validation loss decreased (0.042362 --> 0.031792). Saving model ...
+2025-03-10 16:45:24,209 - INFO - Validation loss decreased (0.031792 --> 0.024200). Saving model ...
+2025-03-10 16:46:23,230 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 16:47:21,652 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 16:48:20,371 - INFO - Validation loss decreased (0.024200 --> 0.023293). Saving model ...
+2025-03-10 16:49:20,238 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 16:50:17,569 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 16:51:15,404 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 16:52:13,243 - INFO - Validation loss decreased (0.023293 --> 0.021836). Saving model ...
+2025-03-10 16:53:12,374 - INFO - Validation loss decreased (0.021836 --> 0.018439). Saving model ...
+2025-03-10 16:54:11,248 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 16:55:08,628 - INFO - Validation loss decreased (0.018439 --> 0.018252). Saving model ...
+2025-03-10 16:56:07,159 - INFO - Validation loss decreased (0.018252 --> 0.017259). Saving model ...
+2025-03-10 16:57:05,181 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 16:58:03,489 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 16:59:00,813 - INFO - Validation loss decreased (0.017259 --> 0.016588). Saving model ...
+2025-03-10 16:59:58,605 - INFO - Validation loss decreased (0.016588 --> 0.015097). Saving model ...
+2025-03-10 17:00:55,777 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 17:01:52,237 - INFO - Validation loss decreased (0.015097 --> 0.014118). Saving model ...
+2025-03-10 17:02:48,779 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 17:03:47,747 - INFO - Validation loss decreased (0.014118 --> 0.013908). Saving model ...
+2025-03-10 17:04:46,125 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 17:05:44,106 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 17:06:43,710 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 17:07:43,210 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 17:08:41,319 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 17:09:37,483 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 17:10:35,253 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 17:11:33,393 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 17:12:30,999 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 17:13:30,124 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 17:14:28,487 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 17:15:27,022 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 17:16:25,516 - INFO - Validation loss decreased (0.013908 --> 0.013554). Saving model ...
+2025-03-10 17:17:24,189 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 17:18:21,952 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 17:19:19,875 - INFO - Validation loss decreased (0.013554 --> 0.013246). Saving model ...
+2025-03-10 17:20:18,120 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 17:21:17,091 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 17:22:17,312 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 17:23:17,063 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 17:24:14,760 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 17:25:12,958 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 17:26:10,938 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 17:27:09,996 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 17:28:08,731 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 17:29:07,979 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 17:30:09,764 - INFO - Validation loss decreased (0.013246 --> 0.013064). Saving model ...
+2025-03-10 17:31:09,356 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 17:32:08,639 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 17:33:07,584 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 17:34:05,686 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 17:35:03,713 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 17:36:02,815 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 17:37:01,836 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 17:38:01,095 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 17:38:59,451 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 17:39:58,134 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 17:40:55,630 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 17:41:54,594 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 17:42:53,458 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 17:43:51,792 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 17:44:49,699 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 17:45:47,847 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 17:46:46,006 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 17:47:43,768 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 17:48:41,409 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 17:49:39,254 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 17:49:39,254 - INFO - Early stopping triggered
+2025-03-10 17:49:44,302 - INFO - Running configuration: config_id=22, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=0.0001
+2025-03-10 17:50:46,897 - INFO - Validation loss decreased (inf --> 0.056382). Saving model ...
+2025-03-10 17:51:46,144 - INFO - Validation loss decreased (0.056382 --> 0.040709). Saving model ...
+2025-03-10 17:52:44,627 - INFO - Validation loss decreased (0.040709 --> 0.027214). Saving model ...
+2025-03-10 17:53:41,142 - INFO - Validation loss decreased (0.027214 --> 0.022206). Saving model ...
+2025-03-10 17:54:37,417 - INFO - Validation loss decreased (0.022206 --> 0.022036). Saving model ...
+2025-03-10 17:55:33,722 - INFO - Validation loss decreased (0.022036 --> 0.020530). Saving model ...
+2025-03-10 17:56:30,569 - INFO - Validation loss decreased (0.020530 --> 0.017794). Saving model ...
+2025-03-10 17:57:25,975 - INFO - Validation loss decreased (0.017794 --> 0.017101). Saving model ...
+2025-03-10 17:58:21,212 - INFO - Validation loss decreased (0.017101 --> 0.015005). Saving model ...
+2025-03-10 17:59:16,842 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 18:00:13,362 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 18:01:09,972 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 18:02:06,493 - INFO - Validation loss decreased (0.015005 --> 0.014946). Saving model ...
+2025-03-10 18:03:04,089 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 18:04:01,471 - INFO - Validation loss decreased (0.014946 --> 0.013936). Saving model ...
+2025-03-10 18:04:58,501 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 18:05:55,804 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 18:06:53,738 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 18:07:49,610 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 18:08:45,001 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 18:09:40,347 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 18:10:36,879 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 18:11:32,810 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 18:12:28,587 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 18:13:24,346 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 18:14:20,666 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 18:15:17,259 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 18:16:12,179 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 18:17:07,073 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 18:18:01,896 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 18:18:57,371 - INFO - Validation loss decreased (0.013936 --> 0.013827). Saving model ...
+2025-03-10 18:19:54,152 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 18:20:50,113 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 18:21:46,313 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 18:22:42,497 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 18:23:38,880 - INFO - Validation loss decreased (0.013827 --> 0.013507). Saving model ...
+2025-03-10 18:24:34,593 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 18:25:30,124 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 18:26:25,387 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 18:27:20,616 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 18:28:16,095 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 18:29:13,086 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 18:30:08,685 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 18:31:04,707 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 18:32:00,091 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 18:32:56,722 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 18:33:53,412 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 18:34:49,063 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 18:35:44,608 - INFO - Validation loss decreased (0.013507 --> 0.013228). Saving model ...
+2025-03-10 18:36:40,703 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 18:37:37,361 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 18:38:33,893 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 18:39:30,190 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 18:40:25,285 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 18:41:21,780 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 18:42:18,470 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 18:43:14,665 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 18:44:10,759 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 18:45:06,996 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 18:46:02,298 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 18:46:58,983 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 18:47:55,268 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 18:48:50,902 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 18:49:46,502 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 18:50:41,940 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 18:51:37,632 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 18:52:33,259 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 18:53:28,502 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 18:54:23,972 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 18:54:23,972 - INFO - Early stopping triggered
+2025-03-10 18:54:28,384 - INFO - Running configuration: config_id=23, model_name=indobenchmark/indobert-lite-base-p2, batch_size=16, epochs=100, learning_rate=0.0001
+2025-03-10 18:55:26,058 - INFO - Validation loss decreased (inf --> 0.035586). Saving model ...
+2025-03-10 18:56:21,265 - INFO - Validation loss decreased (0.035586 --> 0.026850). Saving model ...
+2025-03-10 18:57:17,702 - INFO - Validation loss decreased (0.026850 --> 0.023047). Saving model ...
+2025-03-10 18:58:14,108 - INFO - Validation loss decreased (0.023047 --> 0.019833). Saving model ...
+2025-03-10 18:59:10,244 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 19:00:06,607 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 19:01:03,256 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 19:01:58,555 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 19:02:53,764 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 19:03:49,368 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 19:04:45,506 - INFO - Validation loss decreased (0.019833 --> 0.019384). Saving model ...
+2025-03-10 19:05:42,018 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 19:06:37,635 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 19:07:34,330 - INFO - Validation loss decreased (0.019384 --> 0.018955). Saving model ...
+2025-03-10 19:08:30,821 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 19:09:27,002 - INFO - Validation loss decreased (0.018955 --> 0.015276). Saving model ...
+2025-03-10 19:10:22,439 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 19:11:19,099 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 19:12:15,005 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 19:13:10,358 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 19:14:05,784 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 19:15:02,393 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 19:15:58,546 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 19:16:54,280 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 19:17:50,068 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 19:18:46,493 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 19:19:43,082 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 19:20:37,865 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 19:21:32,806 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 19:22:27,667 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 19:23:23,097 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 19:24:19,664 - INFO - Validation loss decreased (0.015276 --> 0.014964). Saving model ...
+2025-03-10 19:25:15,561 - INFO - Validation loss decreased (0.014964 --> 0.013701). Saving model ...
+2025-03-10 19:26:11,675 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 19:27:07,961 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 19:28:04,182 - INFO - Validation loss decreased (0.013701 --> 0.013578). Saving model ...
+2025-03-10 19:28:59,827 - INFO - EarlyStopping counter: 1 out of 20
+2025-03-10 19:29:55,318 - INFO - EarlyStopping counter: 2 out of 20
+2025-03-10 19:30:50,604 - INFO - EarlyStopping counter: 3 out of 20
+2025-03-10 19:31:45,796 - INFO - EarlyStopping counter: 4 out of 20
+2025-03-10 19:32:41,339 - INFO - EarlyStopping counter: 5 out of 20
+2025-03-10 19:33:38,230 - INFO - EarlyStopping counter: 6 out of 20
+2025-03-10 19:34:33,886 - INFO - EarlyStopping counter: 7 out of 20
+2025-03-10 19:35:29,903 - INFO - EarlyStopping counter: 8 out of 20
+2025-03-10 19:36:25,323 - INFO - EarlyStopping counter: 9 out of 20
+2025-03-10 19:37:21,847 - INFO - EarlyStopping counter: 10 out of 20
+2025-03-10 19:38:18,482 - INFO - EarlyStopping counter: 11 out of 20
+2025-03-10 19:39:14,105 - INFO - EarlyStopping counter: 12 out of 20
+2025-03-10 19:40:09,521 - INFO - EarlyStopping counter: 13 out of 20
+2025-03-10 19:41:05,266 - INFO - EarlyStopping counter: 14 out of 20
+2025-03-10 19:42:01,728 - INFO - EarlyStopping counter: 15 out of 20
+2025-03-10 19:42:58,058 - INFO - EarlyStopping counter: 16 out of 20
+2025-03-10 19:43:54,044 - INFO - EarlyStopping counter: 17 out of 20
+2025-03-10 19:44:48,963 - INFO - EarlyStopping counter: 18 out of 20
+2025-03-10 19:45:46,097 - INFO - EarlyStopping counter: 19 out of 20
+2025-03-10 19:46:42,713 - INFO - EarlyStopping counter: 20 out of 20
+2025-03-10 19:46:42,713 - INFO - Early stopping triggered
