@@ -41,16 +41,25 @@ class SiameseModel(nn.Module):
         embeddings = self.mean_pooling(outputs, encoded_input['attention_mask'])
         return embeddings
     
-    def forward(self, reference_texts, student_texts):
-        # Get embeddings for reference and student texts
+    def forward(self, reference_texts, student_texts, sim_type='cosine'):
+        # Get embeddings
         reference_embeddings = self.get_embeddings(reference_texts)
         student_embeddings = self.get_embeddings(student_texts)
-
+        
         # Normalize embeddings
         ref_embedding = F.normalize(reference_embeddings, p=2, dim=1)
         student_embedding = F.normalize(student_embeddings, p=2, dim=1)
         
-        # Compute similarity score
-        similarity = torch.sum(ref_embedding * student_embedding, dim=1)
+        if sim_type == 'cosine':
+            # Compute cosine similarity
+            similarity = torch.sum(ref_embedding * student_embedding, dim=1).unsqueeze(1)
+        elif sim_type == 'manhattan':
+            # Manhattan distance similarity
+            manhattan_distance = torch.sum(torch.abs(ref_embedding - student_embedding), dim=1)
+            similarity = (1 / (1 + manhattan_distance)).unsqueeze(1)
+        elif sim_type == 'euclidean':
+            # Euclidean distance similarity
+            euclidean_distance = torch.sqrt(torch.sum((ref_embedding - student_embedding) ** 2, dim=1))
+            similarity = (1 / (1 + euclidean_distance)).unsqueeze(1)
         
         return similarity

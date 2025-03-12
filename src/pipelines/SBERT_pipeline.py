@@ -7,9 +7,8 @@ import torch
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from src.datasets.SBERTDataset import SBERTDataset
-from src.models.SBERTRegressionModel import SBERTRegressionModel
-from src.models.SiameseIndoBERTModel import SiameseIndoBERTModel
 from src.models.SiameseScoringModel import SiameseScoringModel
+from src.models.SiameseModel import SiameseModel
 from src.pipelines.BERT_pipeline import BERTPipeline
 from src.utils.EarlyStopping import EarlyStopping
 from transformers import get_linear_schedule_with_warmup
@@ -37,9 +36,8 @@ class SBERTPipeline:
     def __init__(self, config, results, results_epoch):
         self.df = config['df']
         # tokenizer and model
-        # self.model = SBERTRegressionModel(config['model_name']).to(device)
-        # self.model = SiameseIndoBERTModel(config['model_name']).to(device)
-        self.model = SiameseScoringModel(config['model_name'], config['dropout']).to(device)
+        # self.model = SiameseScoringModel(config['model_name'], config['dropout']).to(device)
+        self.model = SiameseModel(config['model_name']).to(device)
         self.learning_rate = config['learning_rate']
         # optimizer and scheduler
         self.optimizer = AdamW(self.model.parameters(), lr=self.learning_rate, weight_decay=0.01)
@@ -54,7 +52,7 @@ class SBERTPipeline:
             num_training_steps=num_training_steps
         )
         # early stopping
-        self.early_stopping = EarlyStopping(verbose=True, path='experiments/models/checkpoint.pt', patience=20)
+        self.early_stopping = EarlyStopping(verbose=True, path='experiments/models/checkpoint.pt', patience=10)
         # loss function
         self.criterion = torch.nn.MSELoss()
         # other variable
@@ -117,9 +115,8 @@ class SBERTPipeline:
     
     def evaluate(self, dataloader, mode="validation"):
         if mode == 'testing':
-            # self.model = SBERTRegressionModel(self.config['model_name']).to(device)
-            # self.model = SiameseIndoBERTModel(self.config['model_name']).to(device)
-            self.model = SiameseScoringModel(self.config['model_name'], self.config['dropout']).to(device)
+            # self.model = SiameseScoringModel(self.config['model_name'], self.config['dropout']).to(device)
+            self.model = SiameseModel(self.config['model_name']).to(device)
             checkpoint = torch.load('experiments/models/checkpoint.pt')
             if isinstance(checkpoint, dict) and 'model_state_dict' in checkpoint:
                 self.model.load_state_dict(checkpoint['model_state_dict'])
@@ -260,7 +257,6 @@ class SBERTPipeline:
             "epochs": num_epochs,
             "learning_rate": self.config.get("learning_rate"),
             "warm_up": self.config['warmup_ratio'],
-            "dropout": self.config['dropout'],
             "training_time": time.time() - start_time,
             "peak_memory": torch.cuda.max_memory_allocated(device) / (1024 ** 2),  # Convert to MB
             "test_mse": test_loss,
