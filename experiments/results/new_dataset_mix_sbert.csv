@@ -1,0 +1,2 @@
+config_id,model_name,batch_size,epochs,learning_rate,warm_up,training_time,peak_memory,test_mse,test_mae,test_rmse,test_pearson
+0,sentence-transformers/paraphrase-multilingual-mpnet-base-v2,16,20,2e-05,0.0,9143.5605199337,9976.08251953125,0.011753543787303247,0.07489313,0.10851006,0.9449619411728776
