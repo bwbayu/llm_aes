@@ -374,19 +374,19 @@ import pandas as pd
 import logging
 import torch
 import os
-# df = pd.read_csv("data/aes_dataset_indo.csv") # tag nya nomor 1 di model
-df = pd.read_csv("data/aes_dataset_new.csv") # tag nya nomor 2 di model
+df = pd.read_csv("data/aes_dataset_indo.csv") # tag nya nomor 1 di model
+# df = pd.read_csv("data/aes_dataset_new.csv") # tag nya nomor 2 di model
 # df = pd.read_csv("data/aes_dataset_5k_clean.csv")
 # df = df[df['dataset'] == 'analisis_essay'][['reference_answer', 'answer', 'score', 'normalized_score', 'dataset', 'dataset_num']]
 print(df.info())
 
 # Check if the first file exists
 df_result = None
-if os.path.exists("experiments/results/new_dataset_mix_bert_reduce_4096.csv"):
-    df_result = pd.read_csv("experiments/results/new_dataset_mix_bert_reduce_4096.csv")
+if os.path.exists("experiments/results/new_dataset_indo_bert_reduce_4096.csv"):
+    df_result = pd.read_csv("experiments/results/new_dataset_indo_bert_reduce_4096.csv")
     print(df_result['config_id'].iloc[-1])
 else:
-    print("File 'new_dataset_mix_bert_reduce_4096.csv' does not exist.")
+    print("File 'new_dataset_indo_bert_reduce_4096.csv' does not exist.")
 
 idx = (df_result['config_id'].iloc[-1] + 1) if df_result is not None and not df_result.empty else 0  # index untuk setiap kombinasi
 ROOT_DIR = os.getcwd()
@@ -395,11 +395,11 @@ results = []
 results_epoch = []
 df_result1 = None
 # Check if the second file exists
-if os.path.exists("experiments/results/new_dataset_mix_bert_reduce_4096_epoch.csv"):
-    df_result1 = pd.read_csv("experiments/results/new_dataset_mix_bert_reduce_4096_epoch.csv")
+if os.path.exists("experiments/results/new_dataset_indo_bert_reduce_4096_epoch.csv"):
+    df_result1 = pd.read_csv("experiments/results/new_dataset_indo_bert_reduce_4096_epoch.csv")
     print(max(df_result1['valid_pearson']))
 else:
-    print("File 'new_dataset_mix_bert_reduce_4096_epoch.csv' does not exist.")
+    print("File 'new_dataset_indo_bert_reduce_4096_epoch.csv' does not exist.")
 
 # set up hyperparamter
 config = {
@@ -430,8 +430,8 @@ try:
 
     # Save results
     # Dapatkan root project
-    results_path = os.path.join(ROOT_DIR, "experiments/results/new_dataset_mix_bert_reduce_4096.csv")
-    results_epoch_path = os.path.join(ROOT_DIR, "experiments/results/new_dataset_mix_bert_reduce_4096_epoch.csv")
+    results_path = os.path.join(ROOT_DIR, "experiments/results/new_dataset_indo_bert_reduce_4096.csv")
+    results_epoch_path = os.path.join(ROOT_DIR, "experiments/results/new_dataset_indo_bert_reduce_4096_epoch.csv")
     BERTPipeline.save_csv(results, results_path)
     BERTPipeline.save_csv(results_epoch, results_epoch_path)
 except Exception as e:
