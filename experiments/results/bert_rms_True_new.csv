@@ -1,0 +1,2 @@
+config_id,model_name,batch_size,epochs,learning_rate,warm_up,training_time,peak_memory,test_mse,test_mae,test_rmse,test_pearson,use_reference,layer_norm,use_pretrained_weight
+0,indobenchmark/indobert-lite-base-p2,16,48,2e-05,0.0,9186.968232631683,6634.9150390625,0.011516950018371322,0.07300029,0.10735207,0.9460325057657627,True,rms,True
